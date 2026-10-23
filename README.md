@@ -8,8 +8,8 @@ This repository maintains the public Gallery component used by Chutj's academic
 website. The live gallery remains at the existing address; this repository does
 not deploy a second website or replace the academic site's Home and GEE Access.
 
-The initial release contains **31 reviewed figures from 7 papers**: one CC BY 4.0
-figure and 30 CC BY-NC-ND 4.0 figures. These are individual reviewed image files,
+The gallery contains **164 reviewed figures from 26 papers**: 79 CC BY 4.0
+figures and 85 CC BY-NC-ND 4.0 figures. These are individual reviewed image files,
 not a blanket approval of every figure in those papers.
 
 ## Browse and learn

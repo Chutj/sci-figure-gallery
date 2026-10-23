@@ -148,7 +148,8 @@
     text('detail-title', figure.title); text('detail-meta', meta(figure));
     text('detail-categories', figure.categories.length ? `Filed under: ${figure.categories.join(' · ')}` : 'Category unavailable');
     text('detail-paper', figure.paper || 'Paper title unavailable');
-    text('detail-translation', publicMode ? 'Independently written English summary based on the cited paper; not a reproduction of its original caption.' : !figure.translation_status || figure.translation_status === 'reviewed'
+    document.getElementById('detail-translation').hidden = publicMode;
+    text('detail-translation', publicMode ? '' : !figure.translation_status || figure.translation_status === 'reviewed'
       ? 'English translation of the existing library notes.'
       : 'English translation pending review. Original notes are retained in the local inventory. Any PDF-based candidate below is a draft requiring human review.');
     text('detail-author', figure.author ? `${publicMode ? 'Authors' : 'First author'}: ${figure.author}` : 'Author information unavailable');
