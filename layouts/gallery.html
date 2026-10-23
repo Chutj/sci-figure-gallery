@@ -26,7 +26,7 @@
 {{ end }}
 {{ if gt (len $figures) 0 }}
   <section id="figure-gallery" aria-label="Figure library">
-    <p class="gallery-notice">{{ if eq $mode "local" }}<strong>Local preview</strong> · {{ len $figures }} figures. Rights assessment does not constitute publication approval.{{ else if site.Params.galleryCandidatePreview }}<strong>Candidate preview — pending final confirmation</strong> · {{ len $figures }} figures. This isolated preview does not approve or publish any figure.{{ else }}<strong>Public reference library</strong> · {{ len $figures }} figures with reviewed publication permission.{{ end }}</p>
+    {{ if eq $mode "local" }}<p class="gallery-notice"><strong>Local preview</strong> · Rights assessment does not constitute publication approval.</p>{{ else if site.Params.galleryCandidatePreview }}<p class="gallery-notice"><strong>Candidate preview — pending final confirmation</strong> · This isolated preview does not approve or publish any figure.</p>{{ end }}
     <div class="gallery-controls">
       <label for="gallery-query">Search the library<input id="gallery-query" type="search" placeholder="Title, DOI, journal, color or method…" autocomplete="off"></label>
       <label for="gallery-category">Category<select id="gallery-category"><option value="">All categories</option></select></label>
@@ -47,7 +47,7 @@
         <label for="gallery-field-method">Method or visualization<input id="gallery-field-method" data-search-field="method" type="search" autocomplete="off" placeholder="Regression, SHAP, map…"></label>
       </div>
     </details>
-    <p id="gallery-count" role="status" aria-live="polite"></p>
+    <p id="gallery-count" role="status" aria-live="polite" data-permission-note="{{ if eq $mode "public" }} with reviewed publication permission{{ end }}"></p>
     <div id="gallery-grid" class="gallery-grid"></div>
     <p id="gallery-empty" hidden>No figures match your search. Try another keyword or reset the filters.</p>
     <noscript>Enable JavaScript to browse this local figure library.</noscript>
@@ -55,14 +55,19 @@
   <dialog id="figure-detail" aria-labelledby="detail-title">
     <div class="detail-toolbar"><span>Figure details</span><button id="detail-close" type="button" autofocus>Close</button></div>
     <div class="detail-body">
-      <h2 id="detail-title"></h2><p id="detail-meta"></p>
-      <a id="detail-original" target="_blank" rel="noopener">Open full-size image in a new tab</a>
-      <div class="image-controls" role="group" aria-label="Image zoom controls">
-        <button id="zoom-fit" type="button">Fit image</button><button id="zoom-actual" type="button">Actual size</button>
-        <button id="zoom-out" type="button" aria-label="Zoom out">−</button><button id="zoom-in" type="button" aria-label="Zoom in">+</button><span id="zoom-level" role="status" aria-live="polite"></span>
+      <h2 id="detail-title"></h2>
+      <div class="detail-meta-row">
+        <p id="detail-meta"></p>
+        <a id="detail-original" target="_blank" rel="noopener">Open full-size image in a new tab</a>
       </div>
-      <p class="gallery-muted">Zoom to inspect panel labels. Scroll within the image when enlarged. Keyboard: + / − to zoom, 0 to fit, 1 for actual size, Esc to close.</p>
-      <div id="detail-viewport" tabindex="0" role="region" aria-label="Scrollable figure image"><img id="detail-image" alt=""></div>
+      <div class="image-tools">
+        <div class="image-controls" role="group" aria-label="Image zoom controls" aria-describedby="detail-zoom-help">
+          <button id="zoom-fit" type="button">Fit image</button><button id="zoom-actual" type="button">Actual size</button>
+          <button id="zoom-out" type="button" aria-label="Zoom out">−</button><button id="zoom-in" type="button" aria-label="Zoom in">+</button><span id="zoom-level" role="status" aria-live="polite"></span>
+        </div>
+        <p id="detail-zoom-help" class="gallery-muted">Zoom to inspect panel labels. Scroll within the image when enlarged. Keys: + / − zoom, 0 fit, 1 actual size, Esc close.</p>
+      </div>
+      <div id="detail-viewport" tabindex="0" role="region" aria-label="Scrollable figure image" aria-describedby="detail-zoom-help"><img id="detail-image" alt=""></div>
       <p id="detail-image-error" hidden>Image unavailable. The reference notes remain available below.</p>
       <p id="detail-categories"></p>
       <p id="detail-translation" class="gallery-muted"></p>

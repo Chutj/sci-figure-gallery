@@ -259,7 +259,7 @@
       resizeObserver?.observe(article);
       button.addEventListener('click', () => openFigure(figure, button));
     });
-    count.textContent = `${matches.length} of ${figures.length} figures`;
+    count.textContent = `${matches.length} of ${figures.length} figures${count.dataset.permissionNote || ''}`;
     document.getElementById('gallery-empty').hidden = matches.length > 0;
     layout();
   }
