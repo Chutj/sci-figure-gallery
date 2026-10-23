@@ -51,12 +51,14 @@ def snapshot(source=ROOT, ref='HEAD'):
     descriptor = json.loads(blob('gallery-component.json'))
     media = json.loads(blob('data/gallery/media.json'))
     names = component_paths(descriptor, media)
-    archive = command(['git','archive','--format=tar',commit,'--',*names], source)
+    # A large gallery exceeds Windows' command-line length if every media path
+    # is an argument. Archive the committed tree, then read only manifest entries.
+    archive = command(['git','archive','--format=tar',commit], source)
     files = {}
     with tarfile.open(fileobj=io.BytesIO(archive), mode='r:') as bundle:
         for member in bundle:
-            if member.isdir(): continue
-            if not member.isfile() or member.name not in names:
+            if member.name not in names: continue
+            if not member.isfile():
                 raise ValueError('Unsafe or unexpected component archive entry')
             files[member.name] = bundle.extractfile(member).read()
     if set(files) != set(names):

@@ -83,3 +83,17 @@ class ComponentSyncTest(unittest.TestCase):
         (self.source/'assets/js/gallery.js').write_bytes(b'uncommitted version')
         with self.assertRaisesRegex(ValueError,'Commit/review'):
             sync.plan(self.site,self.source)
+
+    def test_large_manifest_sync_excludes_unmanaged_archive_entries(self):
+        path=self.source/'gallery-component.json';descriptor=sync.read(path)
+        names=['docs/managed-'+'x'*70+f'-{i:03}.txt' for i in range(400)]
+        self.assertGreater(len(' '.join(names)),32767)
+        for name in names:sync.write(self.source/name,b'large gallery fixture\n')
+        descriptor['files'].extend(names);sync.write(path,sync.encoded(descriptor))
+        sync.write(self.source/'not-exported.txt',b'unmanaged content must not sync')
+        self.commit(self.source)
+        result=sync.apply(self.site,self.source)
+        self.assertEqual(result['managed_files'],len(descriptor['files']))
+        self.assertTrue(all((self.site/name).is_file() for name in names))
+        self.assertFalse((self.site/'not-exported.txt').exists())
+        validate_component_lock(self.site)
