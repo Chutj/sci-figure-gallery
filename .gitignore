@@ -1,0 +1,17 @@
+/public/
+/resources/_gen/
+/.hugo_build.lock
+/hugo_stats.json
+/.gallery-dev/
+/.gallery-local/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+*.pdf
+*.sqlite*
+*.pem
+*.key
+**/private-bindings.json
+.DS_Store
+Thumbs.db

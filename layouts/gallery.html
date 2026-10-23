@@ -1,0 +1,82 @@
+{{ define "main" }}
+<header class="page-header"><h1>{{ .Title }}</h1><p>{{ .Description }}</p></header>
+{{ $css := resources.Get "css/gallery.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{ partial "gallery/licensing.html" . }}
+{{ $catalogPath := site.Params.galleryCatalog | default ".gallery-local/catalog.json" }}
+{{ $mode := "public" }}
+{{ $figures := slice }}
+{{ if and hugo.IsServer (eq hugo.Environment "development") site.Params.galleryLocalPreview (strings.HasPrefix $catalogPath ".gallery-local/") (fileExists $catalogPath) }}
+  {{ $mode = "local" }}
+  {{ $catalog := os.ReadFile $catalogPath | transform.Unmarshal }}
+  {{ range $catalog.records }}
+    {{ $image := resources.Get .asset }}
+    {{ $media := dict "image" "" "thumbnail" "" "srcset" "" "width" (.width | default 4) "height" (.height | default 3) }}
+    {{ if and $image (eq $image.MediaType.MainType "image") }}
+      {{ $small := $image.Fit "320x4096 webp q82" }}
+      {{ $thumb := $image.Fit "640x4096 webp q82" }}
+      {{ $large := $image.Fit "960x4096 webp q82" }}
+      {{ $media = dict "image" $image.RelPermalink "thumbnail" $thumb.RelPermalink "srcset" (printf "%s %dw, %s %dw, %s %dw" $small.RelPermalink $small.Width $thumb.RelPermalink $thumb.Width $large.RelPermalink $large.Width) "width" $image.Width "height" $image.Height }}
+    {{ end }}
+    {{ $figures = $figures | append (merge . $media) }}
+  {{ end }}
+{{ else }}
+  {{ $figures = partial "gallery/public-records.html" . }}
+  {{ if site.Params.galleryCandidatePreview }}{{ $mode = "candidate" }}{{ end }}
+{{ end }}
+{{ if gt (len $figures) 0 }}
+  <section id="figure-gallery" aria-label="Figure library">
+    <p class="gallery-notice">{{ if eq $mode "local" }}<strong>Local preview</strong> · {{ len $figures }} figures. Rights assessment does not constitute publication approval.{{ else if site.Params.galleryCandidatePreview }}<strong>Candidate preview — pending final confirmation</strong> · {{ len $figures }} figures. This isolated preview does not approve or publish any figure.{{ else }}<strong>Public reference library</strong> · {{ len $figures }} figures with reviewed publication permission.{{ end }}</p>
+    <div class="gallery-controls">
+      <label for="gallery-query">Search the library<input id="gallery-query" type="search" placeholder="Title, DOI, journal, color or method…" autocomplete="off"></label>
+      <label for="gallery-category">Category<select id="gallery-category"><option value="">All categories</option></select></label>
+      <label for="gallery-sort">Sort by<select id="gallery-sort"><option value="library">Library order</option><option value="title">Title A–Z</option><option value="newest">Year, newest first</option></select></label>
+      <button id="gallery-reset" type="button">Reset</button>
+    </div>
+    <details id="gallery-advanced" class="gallery-advanced">
+      <summary>Advanced search<span id="gallery-advanced-active"></span></summary>
+      <p class="gallery-muted">Combine fields to narrow your results. All filled fields must match. Color and method searches use the existing figure notes.</p>
+      <div class="gallery-advanced-fields">
+        <label for="gallery-field-title">Figure or paper title<input id="gallery-field-title" data-search-field="title" type="search" autocomplete="off"></label>
+        <label for="gallery-field-author">Author<input id="gallery-field-author" data-search-field="author" type="search" autocomplete="off"></label>
+        <label for="gallery-field-doi">DOI<input id="gallery-field-doi" data-search-field="doi" type="search" autocomplete="off" placeholder="10.1038/…"></label>
+        <label for="gallery-field-journal">Journal<input id="gallery-field-journal" data-search-field="journal" type="search" autocomplete="off"></label>
+        <label for="gallery-field-year">Year or range<input id="gallery-field-year" data-search-field="year" type="search" autocomplete="off" placeholder="2026 or 2020–2026"></label>
+        <label for="gallery-field-figure">Figure or panel<input id="gallery-field-figure" data-search-field="figure" type="search" autocomplete="off" placeholder="Figure 2"></label>
+        <label for="gallery-field-color">Color description or recorded HEX<input id="gallery-field-color" data-search-field="color" type="search" autocomplete="off" placeholder="Blue, diverging, #AABBCC"></label>
+        <label for="gallery-field-method">Method or visualization<input id="gallery-field-method" data-search-field="method" type="search" autocomplete="off" placeholder="Regression, SHAP, map…"></label>
+      </div>
+    </details>
+    <p id="gallery-count" role="status" aria-live="polite"></p>
+    <div id="gallery-grid" class="gallery-grid"></div>
+    <p id="gallery-empty" hidden>No figures match your search. Try another keyword or reset the filters.</p>
+    <noscript>Enable JavaScript to browse this local figure library.</noscript>
+  </section>
+  <dialog id="figure-detail" aria-labelledby="detail-title">
+    <div class="detail-toolbar"><span>Figure details</span><button id="detail-close" type="button" autofocus>Close</button></div>
+    <div class="detail-body">
+      <h2 id="detail-title"></h2><p id="detail-meta"></p>
+      <a id="detail-original" target="_blank" rel="noopener">Open full-size image in a new tab</a>
+      <div class="image-controls" role="group" aria-label="Image zoom controls">
+        <button id="zoom-fit" type="button">Fit image</button><button id="zoom-actual" type="button">Actual size</button>
+        <button id="zoom-out" type="button" aria-label="Zoom out">−</button><button id="zoom-in" type="button" aria-label="Zoom in">+</button><span id="zoom-level" role="status" aria-live="polite"></span>
+      </div>
+      <p class="gallery-muted">Zoom to inspect panel labels. Scroll within the image when enlarged. Keyboard: + / − to zoom, 0 to fit, 1 for actual size, Esc to close.</p>
+      <div id="detail-viewport" tabindex="0" role="region" aria-label="Scrollable figure image"><img id="detail-image" alt=""></div>
+      <p id="detail-image-error" hidden>Image unavailable. The reference notes remain available below.</p>
+      <p id="detail-categories"></p>
+      <p id="detail-translation" class="gallery-muted"></p>
+      <div id="detail-notes"></div>
+      <section class="detail-source" aria-labelledby="detail-source-heading">
+        <h3 id="detail-source-heading">Original Paper</h3><p id="detail-paper"></p><p id="detail-author"></p><a id="detail-doi" target="_blank" rel="noopener"></a>
+        <p id="detail-rights" class="gallery-muted" hidden></p>
+      </section>
+    </div>
+  </dialog>
+  <script id="gallery-data" type="application/json" data-mode="{{ $mode }}" data-image-hosts="{{ if eq $mode "public" }}{{ delimit hugo.Data.gallery.allowlist.image_hosts "," }}{{ end }}">{{ $figures | jsonify | safeJS }}</script>
+  {{ $js := slice (resources.Get "js/gallery-tools.js") (resources.Get "js/gallery.js") | resources.Concat "js/figure-gallery.js" | minify | fingerprint }}
+  <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+{{ else }}
+  <div class="post-content"><h2>Coming soon</h2><p>No public figures available yet. Only figures with confirmed publication permission and completed review will appear here.</p></div>
+{{ end }}
+{{ end }}

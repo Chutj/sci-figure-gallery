@@ -1,0 +1,38 @@
+name: Validate SCI Figure Gallery
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source and pinned theme
+        uses: actions/checkout@v7
+        with:
+          submodules: recursive
+          persist-credentials: false
+      - name: Validate public permissions and exact media hashes
+        run: python3 scripts/validate_public_gallery.py
+      - name: Run tests
+        run: |
+          node --version
+          python3 -m unittest discover -s scripts -p 'test_*.py'
+      - name: Install Hugo Extended
+        env:
+          HUGO_VERSION: '0.168.0'
+        run: |
+          curl --fail --silent --show-error --location --output "${RUNNER_TEMP}/hugo.tar.gz" "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
+          mkdir -p "${RUNNER_TEMP}/hugo"
+          tar -xzf "${RUNNER_TEMP}/hugo.tar.gz" -C "${RUNNER_TEMP}/hugo"
+          echo "${RUNNER_TEMP}/hugo" >> "${GITHUB_PATH}"
+      - name: Build public example without private inputs
+        run: |
+          hugo build --environment production --minify --destination public
+          python3 scripts/validate_public_gallery.py --output public

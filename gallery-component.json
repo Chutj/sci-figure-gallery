@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "name": "SCI Figure Gallery",
+  "repository": "https://github.com/Chutj/sci-figure-gallery",
+  "live_url": "https://chutj.github.io/gallery/",
+  "files": [
+    "assets/css/gallery.css",
+    "assets/js/gallery.js",
+    "assets/js/gallery-tools.js",
+    "layouts/gallery.html",
+    "layouts/_partials/gallery/licensing.html",
+    "layouts/_partials/gallery/public-records.html",
+    "content/gallery/_index.md",
+    "data/gallery/public.json",
+    "data/gallery/allowlist.json",
+    "data/gallery/media.json",
+    "scripts/public_gallery_schema.py",
+    "scripts/public_gallery_media.py",
+    "scripts/validate_public_gallery.py",
+    "scripts/test_gallery_frontend.cjs",
+    "scripts/test_gallery_frontend.py",
+    "gallery-component.json",
+    "scripts/check_gallery_component.py"
+  ]
+}

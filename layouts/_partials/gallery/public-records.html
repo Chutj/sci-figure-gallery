@@ -1,0 +1,42 @@
+{{/* Second gate for direct Hugo builds. CI also validates the complete schema. */}}
+{{ $result := slice }}
+{{ $public := index hugo.Data.gallery "public" }}
+{{ $policy := hugo.Data.gallery.allowlist }}
+{{ $editorKeys := slice "id" "title" "primary" "categories" "journal" "year" "doi" "figure" "paper" "author" "source" "sections" "translation_status" "width" "height" }}
+{{ range $r := $public.records }}
+  {{ range $a := $policy.approved_records }}
+    {{ $rights := $r.rights }}
+    {{ $eligible := and (eq $r.id $a.id) (eq $rights.status "approved") (eq $rights.public_use_allowed true) (eq $rights.human_reviewed true) $rights.approved_by $rights.approved_at $rights.license $rights.evidence_reference $rights.attribution (eq $r.translation_status "reviewed") (eq $r.source_image_sha256 $a.source_image_sha256) (eq $r.metadata_sha256 $a.metadata_sha256) (eq (jsonify $rights) (jsonify $a.rights)) (eq $r.image $a.image) (eq $r.thumbnail $a.thumbnail) (eq $r.srcset $a.srcset) }}
+    {{ if $eligible }}
+      {{ $eligible = and $rights.modification_status $rights.additional_credit }}
+    {{ end }}
+    {{ if $eligible }}
+      {{ $eligible = eq (len (findRE `^[a-f0-9]{64}$` ($rights.review_evidence_sha256 | default ""))) 1 }}
+    {{ end }}
+    {{ if $eligible }}
+      {{ $editor := dict }}
+      {{ range $editorKeys }}{{ $editor = merge $editor (dict . (index $r .)) }}{{ end }}
+      {{ $hash := sha256 (jsonify (dict "noHTMLEscape" true) $editor) }}
+      {{ $safe := and (eq $hash $r.metadata_sha256) (eq $r.source (printf "https://doi.org/%s" $r.doi)) (eq (len (findRE `file://|gallery-private|\.gallery-local|[\x{3400}-\x{9fff}]` (jsonify $r))) 0) }}
+      {{ range slice $r.image $r.thumbnail }}
+        {{ $url := urls.Parse . }}
+        {{ if not (and (eq $url.Scheme "https") (in $policy.image_hosts $url.Host) (not $url.User) (not $url.RawQuery) (not $url.Fragment)) }}{{ $safe = false }}{{ end }}
+      {{ end }}
+      {{ if $r.srcset }}
+        {{ range split $r.srcset "," }}
+          {{ $parts := split (strings.TrimSpace .) " " }}
+          {{ if ne (len $parts) 2 }}{{ $safe = false }}{{ else }}
+            {{ $url := urls.Parse (index $parts 0) }}
+            {{ if not (and (eq $url.Scheme "https") (in $policy.image_hosts $url.Host) (not $url.User) (not $url.RawQuery) (not $url.Fragment) (findRE `^[1-9][0-9]*w$` (index $parts 1))) }}{{ $safe = false }}{{ end }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      {{ if not (or (eq $rights.permission_basis "written_permission") (and (eq $rights.permission_basis "license") (strings.HasPrefix $rights.license_url "https://"))) }}{{ $safe = false }}{{ end }}
+      {{ if $safe }}
+        {{/* Only named public fields are serialized; never merge raw local metadata. */}}
+        {{ $result = $result | append (merge $editor (dict "image" $r.image "thumbnail" $r.thumbnail "srcset" $r.srcset "rights" $rights)) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ return $result }}

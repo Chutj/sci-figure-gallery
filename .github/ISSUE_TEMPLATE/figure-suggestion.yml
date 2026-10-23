@@ -1,0 +1,44 @@
+name: Suggest a scientific figure
+description: Recommend a paper and figure by reference, without uploading unreviewed material.
+title: "[Figure suggestion] "
+body:
+  - type: markdown
+    attributes:
+      value: Please provide references first. Do not upload PDFs, unverified images, private evidence or credentials. A suggestion is not publication approval.
+  - type: input
+    id: paper
+    attributes:
+      label: Paper title
+    validations:
+      required: true
+  - type: input
+    id: doi
+    attributes:
+      label: DOI or official article URL
+    validations:
+      required: true
+  - type: input
+    id: figure
+    attributes:
+      label: Figure or panel number and paper version
+    validations:
+      required: true
+  - type: textarea
+    id: learning
+    attributes:
+      label: Visualization features worth learning
+      description: Describe the figure type, encoding, layout or scientific communication ideas.
+    validations:
+      required: true
+  - type: textarea
+    id: rights
+    attributes:
+      label: License and credit references, if available
+      description: Link official terms and identify any third-party credit. Do not claim approval without review.
+  - type: checkboxes
+    id: acknowledgment
+    attributes:
+      label: Before submitting
+      options:
+        - label: I have not attached a PDF, unreviewed image, private evidence or credentials.
+          required: true
