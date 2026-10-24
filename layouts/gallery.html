@@ -18,7 +18,14 @@
       {{ $large := $image.Fit "960x4096 webp q82" }}
       {{ $media = dict "image" $image.RelPermalink "thumbnail" $thumb.RelPermalink "srcset" (printf "%s %dw, %s %dw, %s %dw" $small.RelPermalink $small.Width $thumb.RelPermalink $thumb.Width $large.RelPermalink $large.Width) "width" $image.Width "height" $image.Height }}
     {{ end }}
-    {{ $figures = $figures | append (merge . $media) }}
+    {{ $record := merge . $media }}
+    {{ $sourceHash := path.BaseName (path.Base .asset) }}
+    {{ range where hugo.Data.gallery.public.records "id" .id }}
+      {{ if eq .source_image_sha256 $sourceHash }}
+        {{ with .legend }}{{ $localLegend := merge . (dict "image" (urls.Parse .image).Path) }}{{ $record = merge $record (dict "legend" $localLegend) }}{{ end }}
+      {{ end }}
+    {{ end }}
+    {{ $figures = $figures | append $record }}
   {{ end }}
 {{ else }}
   {{ $figures = partial "gallery/public-records.html" . }}

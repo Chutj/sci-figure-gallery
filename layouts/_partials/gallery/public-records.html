@@ -16,11 +16,16 @@
     {{ if $eligible }}
       {{ $editor := dict }}
       {{ range $editorKeys }}{{ $editor = merge $editor (dict . (index $r .)) }}{{ end }}
+      {{ with $r.legend }}{{ $editor = merge $editor (dict "legend" .) }}{{ end }}
       {{ $hash := sha256 (jsonify (dict "noHTMLEscape" true) $editor) }}
       {{ $safe := and (eq $hash $r.metadata_sha256) (eq $r.source (printf "https://doi.org/%s" $r.doi)) (eq (len (findRE `file://|gallery-private|\.gallery-local|[\x{3400}-\x{9fff}]` (jsonify $r))) 0) }}
       {{ range slice $r.image $r.thumbnail }}
         {{ $url := urls.Parse . }}
         {{ if not (and (eq $url.Scheme "https") (in $policy.image_hosts $url.Host) (not $url.User) (not $url.RawQuery) (not $url.Fragment)) }}{{ $safe = false }}{{ end }}
+      {{ end }}
+      {{ with $r.legend }}
+        {{ $url := urls.Parse .image }}
+        {{ if not (and (eq $url.Scheme "https") (in $policy.image_hosts $url.Host) (not $url.User) (not $url.RawQuery) (not $url.Fragment) (findRE `^[a-f0-9]{64}$` .sha256)) }}{{ $safe = false }}{{ end }}
       {{ end }}
       {{ if $r.srcset }}
         {{ range split $r.srcset "," }}

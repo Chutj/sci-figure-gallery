@@ -97,3 +97,34 @@ class ComponentSyncTest(unittest.TestCase):
         self.assertTrue(all((self.site/name).is_file() for name in names))
         self.assertFalse((self.site/'not-exported.txt').exists())
         validate_component_lock(self.site)
+
+    def test_retirement_is_explicit_archived_and_limited_to_media(self):
+        from test_gallery_legend import SharedLegendTest
+        fixture=SharedLegendTest();fixture.setUp();del fixture.record['legend'];fixture.pin()
+        record=fixture.record;name='static/'+record['image'].split('chutj.github.io/',1)[1];payload=fixture.original
+        for directory in (self.source,self.site):
+            sync.write(directory/name,payload)
+            sync.write(directory/'data/gallery/public.json',sync.encoded(fixture.dataset))
+            sync.write(directory/'data/gallery/allowlist.json',sync.encoded(fixture.policy))
+            sync.write(directory/'data/gallery/media.json',sync.encoded(dict(schema_version=1,files=[dict(id=record['id'],url=record['image'],sha256=content_hash(payload,name))])))
+        self.commit(self.source);sync.apply(self.site,self.source)
+        # A new, explicitly reviewed version no longer publishes this media.
+        sync.write(self.source/'data/gallery/media.json',sync.encoded(dict(schema_version=1,files=[])))
+        sync.write(self.source/'data/gallery/public.json',sync.encoded(dict(schema_version=1,records=[])))
+        sync.write(self.source/'data/gallery/allowlist.json',sync.encoded(dict(schema_version=1,image_hosts=['chutj.github.io'],approved_records=[])))
+        (self.source/name).unlink();self.commit(self.source)
+        with self.assertRaisesRegex(ValueError,'separate review'):sync.apply(self.site,self.source)
+        self.assertEqual((self.site/name).read_bytes(),payload)
+        result=sync.apply(self.site,self.source,retire_media=True)
+        self.assertEqual(result['retired'],[name]);self.assertFalse((self.site/name).exists())
+        self.assertEqual(sync.filesystem_path(Path(result['backup'])/name).read_bytes(),payload)
+        self.assertEqual((self.site/'unrelated.txt').read_bytes(),b'preserve unrelated website content')
+        validate_component_lock(self.site)
+
+    def test_retirement_rejects_nonmedia_and_changed_bytes(self):
+        with self.assertRaisesRegex(ValueError,'Only previous approved'):
+            sync.retired_media(['docs/important.txt'],[],dict(files=[]),True)
+        name='static/figures/approved/fixture/image.png';sync.write(self.source/name,b'changed bytes')
+        with self.assertRaisesRegex(ValueError,'changed or unsafe'):
+            sync.archive_retired(self.source,{name:'0'*64},self.source/'.gallery-dev/backup')
+        self.assertEqual((self.source/name).read_bytes(),b'changed bytes')

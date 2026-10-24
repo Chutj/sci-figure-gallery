@@ -12,6 +12,7 @@ RIGHTS_FIELDS = ('status', 'public_use_allowed', 'human_reviewed', 'approved_by'
                 'permission_basis', 'license', 'license_url', 'evidence_reference', 'attribution', 'review_evidence_sha256',
                 'modification_status', 'additional_credit')
 PUBLIC_FIELDS = set(EDITOR_FIELDS) | {'source_image_sha256', 'metadata_sha256', 'rights', 'image', 'thumbnail', 'srcset'}
+OPTIONAL_EDITOR_FIELDS = {'legend'}
 APPROVAL_FIELDS = {'id', 'source_image_sha256', 'metadata_sha256', 'rights', 'image', 'thumbnail', 'srcset'}
 SECTIONS = {'What the figure shows', 'Statistics & symbols', 'Color & encoding', 'Design lessons', 'Verification & limitations'}
 HASH = re.compile(r'^[a-f0-9]{64}$')
@@ -25,6 +26,7 @@ def require(condition, message):
 
 def editor_payload(record):
     result = {key: record[key] for key in EDITOR_FIELDS}
+    result.update({key:record[key] for key in OPTIONAL_EDITOR_FIELDS if key in record})
     result['source'] = 'https://doi.org/' + result['doi']
     return result
 
@@ -110,7 +112,7 @@ def validate_dataset(dataset, policy):
             and dataset['schema_version'] == 1 and isinstance(dataset['records'],list), 'Invalid public dataset schema')
     seen = set()
     for record in dataset['records']:
-        require(isinstance(record,dict) and set(record) == PUBLIC_FIELDS, 'Private or unknown record fields rejected')
+        require(isinstance(record,dict) and PUBLIC_FIELDS <= set(record) <= PUBLIC_FIELDS | OPTIONAL_EDITOR_FIELDS, 'Private or unknown record fields rejected')
         uid = record['id']
         require(uid in approved and uid not in seen, 'Record absent from whitelist or duplicated')
         seen.add(uid)
@@ -118,6 +120,13 @@ def validate_dataset(dataset, policy):
         for field in APPROVAL_FIELDS:
             require(record[field] == approval[field], 'Record differs from pinned approval: '+field)
         require(record['metadata_sha256'] == metadata_hash(record), 'Public metadata changed after review')
+        if 'legend' in record:
+            legend = record['legend']
+            require(isinstance(legend,dict) and set(legend)=={'image','sha256','width','height','label'}, 'Explicit complete shared legend required')
+            https_url(legend['image'],policy['image_hosts'])
+            require(bool(HASH.fullmatch(legend.get('sha256',''))), 'Legend SHA256 required')
+            require(all(type(legend[k]) is int and 0 < legend[k] <= 100000 for k in ('width','height')), 'Invalid legend dimensions')
+            require(isinstance(legend['label'],str) and bool(legend['label'].strip()), 'Legend label required')
         require(record['translation_status'] == 'reviewed', 'Unreviewed English description rejected')
         for field in ('title','primary','journal','doi','figure','paper','author','source'):
             require(isinstance(record[field],str) and record[field].strip(), 'Missing public '+field)

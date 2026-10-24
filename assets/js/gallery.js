@@ -199,6 +199,19 @@
         const status = document.createElement('p'); status.id = 'detail-color-status'; status.className = 'gallery-muted';
         status.setAttribute('role', 'status'); status.setAttribute('aria-live', 'polite');
         section.append(palette, caption, status);
+        const legend = figure.legend;
+        const legendPath = legend && safePath(legend.image);
+        if (legendPath) {
+          const details = document.createElement('details'); details.className = 'figure-legend';
+          const summary = document.createElement('summary'); summary.textContent = 'Shared source legend';
+          const link = document.createElement('a'); link.href = legendPath; link.target = '_blank'; link.rel = 'noopener';
+          const img = document.createElement('img'); img.alt = legend.label || 'Shared source legend';
+          img.width = legend.width; img.height = legend.height; img.loading = 'lazy';
+          const note = document.createElement('p'); note.className = 'gallery-muted'; note.textContent = 'Shown separately from the original panel excerpt. Open the legend for full size.';
+          img.addEventListener('error', () => { img.hidden = true; note.textContent = 'Legend preview unavailable. Open the source legend in a new tab.'; });
+          link.append(img); details.append(summary, link, note); section.append(details);
+          details.addEventListener('toggle', () => { if (details.open && !img.hasAttribute('src')) img.src = legendPath; });
+        }
       }
     });
     if (!publicMode && figure.pdf_reference) {

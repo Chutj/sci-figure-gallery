@@ -24,6 +24,7 @@ def validate_media(root, dataset, policy, output=None):
     expected = {}
     for record in dataset['records']:
         urls = [record['image'], record['thumbnail']]
+        if 'legend' in record: urls.append(record['legend']['image'])
         urls += [part.strip().split()[0] for part in record['srcset'].split(',') if part.strip()]
         for url in urls:
             if url.startswith(SITE + '/'):
@@ -46,6 +47,9 @@ def validate_media(root, dataset, policy, output=None):
             raise ValueError('Approved media bytes changed')
         if url == approvals[rid]['image'] and digest != approvals[rid]['source_image_sha256']:
             raise ValueError('Original image differs from reviewed source')
+        record = next(r for r in dataset['records'] if r['id']==rid)
+        if url == record.get('legend',{}).get('image') and digest != record['legend']['sha256']:
+            raise ValueError('Shared legend differs from reviewed metadata')
         if output:
             built = output / str(relative)
             if not built.is_file() or hashlib.sha256(built.read_bytes()).hexdigest() != digest:

@@ -46,10 +46,18 @@ python scripts/sync_website.py apply --website ../chutj.github.io --ref <commit>
 
 最后在 Website 做生产构建和 Git 提交审查，确认后部署。新的双仓库顺序取代直接执行旧单仓库 `publish --execute`；直接修改网站的托管 JSON 会被版本锁拦截。日常仍可以告诉 Codex：“检查 FIG 新增内容，准备本次 Figure Gallery 更新。”批准发布时需要完成上述两仓库顺序。
 
+## 分类裁图与共享图例
+
+- 按 FIG 已整理的分类文件逐张发布，一张卡片对应一份裁图，主图保持原始字节。
+- 不得为补充图例而把不同图型的裁图合并，或替换成整幅 Figure；同类多面板图按 FIG 的现有组合保留。
+- 分类使用当前裁图的类别，不继承完整 Figure 中其他面板的类别。
+- 可选 `legend` 保存独立共享图例的 URL、完整 SHA-256、尺寸和英文标签，并纳入元数据审批哈希和媒体清单。详情中单独展开，不能拼入主图。
+- 需要替换旧发布版本时，先审查精确媒体移出清单，再对 capture-public / plan / apply 显式加 `--retire-media`。程序只允许核验并备份此前批准的静态媒体，不移除代码、无关文件或 FIG 原件。备份分别在 `.gallery-dev/retired-public/` 和 Website `.gallery-local/component-sync/`；Git 历史也保留。
+
 ## 安全与失败处理
 
 - 代码 MIT 不覆盖科研图片；逐图许可、版本、第三方材料和实际用途继续审核。
 - 同一篇论文的新图不会继承旧图审批。
-- 删除或撤回媒体需要单独审查；同步不会自动删除旧文件。
+- 删除或撤回媒体需要单独审查；默认同步不会自动删除旧文件。
 - 失败时先查看命令的 STOP 原因、Git 状态以及 Website `.gallery-local/component-sync/` 的备份，不 force push，不自动回滚覆盖。
 - CODEOWNERS 用于指定代码审阅人；是否强制审阅取决于 GitHub 分支规则，不能把文件本身当成已启用分支保护。

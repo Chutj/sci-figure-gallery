@@ -35,6 +35,7 @@ def build(hugo,root=ROOT,base_url='http://127.0.0.1:1320/'):
                 return parsed.path
             for figure in figures:
                 figure['image']=local(figure['image']);figure['thumbnail']=local(figure['thumbnail'])
+                if 'legend' in figure: figure['legend']['image']=local(figure['legend']['image'])
                 figure['srcset']=', '.join(local(part.strip().split()[0])+' '+part.strip().split()[1]
                     for part in figure['srcset'].split(',') if part.strip())
             tag=re.sub(r'data-mode=(?:"public"|\'public\'|public)', 'data-mode="candidate"',match[1])

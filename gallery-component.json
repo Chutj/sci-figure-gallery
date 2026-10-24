@@ -19,6 +19,7 @@
     "scripts/validate_public_gallery.py",
     "scripts/test_gallery_frontend.cjs",
     "scripts/test_gallery_frontend.py",
+    "scripts/test_gallery_legend.py",
     "gallery-component.json",
     "scripts/check_gallery_component.py",
     "third_party/sci-figure-gallery/LICENSE",
