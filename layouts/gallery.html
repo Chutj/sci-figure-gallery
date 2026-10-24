@@ -1,5 +1,10 @@
 {{ define "main" }}
-<header class="page-header"><h1>{{ .Title }}</h1><p>{{ .Description }}</p></header>
+<header class="page-header gallery-heading">
+  <div><h1>{{ .Title }}</h1><p>{{ .Description }}</p></div>
+  <a class="gallery-repository" href="https://github.com/Chutj/sci-figure-gallery" target="_blank" rel="noopener noreferrer" aria-label="SCI Figure Gallery on GitHub (opens in a new tab)">
+    <span aria-hidden="true">{{ partial "svg.html" (dict "name" "github") }}</span><span>GitHub</span>
+  </a>
+</header>
 {{ $css := resources.Get "css/gallery.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 {{ partial "gallery/licensing.html" . }}

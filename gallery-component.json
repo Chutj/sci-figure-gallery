@@ -20,6 +20,7 @@
     "scripts/test_gallery_frontend.cjs",
     "scripts/test_gallery_frontend.py",
     "scripts/test_gallery_legend.py",
+    "scripts/test_site_branding.py",
     "gallery-component.json",
     "scripts/check_gallery_component.py",
     "third_party/sci-figure-gallery/LICENSE",
