@@ -2137,3 +2137,1056 @@ Vegetation losses under flash and conventional drought
 - Modification status: Complete original Figure 3 reproduced from the final publisher PDF by direct page-region rendering; no relabeling, recoloring, panel rearrangement or compositing. Proportional resizing and WebP thumbnail conversion only.
 - Additional credit: No separately excluded material identified in the reviewed original figure, caption, PDF notices or official article page.
 - Approved source image SHA-256: `452d1f1b11d9f0ffd00395710d6941321c742d8def7d2385e58a895d873a6e53`
+
+## fig-003c1baf1ffb595bba35e9036fc5ee7d
+
+Regional distributions of tree-richness change
+
+- Original paper: Tree diversity is changing across tropical Andean and Amazonian forests in response to global change
+- DOI: https://doi.org/10.1038/s41559-025-02956-5
+- Figure: Figure 3 (b)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: B. Fadrique; F. Costa; F. Cuesta; G. Arellano; L. Cayuela; T. R. Baker; F. C. Draper; A. Esquivel-Muelbert; H. ter Steege; M. Bauters; J. Aguirre-Gutiérrez; Z. Aguirre-Mendoza; M. N. Alexiades; E. Alvarez-Davila; E. Arets; E. Ayala; C. G. A. Aymard; F. Baccaro; S. Báez; C. Baraloto; R. I. Barbosa; P. Barbosa Camargo; J. Barlow; P. E. Barni; J. Barroso; M. Benchimol; A. C. Bennett; E. Berenguer; L. Blanc; D. Bonal; F. Bongers; R. Brienen; F. Brown; M. BT Andrade; B. Burban; R. J. Burnham; J. L. Camargo; S. P. C. Carvalho; C. Castilho; J. Chave; F. Coelho de Souza; J. Comiskey; L. da Costa; R. B. de Lima; E. A. de Oliveira; R. L. C. de Oliveira; R. de Oliveira Perdiz; J. De Rutte; J. del Aguila-Pasquel; G. Derroire; A. Di Fiore; M. Disney; A. Duque; T. Emilio; W. Farfan-Rios; S. Fauset; P. M. Fearnside; K. J. Feeley; T. R. Feldpausch; J. Ferreira; L. Ferreira; G. R. Flores Llampazo; D. Galbraith; K. García-Cabrera; M. García Criado; E. Gloor; J. M. Grandez-Rios; B. Hérault; J. Homeier; E. N. Honorio Coronado; I. Huamantupa-Chuquimaco; W. Huaraca Huasco; Y. T. Huillca-Aedo; Á. Idárraga; O. Jadán-Maza; M. Kalamandeen; T. J. Killeen; S. G. W. Laurance; W. F. Laurance; A. Levesley; W. Lopez; M. J. Macía; W. E. Magnusson; Y. Malhi; A. G. Manzatto; B. S. Marimon; B. H. Marimon Junior; J. A. Martínez-Villa; M. B. Medeiros; K. Melgaço; L. Melo; T. Metzker; A. Monteagudo; P. S. Morandi; J. A. Myers; H. M. Nascimento; R. Nascimento; D. Neill; B. Nieto-Ariza; W. A. Palacios; S. Palacios-Ramos; N. C. Pallqui-Camacho; G. Pardo Molina; J. Peacock; M. A. Peña; R. T. Pennington; M. C. Peñuela; C. A. Peres; Á. J. Pérez; G. C. Pickavance; E. Pinto; J. Pipoly; N. Pitman; A. Prieto; H. Ramírez-Angulo; S. M. Reis; Z. Restrepo; C. Reynel; S. Ribeiro; G. Rivas-Torres; R. Rojas; A. Rudas; N. Salinas; R. P. Salomão; F. Santana; J. Schietti; G. Schwartz; J. Serrano; M. Silman; C. Silva; C. A. Silva; R. C. Silva; R. S. A. Silva; J. Silva-Espejo; M. Silveira; M. F. Simon; Y. C. Soto-Shareva; P. F. Souza; D. Storck-Tonon; J. Stropp; V. Swamy; J. S. Tello; J. Terborgh; R. Thomas; A. Torres-Lezama; J. D. Vale; L. Valenzuela Gamarra; G. van der Heijden; P. van der Hout; P. J. van der Meer; R. Vasquez Martinez; L. Vedovato; H. Verbeeck; I. Vieira; S. A. Vieira; E. Vilanova; B. Vinceti; V. A. Vos; R. Zagt; P. A. Zuidema; O. L. Phillips. Tree diversity is changing across tropical Andean and Amazonian forests in response to global change. Nature Ecology & Evolution (2026), Figure 3 (b). https://doi.org/10.1038/s41559-025-02956-5. Copyright The Author(s) 2026, modified publication 2026. CC BY 4.0. No endorsement implied.
+- Modification status: Original rectangular panel excerpt (b) from the final publisher version. Cropped from the publisher PNG without rearranging, redrawing, recoloring or relabeling; other panels are omitted. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `ea69b44696d1d223c07d5037b5db2ec6e4206e2b7be213ae4bdd6d6f2c90250c`
+
+## fig-091d5549216c53d49f915de76ed74002
+
+Research themes in a correspondence-analysis ordination
+
+- Original paper: Artificial intelligence in sustainable development research
+- DOI: https://doi.org/10.1038/s41893-025-01598-6
+- Figure: Figure 2 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: C. Gohr; G. Rodríguez; S. Belomestnykh; D. Berg-Moelleken; N. Chauhan; J.-O. Engler; L. V. Heydebreck; M. J. Hintz; M. Kretschmer; C. Krügermeier; J. Meinberg; A.-L. Rau; C. Schwenck; I. Aoulkadi; S. Poll; E. Frank; F. Creutzig; O. Lemke; M. Maushart; J. Pfendtner-Heise; J. Rathgens; H. von Wehrden. Artificial intelligence in sustainable development research. Nature Sustainability (2025), Figure 2 (complete). https://doi.org/10.1038/s41893-025-01598-6. Copyright The Author(s) 2025, corrected publication 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `14893cb39e58141a973da818575dea548d6b0318d08c3e92e2392069b8c70973`
+
+## fig-0bad69070a5a5a79bfdf47f28ea9c89d
+
+Geographic distributions of food-system outcomes
+
+- Original paper: A food system transformation pathway reconciles 1.5 °C global warming with improved health, environment and social inclusion
+- DOI: https://doi.org/10.1038/s43016-025-01268-y
+- Figure: Figure 5 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Benjamin Leon Bodirsky; Felicitas Beier; Florian Humpenöder; Debbora Leip; Michael S. Crawford; David Meng-Chuen Chen; Patrick von Jeetze; Marco Springmann; Bjoern Soergel; Zebedee Nicholls; Jessica Strefler; Jared Lewis; Jens Heinke; Christoph Müller; Kristine Karstens; Isabelle Weindl; Miodrag Stevanović; Patrick Rein; Pascal Sauer; Abhijeet Mishra; Edna Johanna Molina Bacca; Alexandre C. Köberle; Xiaoxi Wang; Vartika Singh; Claudia Hunecke; Quitterie Collignon; Pepijn Schreinemachers; Simon Dietz; Ravi Kanbur; Jan Philipp Dietrich; Hermann Lotze-Campen; Alexander Popp. A food system transformation pathway reconciles 1.5 °C global warming with improved health, environment and social inclusion. Nature Food (2025), Figure 5 (complete). https://doi.org/10.1038/s43016-025-01268-y. Copyright The Author(s) 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `32f1974afe01f78d7a7629627c55dc922a907d7342f4f2de45651ef9e0c39905`
+
+## fig-0f27d03ab55c5d79869d5a5cf81ceb92
+
+Water-regulation strategies as overlapping distributions
+
+- Original paper: Towards a unified theory of plant photosynthesis and hydraulics
+- DOI: https://doi.org/10.1038/s41477-022-01244-5
+- Figure: Figure 5 (a)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Jaideep Joshi; Benjamin D. Stocker; Florian Hofhansl; Shuangxi Zhou; Ulf Dieckmann; Iain Colin Prentice. Towards a unified theory of plant photosynthesis and hydraulics. Nature Plants (2022), Figure 5 (a). https://doi.org/10.1038/s41477-022-01244-5. Copyright The Author(s) 2022. CC BY 4.0. No endorsement implied.
+- Modification status: Original rectangular panel excerpt (a) from the final publisher version. Cropped from the publisher PNG without rearranging, redrawing, recoloring or relabeling; other panels are omitted. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `c30d17902521e388d901b4aad985bc4f23aae9d43a1179ac3c102f37f3974900`
+
+## fig-0f3e895f262e529ab1dff38340684364
+
+Local transgressions of Earth system boundaries
+
+- Original paper: Safe and just Earth system boundaries
+- DOI: https://doi.org/10.1038/s41586-023-06083-8
+- Figure: Figure 3 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Johan Rockström; Joyeeta Gupta; Dahe Qin; Steven J. Lade; Jesse F. Abrams; Lauren S. Andersen; David I. Armstrong McKay; Xuemei Bai; Govindasamy Bala; Stuart E. Bunn; Daniel Ciobanu; Fabrice DeClerck; Kristie Ebi; Lauren Gifford; Christopher Gordon; Syezlin Hasan; Norichika Kanie; Timothy M. Lenton; Sina Loriani; Diana M. Liverman; Awaz Mohamed; Nebojsa Nakicenovic; David Obura; Daniel Ospina; Klaudia Prodani; Crelis Rammelt; Boris Sakschewski; Joeri Scholtens; Ben Stewart-Koster; Thejna Tharammal; Detlef van Vuuren; Peter H. Verburg; Ricarda Winkelmann; Caroline Zimm; Elena M. Bennett; Stefan Bringezu; Wendy Broadgate; Pamela A. Green; Lei Huang; Lisa Jacobson; Christopher Ndehedehe; Simona Pedde; Juan Rocha; Marten Scheffer; Lena Schulte-Uebbing; Wim de Vries; Cunde Xiao; Chi Xu; Xinwu Xu; Noelia Zafra-Calvo; Xin Zhang. Safe and just Earth system boundaries. Nature (2023), Figure 3 (complete). https://doi.org/10.1038/s41586-023-06083-8. Copyright The Author(s) 2023. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `e6263cbfcd6240f019e8b4a883c99da44dfab5788e28c465ca65bd4285c2fc63`
+
+## fig-0f92440e258f5ffb8bb9995530fe8b28
+
+Baseline and sustainable food-system pathways
+
+- Original paper: A food system transformation pathway reconciles 1.5 °C global warming with improved health, environment and social inclusion
+- DOI: https://doi.org/10.1038/s43016-025-01268-y
+- Figure: Figure 3 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Benjamin Leon Bodirsky; Felicitas Beier; Florian Humpenöder; Debbora Leip; Michael S. Crawford; David Meng-Chuen Chen; Patrick von Jeetze; Marco Springmann; Bjoern Soergel; Zebedee Nicholls; Jessica Strefler; Jared Lewis; Jens Heinke; Christoph Müller; Kristine Karstens; Isabelle Weindl; Miodrag Stevanović; Patrick Rein; Pascal Sauer; Abhijeet Mishra; Edna Johanna Molina Bacca; Alexandre C. Köberle; Xiaoxi Wang; Vartika Singh; Claudia Hunecke; Quitterie Collignon; Pepijn Schreinemachers; Simon Dietz; Ravi Kanbur; Jan Philipp Dietrich; Hermann Lotze-Campen; Alexander Popp. A food system transformation pathway reconciles 1.5 °C global warming with improved health, environment and social inclusion. Nature Food (2025), Figure 3 (complete). https://doi.org/10.1038/s43016-025-01268-y. Copyright The Author(s) 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `b9a0e56367550a538d4f6f8c9d3344f3d017063e15da144f8b6b10e82d6000db`
+
+## fig-1632d61040e25dfa959a436494201ae0
+
+Carbon-pulse contributions and method comparisons
+
+- Original paper: Widespread underestimation of rain-induced soil carbon emissions from global drylands
+- DOI: https://doi.org/10.1038/s41561-025-01754-9
+- Figure: Figure 2 (a-b)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Ngoc B. Nguyen; Mirco Migliavacca; Maoya Bassiouni; Dennis D. Baldocchi; Laureano A. Gherardi; Julia K. Green; Dario Papale; Markus Reichstein; Kai-Hendrik Cohrs; Alessandro Cescatti; Tuan Dung Nguyen; Hoang H. Nguyen; Quang Minh Nguyen; Trevor F. Keenan. Widespread underestimation of rain-induced soil carbon emissions from global drylands. Nature Geoscience (2025), Figure 2 (a-b). https://doi.org/10.1038/s41561-025-01754-9. Copyright The Author(s) 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Original rectangular panel excerpt (a-b) from the final publisher version. Cropped from the publisher PNG without rearranging, redrawing, recoloring or relabeling; other panels are omitted. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `95632a6aaa5181017a0541a430e47bccf20c9390d74cbfb761912c96cb4e92d0`
+
+## fig-189d0e900dff544c89b895bef9370d7e
+
+Seasonal carbon fluxes across two periods
+
+- Original paper: Wildfires offset the increasing but spatially heterogeneous Arctic–boreal CO2 uptake
+- DOI: https://doi.org/10.1038/s41558-024-02234-5
+- Figure: Figure 3 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Anna-Maria Virkkala; Brendan M. Rogers; Jennifer D. Watts; Kyle A. Arndt; Stefano Potter; Isabel Wargowsky; Edward A. G. Schuur; Craig R. See; Marguerite Mauritz; Julia Boike; M. Syndonia Bret-Harte; Eleanor J. Burke; Arden Burrell; Namyi Chae; Abhishek Chatterjee; Frederic Chevallier; Torben R. Christensen; Roisin Commane; Han Dolman; Colin W. Edgar; Bo Elberling; Craig A. Emmerton; Eugenie S. Euskirchen; Liang Feng; Mathias Göckede; Achim Grelle; Manuel Helbig; David Holl; Järvi Järveoja; Sergey V. Karsanaev; Hideki Kobayashi; Lars Kutzbach; Junjie Liu; Ingrid T. Luijkx; Efrén López-Blanco; Kyle Lunneberg; Ivan Mammarella; Maija E. Marushchak; Mikhail Mastepanov; Yojiro Matsuura; Trofim C. Maximov; Lutz Merbold; Gesa Meyer; Mats B. Nilsson; Yosuke Niwa; Walter Oechel; Paul I. Palmer; Sang-Jong Park; Frans-Jan W. Parmentier; Matthias Peichl; Wouter Peters; Roman Petrov; William Quinton; Christian Rödenbeck; Torsten Sachs; Christopher Schulze; Oliver Sonnentag; Vincent L. St. Louis; Eeva-Stiina Tuittila; Masahito Ueyama; Andrej Varlagin; Donatella Zona; Susan M. Natali. Wildfires offset the increasing but spatially heterogeneous Arctic–boreal CO2 uptake. Nature Climate Change (2025), Figure 3 (complete). https://doi.org/10.1038/s41558-024-02234-5. Copyright The Author(s) 2025, corrected publication 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `acb7831ce0efc129033058a4a59584eaea24d303f64fec1f2445a424d8f90b83`
+
+## fig-19ca87e639de50368184b877d274d224
+
+Hydraulic trade-offs and safety margins
+
+- Original paper: Towards a unified theory of plant photosynthesis and hydraulics
+- DOI: https://doi.org/10.1038/s41477-022-01244-5
+- Figure: Figure 5 (c-d)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Jaideep Joshi; Benjamin D. Stocker; Florian Hofhansl; Shuangxi Zhou; Ulf Dieckmann; Iain Colin Prentice. Towards a unified theory of plant photosynthesis and hydraulics. Nature Plants (2022), Figure 5 (c-d). https://doi.org/10.1038/s41477-022-01244-5. Copyright The Author(s) 2022. CC BY 4.0. No endorsement implied.
+- Modification status: Original rectangular panel excerpt (c-d) from the final publisher version. Cropped from the publisher PNG without rearranging, redrawing, recoloring or relabeling; other panels are omitted. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `9a9eb6f43eac36e01e564f7dac14a8b6c32895f421b89c6ebaafe4f76c904b12`
+
+## fig-1c5d81f49a77535f98c41bed8bcbd10e
+
+Bleaching exposure at restored and control reefs
+
+- Original paper: Restoration cannot be scaled up globally to save reefs from loss and degradation
+- DOI: https://doi.org/10.1038/s41559-025-02667-x
+- Figure: Figure 4 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Clelia Mulà; Corey J. A. Bradshaw; Mar Cabeza; Federica Manca; Simone Montano; Giovanni Strona. Restoration cannot be scaled up globally to save reefs from loss and degradation. Nature Ecology & Evolution (2025), Figure 4 (complete). https://doi.org/10.1038/s41559-025-02667-x. Copyright The Author(s) 2025, corrected publication 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `ff7d7af10ed7e8f353493912e17bd624338fd507c583217c8e40af6446d5a9bd`
+
+## fig-1de65728374e5da28af64e12118dde02
+
+AI roles across sustainability research themes
+
+- Original paper: Artificial intelligence in sustainable development research
+- DOI: https://doi.org/10.1038/s41893-025-01598-6
+- Figure: Figure 3 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: C. Gohr; G. Rodríguez; S. Belomestnykh; D. Berg-Moelleken; N. Chauhan; J.-O. Engler; L. V. Heydebreck; M. J. Hintz; M. Kretschmer; C. Krügermeier; J. Meinberg; A.-L. Rau; C. Schwenck; I. Aoulkadi; S. Poll; E. Frank; F. Creutzig; O. Lemke; M. Maushart; J. Pfendtner-Heise; J. Rathgens; H. von Wehrden. Artificial intelligence in sustainable development research. Nature Sustainability (2025), Figure 3 (complete). https://doi.org/10.1038/s41893-025-01598-6. Copyright The Author(s) 2025, corrected publication 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `9af2a361b3a31fde4f3834f8bd506b27fb1b363ffe2335fced2fa98431aa0b78`
+
+## fig-209566fe1c7e570993143c1c36fcd7aa
+
+Detection recall across pulse-intensity groups
+
+- Original paper: Widespread underestimation of rain-induced soil carbon emissions from global drylands
+- DOI: https://doi.org/10.1038/s41561-025-01754-9
+- Figure: Figure 4 (b)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Ngoc B. Nguyen; Mirco Migliavacca; Maoya Bassiouni; Dennis D. Baldocchi; Laureano A. Gherardi; Julia K. Green; Dario Papale; Markus Reichstein; Kai-Hendrik Cohrs; Alessandro Cescatti; Tuan Dung Nguyen; Hoang H. Nguyen; Quang Minh Nguyen; Trevor F. Keenan. Widespread underestimation of rain-induced soil carbon emissions from global drylands. Nature Geoscience (2025), Figure 4 (b). https://doi.org/10.1038/s41561-025-01754-9. Copyright The Author(s) 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Original rectangular panel excerpt (b) from the final publisher version. Cropped from the publisher PNG without rearranging, redrawing, recoloring or relabeling; other panels are omitted. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `2f6c70d64bc02450547fa8aa5bc0c28e3837654587591273e15c94437f6233c9`
+
+## fig-20d4d66dbf375024b3a176b88fa298b4
+
+Carbon budgets with and without wildfire emissions
+
+- Original paper: Wildfires offset the increasing but spatially heterogeneous Arctic–boreal CO2 uptake
+- DOI: https://doi.org/10.1038/s41558-024-02234-5
+- Figure: Figure 2 (a-b)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Anna-Maria Virkkala; Brendan M. Rogers; Jennifer D. Watts; Kyle A. Arndt; Stefano Potter; Isabel Wargowsky; Edward A. G. Schuur; Craig R. See; Marguerite Mauritz; Julia Boike; M. Syndonia Bret-Harte; Eleanor J. Burke; Arden Burrell; Namyi Chae; Abhishek Chatterjee; Frederic Chevallier; Torben R. Christensen; Roisin Commane; Han Dolman; Colin W. Edgar; Bo Elberling; Craig A. Emmerton; Eugenie S. Euskirchen; Liang Feng; Mathias Göckede; Achim Grelle; Manuel Helbig; David Holl; Järvi Järveoja; Sergey V. Karsanaev; Hideki Kobayashi; Lars Kutzbach; Junjie Liu; Ingrid T. Luijkx; Efrén López-Blanco; Kyle Lunneberg; Ivan Mammarella; Maija E. Marushchak; Mikhail Mastepanov; Yojiro Matsuura; Trofim C. Maximov; Lutz Merbold; Gesa Meyer; Mats B. Nilsson; Yosuke Niwa; Walter Oechel; Paul I. Palmer; Sang-Jong Park; Frans-Jan W. Parmentier; Matthias Peichl; Wouter Peters; Roman Petrov; William Quinton; Christian Rödenbeck; Torsten Sachs; Christopher Schulze; Oliver Sonnentag; Vincent L. St. Louis; Eeva-Stiina Tuittila; Masahito Ueyama; Andrej Varlagin; Donatella Zona; Susan M. Natali. Wildfires offset the increasing but spatially heterogeneous Arctic–boreal CO2 uptake. Nature Climate Change (2025), Figure 2 (a-b). https://doi.org/10.1038/s41558-024-02234-5. Copyright The Author(s) 2025, corrected publication 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Original rectangular panel excerpt (a-b) from the final publisher version. Cropped from the publisher PNG without rearranging, redrawing, recoloring or relabeling; other panels are omitted. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `38e62cbe21582409f2cc76323c24f3ac3f3ebb70cb52c93356b2feb1e308fdba`
+
+## fig-2a7f6fac33a05776a51ffcdd7d4ddeda
+
+Arctic–boreal carbon flux means and trends
+
+- Original paper: Wildfires offset the increasing but spatially heterogeneous Arctic–boreal CO2 uptake
+- DOI: https://doi.org/10.1038/s41558-024-02234-5
+- Figure: Figure 1 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Anna-Maria Virkkala; Brendan M. Rogers; Jennifer D. Watts; Kyle A. Arndt; Stefano Potter; Isabel Wargowsky; Edward A. G. Schuur; Craig R. See; Marguerite Mauritz; Julia Boike; M. Syndonia Bret-Harte; Eleanor J. Burke; Arden Burrell; Namyi Chae; Abhishek Chatterjee; Frederic Chevallier; Torben R. Christensen; Roisin Commane; Han Dolman; Colin W. Edgar; Bo Elberling; Craig A. Emmerton; Eugenie S. Euskirchen; Liang Feng; Mathias Göckede; Achim Grelle; Manuel Helbig; David Holl; Järvi Järveoja; Sergey V. Karsanaev; Hideki Kobayashi; Lars Kutzbach; Junjie Liu; Ingrid T. Luijkx; Efrén López-Blanco; Kyle Lunneberg; Ivan Mammarella; Maija E. Marushchak; Mikhail Mastepanov; Yojiro Matsuura; Trofim C. Maximov; Lutz Merbold; Gesa Meyer; Mats B. Nilsson; Yosuke Niwa; Walter Oechel; Paul I. Palmer; Sang-Jong Park; Frans-Jan W. Parmentier; Matthias Peichl; Wouter Peters; Roman Petrov; William Quinton; Christian Rödenbeck; Torsten Sachs; Christopher Schulze; Oliver Sonnentag; Vincent L. St. Louis; Eeva-Stiina Tuittila; Masahito Ueyama; Andrej Varlagin; Donatella Zona; Susan M. Natali. Wildfires offset the increasing but spatially heterogeneous Arctic–boreal CO2 uptake. Nature Climate Change (2025), Figure 1 (complete). https://doi.org/10.1038/s41558-024-02234-5. Copyright The Author(s) 2025, corrected publication 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `19963780718a15cb99269eaa310f2699e153b0bb428f6a9ed461ae832cdff17d`
+
+## fig-2c73c1b5ba2553feb5a7ec8bd87b9325
+
+Tropical forest loss, warming and population
+
+- Original paper: Tropical deforestation is associated with considerable heat-related mortality
+- DOI: https://doi.org/10.1038/s41558-025-02411-0
+- Figure: Figure 1 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: C. L. Reddington; C. Smith; E. W. Butt; J. C. A. Baker; B. F. A. Oliveira; E. I. Yamba; D. V. Spracklen. Tropical deforestation is associated with considerable heat-related mortality. Nature Climate Change (2025), Figure 1 (complete). https://doi.org/10.1038/s41558-025-02411-0. Copyright The Author(s) 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `645fe2a93a4f28eb22f227d585947d897659535c985b1c736a8bf1eda5c32cac`
+
+## fig-3855aa16422659e084647128140e57c3
+
+Tree-richness change across geographic gradients
+
+- Original paper: Tree diversity is changing across tropical Andean and Amazonian forests in response to global change
+- DOI: https://doi.org/10.1038/s41559-025-02956-5
+- Figure: Figure 1 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: B. Fadrique; F. Costa; F. Cuesta; G. Arellano; L. Cayuela; T. R. Baker; F. C. Draper; A. Esquivel-Muelbert; H. ter Steege; M. Bauters; J. Aguirre-Gutiérrez; Z. Aguirre-Mendoza; M. N. Alexiades; E. Alvarez-Davila; E. Arets; E. Ayala; C. G. A. Aymard; F. Baccaro; S. Báez; C. Baraloto; R. I. Barbosa; P. Barbosa Camargo; J. Barlow; P. E. Barni; J. Barroso; M. Benchimol; A. C. Bennett; E. Berenguer; L. Blanc; D. Bonal; F. Bongers; R. Brienen; F. Brown; M. BT Andrade; B. Burban; R. J. Burnham; J. L. Camargo; S. P. C. Carvalho; C. Castilho; J. Chave; F. Coelho de Souza; J. Comiskey; L. da Costa; R. B. de Lima; E. A. de Oliveira; R. L. C. de Oliveira; R. de Oliveira Perdiz; J. De Rutte; J. del Aguila-Pasquel; G. Derroire; A. Di Fiore; M. Disney; A. Duque; T. Emilio; W. Farfan-Rios; S. Fauset; P. M. Fearnside; K. J. Feeley; T. R. Feldpausch; J. Ferreira; L. Ferreira; G. R. Flores Llampazo; D. Galbraith; K. García-Cabrera; M. García Criado; E. Gloor; J. M. Grandez-Rios; B. Hérault; J. Homeier; E. N. Honorio Coronado; I. Huamantupa-Chuquimaco; W. Huaraca Huasco; Y. T. Huillca-Aedo; Á. Idárraga; O. Jadán-Maza; M. Kalamandeen; T. J. Killeen; S. G. W. Laurance; W. F. Laurance; A. Levesley; W. Lopez; M. J. Macía; W. E. Magnusson; Y. Malhi; A. G. Manzatto; B. S. Marimon; B. H. Marimon Junior; J. A. Martínez-Villa; M. B. Medeiros; K. Melgaço; L. Melo; T. Metzker; A. Monteagudo; P. S. Morandi; J. A. Myers; H. M. Nascimento; R. Nascimento; D. Neill; B. Nieto-Ariza; W. A. Palacios; S. Palacios-Ramos; N. C. Pallqui-Camacho; G. Pardo Molina; J. Peacock; M. A. Peña; R. T. Pennington; M. C. Peñuela; C. A. Peres; Á. J. Pérez; G. C. Pickavance; E. Pinto; J. Pipoly; N. Pitman; A. Prieto; H. Ramírez-Angulo; S. M. Reis; Z. Restrepo; C. Reynel; S. Ribeiro; G. Rivas-Torres; R. Rojas; A. Rudas; N. Salinas; R. P. Salomão; F. Santana; J. Schietti; G. Schwartz; J. Serrano; M. Silman; C. Silva; C. A. Silva; R. C. Silva; R. S. A. Silva; J. Silva-Espejo; M. Silveira; M. F. Simon; Y. C. Soto-Shareva; P. F. Souza; D. Storck-Tonon; J. Stropp; V. Swamy; J. S. Tello; J. Terborgh; R. Thomas; A. Torres-Lezama; J. D. Vale; L. Valenzuela Gamarra; G. van der Heijden; P. van der Hout; P. J. van der Meer; R. Vasquez Martinez; L. Vedovato; H. Verbeeck; I. Vieira; S. A. Vieira; E. Vilanova; B. Vinceti; V. A. Vos; R. Zagt; P. A. Zuidema; O. L. Phillips. Tree diversity is changing across tropical Andean and Amazonian forests in response to global change. Nature Ecology & Evolution (2026), Figure 1 (complete). https://doi.org/10.1038/s41559-025-02956-5. Copyright The Author(s) 2026, modified publication 2026. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `ba152b1afd7931ba0b72f44f29e7865bd7f2ca3750c7c019e9ff924b8310248d`
+
+## fig-3876d4a644695e90bd21bda99008ba6c
+
+Normalizing deviations and calculating scenario contributions
+
+- Original paper: Regionally divergent drivers behind transgressions of the freshwater change planetary boundary
+- DOI: https://doi.org/10.1038/s41467-026-73051-x
+- Figure: Figure 3 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Vili Virkki; Lauren Seaby Andersen; Sofie te Wierik; Dieter Gerten; Miina Porkka. Regionally divergent drivers behind transgressions of the freshwater change planetary boundary. Nature Communications (2026), Figure 3 (complete). https://doi.org/10.1038/s41467-026-73051-x. Copyright The Author(s) 2026. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `738fc75837195d62ed68b25c457951f8cfaa924cc60d9dc8526eb3f04e5941c4`
+
+## fig-3e64f28110ed5a0caa2aadad1fdc7b0d
+
+Forest disturbance costs under climate scenarios
+
+- Original paper: Rising cost of disturbances for forestry in Europe under climate change
+- DOI: https://doi.org/10.1038/s41558-025-02408-9
+- Figure: Figure 1 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Johannes S. Mohr; Félix Bastit; Marc Grünig; Thomas Knoke; Werner Rammer; Cornelius Senf; Dominik Thom; Rupert Seidl. Rising cost of disturbances for forestry in Europe under climate change. Nature Climate Change (2025), Figure 1 (complete). https://doi.org/10.1038/s41558-025-02408-9. Copyright The Author(s) 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `1733f0b98d658459360c8f8e59e62e2051222d6a304905e132ae8949ecafe412`
+
+## fig-445ff17960925e94b3b9617a7efa5274
+
+Hydraulic vulnerability and stomatal response slopes
+
+- Original paper: Towards a unified theory of plant photosynthesis and hydraulics
+- DOI: https://doi.org/10.1038/s41477-022-01244-5
+- Figure: Figure 4 (b)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Jaideep Joshi; Benjamin D. Stocker; Florian Hofhansl; Shuangxi Zhou; Ulf Dieckmann; Iain Colin Prentice. Towards a unified theory of plant photosynthesis and hydraulics. Nature Plants (2022), Figure 4 (b). https://doi.org/10.1038/s41477-022-01244-5. Copyright The Author(s) 2022. CC BY 4.0. No endorsement implied.
+- Modification status: Original rectangular panel excerpt (b) from the final publisher version. Cropped from the publisher PNG without rearranging, redrawing, recoloring or relabeling; other panels are omitted. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `713c17de0dfc60dd456221d9811c063eba5ca8fa9814603a7667f0cef77d3a26`
+
+## fig-482504712655535bb0aaf07231ca25ad
+
+Tree mortality locations with regional insets
+
+- Original paper: Global field observations of tree die-off reveal hotter-drought fingerprint for Earth’s forests
+- DOI: https://doi.org/10.1038/s41467-022-29289-2
+- Figure: Figure 1 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: William M. Hammond; A. Park Williams; John T. Abatzoglou; Henry D. Adams; Tamir Klein; Rosana López; Cuauhtémoc Sáenz-Romero; Henrik Hartmann; David D. Breshears; Craig D. Allen. Global field observations of tree die-off reveal hotter-drought fingerprint for Earth’s forests. Nature Communications (2022), Figure 1 (complete). https://doi.org/10.1038/s41467-022-29289-2. Copyright The Author(s) 2022. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `aeccfb416107942b15a483d55939a492398c6d9f0e962c5d4f5108d0cf2a1808`
+
+## fig-48895a3a5a8d5b6cafc4a8e97c141ba7
+
+AI methods across sustainability research themes
+
+- Original paper: Artificial intelligence in sustainable development research
+- DOI: https://doi.org/10.1038/s41893-025-01598-6
+- Figure: Figure 4 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: C. Gohr; G. Rodríguez; S. Belomestnykh; D. Berg-Moelleken; N. Chauhan; J.-O. Engler; L. V. Heydebreck; M. J. Hintz; M. Kretschmer; C. Krügermeier; J. Meinberg; A.-L. Rau; C. Schwenck; I. Aoulkadi; S. Poll; E. Frank; F. Creutzig; O. Lemke; M. Maushart; J. Pfendtner-Heise; J. Rathgens; H. von Wehrden. Artificial intelligence in sustainable development research. Nature Sustainability (2025), Figure 4 (complete). https://doi.org/10.1038/s41893-025-01598-6. Copyright The Author(s) 2025, corrected publication 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `a487ef51bd1f5ac504373333299ebdcd3b5b02b20cf342a31fc95c4048263853`
+
+## fig-48c1e1ebc48053b48ef29d0c72559206
+
+Carbon-flux trend drivers and burned areas
+
+- Original paper: Wildfires offset the increasing but spatially heterogeneous Arctic–boreal CO2 uptake
+- DOI: https://doi.org/10.1038/s41558-024-02234-5
+- Figure: Figure 2 (c-d)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Anna-Maria Virkkala; Brendan M. Rogers; Jennifer D. Watts; Kyle A. Arndt; Stefano Potter; Isabel Wargowsky; Edward A. G. Schuur; Craig R. See; Marguerite Mauritz; Julia Boike; M. Syndonia Bret-Harte; Eleanor J. Burke; Arden Burrell; Namyi Chae; Abhishek Chatterjee; Frederic Chevallier; Torben R. Christensen; Roisin Commane; Han Dolman; Colin W. Edgar; Bo Elberling; Craig A. Emmerton; Eugenie S. Euskirchen; Liang Feng; Mathias Göckede; Achim Grelle; Manuel Helbig; David Holl; Järvi Järveoja; Sergey V. Karsanaev; Hideki Kobayashi; Lars Kutzbach; Junjie Liu; Ingrid T. Luijkx; Efrén López-Blanco; Kyle Lunneberg; Ivan Mammarella; Maija E. Marushchak; Mikhail Mastepanov; Yojiro Matsuura; Trofim C. Maximov; Lutz Merbold; Gesa Meyer; Mats B. Nilsson; Yosuke Niwa; Walter Oechel; Paul I. Palmer; Sang-Jong Park; Frans-Jan W. Parmentier; Matthias Peichl; Wouter Peters; Roman Petrov; William Quinton; Christian Rödenbeck; Torsten Sachs; Christopher Schulze; Oliver Sonnentag; Vincent L. St. Louis; Eeva-Stiina Tuittila; Masahito Ueyama; Andrej Varlagin; Donatella Zona; Susan M. Natali. Wildfires offset the increasing but spatially heterogeneous Arctic–boreal CO2 uptake. Nature Climate Change (2025), Figure 2 (c-d). https://doi.org/10.1038/s41558-024-02234-5. Copyright The Author(s) 2025, corrected publication 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Original rectangular panel excerpt (c-d) from the final publisher version. Cropped from the publisher PNG without rearranging, redrawing, recoloring or relabeling; other panels are omitted. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `a53897f03aaf797bac7027e739c6532f1d3af7632029e33f0cf7ba3fad7ef268`
+
+## fig-4b8aa4b7ae1d599193403153bd0f7c14
+
+Regional Arctic–boreal carbon-balance trajectories
+
+- Original paper: Wildfires offset the increasing but spatially heterogeneous Arctic–boreal CO2 uptake
+- DOI: https://doi.org/10.1038/s41558-024-02234-5
+- Figure: Figure 4 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Anna-Maria Virkkala; Brendan M. Rogers; Jennifer D. Watts; Kyle A. Arndt; Stefano Potter; Isabel Wargowsky; Edward A. G. Schuur; Craig R. See; Marguerite Mauritz; Julia Boike; M. Syndonia Bret-Harte; Eleanor J. Burke; Arden Burrell; Namyi Chae; Abhishek Chatterjee; Frederic Chevallier; Torben R. Christensen; Roisin Commane; Han Dolman; Colin W. Edgar; Bo Elberling; Craig A. Emmerton; Eugenie S. Euskirchen; Liang Feng; Mathias Göckede; Achim Grelle; Manuel Helbig; David Holl; Järvi Järveoja; Sergey V. Karsanaev; Hideki Kobayashi; Lars Kutzbach; Junjie Liu; Ingrid T. Luijkx; Efrén López-Blanco; Kyle Lunneberg; Ivan Mammarella; Maija E. Marushchak; Mikhail Mastepanov; Yojiro Matsuura; Trofim C. Maximov; Lutz Merbold; Gesa Meyer; Mats B. Nilsson; Yosuke Niwa; Walter Oechel; Paul I. Palmer; Sang-Jong Park; Frans-Jan W. Parmentier; Matthias Peichl; Wouter Peters; Roman Petrov; William Quinton; Christian Rödenbeck; Torsten Sachs; Christopher Schulze; Oliver Sonnentag; Vincent L. St. Louis; Eeva-Stiina Tuittila; Masahito Ueyama; Andrej Varlagin; Donatella Zona; Susan M. Natali. Wildfires offset the increasing but spatially heterogeneous Arctic–boreal CO2 uptake. Nature Climate Change (2025), Figure 4 (complete). https://doi.org/10.1038/s41558-024-02234-5. Copyright The Author(s) 2025, corrected publication 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `569f04f6ec69f07888c81aa89791baadfc13e709fe85aad8dcf4fca341a71b12`
+
+## fig-4bbe585b6e6b5ffdb1d7f3dfe15e0961
+
+A hotter-drought fingerprint around mortality events
+
+- Original paper: Global field observations of tree die-off reveal hotter-drought fingerprint for Earth’s forests
+- DOI: https://doi.org/10.1038/s41467-022-29289-2
+- Figure: Figure 3 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: William M. Hammond; A. Park Williams; John T. Abatzoglou; Henry D. Adams; Tamir Klein; Rosana López; Cuauhtémoc Sáenz-Romero; Henrik Hartmann; David D. Breshears; Craig D. Allen. Global field observations of tree die-off reveal hotter-drought fingerprint for Earth’s forests. Nature Communications (2022), Figure 3 (complete). https://doi.org/10.1038/s41467-022-29289-2. Copyright The Author(s) 2022. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `71bec08c01484cd6023e988e0bfbae261f0649f92cf505b2fc61c7d124301f76`
+
+## fig-4cea9e3346a55bb39c2aa589a001a8cb
+
+Tree mortality in biome climate space
+
+- Original paper: Global field observations of tree die-off reveal hotter-drought fingerprint for Earth’s forests
+- DOI: https://doi.org/10.1038/s41467-022-29289-2
+- Figure: Figure 2 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: William M. Hammond; A. Park Williams; John T. Abatzoglou; Henry D. Adams; Tamir Klein; Rosana López; Cuauhtémoc Sáenz-Romero; Henrik Hartmann; David D. Breshears; Craig D. Allen. Global field observations of tree die-off reveal hotter-drought fingerprint for Earth’s forests. Nature Communications (2022), Figure 2 (complete). https://doi.org/10.1038/s41467-022-29289-2. Copyright The Author(s) 2022. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `2c90b3906163d726d0c04e557f9bd2fada44eec66be28098096de9df4dd7662e`
+
+## fig-4dfd3b912a6656a0a40037278508687e
+
+Local warming and population-weighted exposure
+
+- Original paper: Tropical deforestation is associated with considerable heat-related mortality
+- DOI: https://doi.org/10.1038/s41558-025-02411-0
+- Figure: Figure 2 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: C. L. Reddington; C. Smith; E. W. Butt; J. C. A. Baker; B. F. A. Oliveira; E. I. Yamba; D. V. Spracklen. Tropical deforestation is associated with considerable heat-related mortality. Nature Climate Change (2025), Figure 2 (complete). https://doi.org/10.1038/s41558-025-02411-0. Copyright The Author(s) 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `7d7f933b10a43c7cdd6f700e3fb7b582c30fefaa0d59a507e8f183f781e293e8`
+
+## fig-51c050f0ddc150149fd6890efbc2368a
+
+Local patterns of boreal fire climate forcing
+
+- Original paper: Climate impacts from North American boreal forest fires
+- DOI: https://doi.org/10.1038/s41561-026-01940-3
+- Figure: Figure 1 (c-d)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Max J. van Gerrevink; Sander Veraverbeke; Sol Cooperdock; Stefano Potter; Qirui Zhong; Michael Moubarak; Anna-Maria Virkkala; Scott J. Goetz; Michelle C. Mack; James T. Randerson; Nick Schutgens; Merritt R. Turetsky; Guido R. van der Werf; Brendan M. Rogers. Climate impacts from North American boreal forest fires. Nature Geoscience (2026), Figure 1 (c-d). https://doi.org/10.1038/s41561-026-01940-3. Copyright The Author(s) 2026. CC BY 4.0. No endorsement implied.
+- Modification status: Original rectangular panel excerpt (c-d) from the final publisher version. Cropped from the publisher PNG without rearranging, redrawing, recoloring or relabeling; other panels are omitted. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF. Basemap credit: Natural Earth, public-domain map data; https://www.naturalearthdata.com/about/terms-of-use/. Ecoregion data credit: United States Environmental Protection Agency; https://www.epa.gov/eco-research/ecoregions-north-america.
+- Approved source image SHA-256: `26a8bdf0cf75ae9aede09e2a9a0c3e51a1421852f56d66747a8a372995a403e0`
+
+## fig-577af54683e554a884c5d00a22ee230b
+
+Potential diversity changes across five crop groups
+
+- Original paper: Climate change threatens crop diversity at low latitudes
+- DOI: https://doi.org/10.1038/s43016-025-01135-w
+- Figure: Figure 6 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Sara Heikonen; Matias Heino; Mika Jalava; Stefan Siebert; Daniel Viviroli; Matti Kummu. Climate change threatens crop diversity at low latitudes. Nature Food (2025), Figure 6 (complete). https://doi.org/10.1038/s43016-025-01135-w. Copyright The Author(s) 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF. Basemap credit: Natural Earth, public-domain map data; https://www.naturalearthdata.com/about/terms-of-use/.
+- Approved source image SHA-256: `ab3446b1234d204ceda73e2d7eac8f84f42f32c5e20caf4e9de5f83d857e11fc`
+
+## fig-58ab218da4ed50f5882aad3776beaf93
+
+Gains, losses and net changes in crop-climate space
+
+- Original paper: Climate change threatens crop diversity at low latitudes
+- DOI: https://doi.org/10.1038/s43016-025-01135-w
+- Figure: Figure 3 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Sara Heikonen; Matias Heino; Mika Jalava; Stefan Siebert; Daniel Viviroli; Matti Kummu. Climate change threatens crop diversity at low latitudes. Nature Food (2025), Figure 3 (complete). https://doi.org/10.1038/s43016-025-01135-w. Copyright The Author(s) 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `dcf0576ce4e6444270370e297fca291adddda2823429d18ec4eb9b12a8ce60fc`
+
+## fig-5f78e6fc805f570087a3e69890764b9b
+
+Climate versus direct human contributions to freshwater change
+
+- Original paper: Regionally divergent drivers behind transgressions of the freshwater change planetary boundary
+- DOI: https://doi.org/10.1038/s41467-026-73051-x
+- Figure: Figure 5 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Vili Virkki; Lauren Seaby Andersen; Sofie te Wierik; Dieter Gerten; Miina Porkka. Regionally divergent drivers behind transgressions of the freshwater change planetary boundary. Nature Communications (2026), Figure 5 (complete). https://doi.org/10.1038/s41467-026-73051-x. Copyright The Author(s) 2026. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `04e0c603591f48bf7f1c54fdbb3488a8ca9c2f44c9fcf36450f7dd888a1fa5c0`
+
+## fig-607b4b92f5a85b22b2c24f9ede97016b
+
+Coarse and reconstructed Amazon carbon-change maps
+
+- Original paper: Human influence on Amazon’s aboveground carbon dynamics intensified over the last decade
+- DOI: https://doi.org/10.1038/s41467-025-61856-1
+- Figure: Figure 1 (a-b)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Arthur Fendrich; Yu Feng; Jean-Pierre Wigneron; Jerôme Chave; Arnan Araza; Zheyuan Li; Martin Herold; Jean Ometto; Luiz E. O. C. Aragão; Isabel Martinez Cano; Lei Zhu; Yidi Xu; Philippe Ciais. Human influence on Amazon’s aboveground carbon dynamics intensified over the last decade. Nature Communications (2025), Figure 1 (a-b). https://doi.org/10.1038/s41467-025-61856-1. Copyright European Union, represented by The European Union, 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Original rectangular panel excerpt (a-b) from the final publisher version. Cropped from the publisher PNG without rearranging, redrawing, recoloring or relabeling; other panels are omitted. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `8e2d435aef794efb4da080d50edb0f813cdfcdcca58955dc178f788bc7540ea4`
+
+## fig-6084471a9ea359559a74cb068451b314
+
+Shared and regional structural-equation pathways
+
+- Original paper: Tree diversity is changing across tropical Andean and Amazonian forests in response to global change
+- DOI: https://doi.org/10.1038/s41559-025-02956-5
+- Figure: Figure 4 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: B. Fadrique; F. Costa; F. Cuesta; G. Arellano; L. Cayuela; T. R. Baker; F. C. Draper; A. Esquivel-Muelbert; H. ter Steege; M. Bauters; J. Aguirre-Gutiérrez; Z. Aguirre-Mendoza; M. N. Alexiades; E. Alvarez-Davila; E. Arets; E. Ayala; C. G. A. Aymard; F. Baccaro; S. Báez; C. Baraloto; R. I. Barbosa; P. Barbosa Camargo; J. Barlow; P. E. Barni; J. Barroso; M. Benchimol; A. C. Bennett; E. Berenguer; L. Blanc; D. Bonal; F. Bongers; R. Brienen; F. Brown; M. BT Andrade; B. Burban; R. J. Burnham; J. L. Camargo; S. P. C. Carvalho; C. Castilho; J. Chave; F. Coelho de Souza; J. Comiskey; L. da Costa; R. B. de Lima; E. A. de Oliveira; R. L. C. de Oliveira; R. de Oliveira Perdiz; J. De Rutte; J. del Aguila-Pasquel; G. Derroire; A. Di Fiore; M. Disney; A. Duque; T. Emilio; W. Farfan-Rios; S. Fauset; P. M. Fearnside; K. J. Feeley; T. R. Feldpausch; J. Ferreira; L. Ferreira; G. R. Flores Llampazo; D. Galbraith; K. García-Cabrera; M. García Criado; E. Gloor; J. M. Grandez-Rios; B. Hérault; J. Homeier; E. N. Honorio Coronado; I. Huamantupa-Chuquimaco; W. Huaraca Huasco; Y. T. Huillca-Aedo; Á. Idárraga; O. Jadán-Maza; M. Kalamandeen; T. J. Killeen; S. G. W. Laurance; W. F. Laurance; A. Levesley; W. Lopez; M. J. Macía; W. E. Magnusson; Y. Malhi; A. G. Manzatto; B. S. Marimon; B. H. Marimon Junior; J. A. Martínez-Villa; M. B. Medeiros; K. Melgaço; L. Melo; T. Metzker; A. Monteagudo; P. S. Morandi; J. A. Myers; H. M. Nascimento; R. Nascimento; D. Neill; B. Nieto-Ariza; W. A. Palacios; S. Palacios-Ramos; N. C. Pallqui-Camacho; G. Pardo Molina; J. Peacock; M. A. Peña; R. T. Pennington; M. C. Peñuela; C. A. Peres; Á. J. Pérez; G. C. Pickavance; E. Pinto; J. Pipoly; N. Pitman; A. Prieto; H. Ramírez-Angulo; S. M. Reis; Z. Restrepo; C. Reynel; S. Ribeiro; G. Rivas-Torres; R. Rojas; A. Rudas; N. Salinas; R. P. Salomão; F. Santana; J. Schietti; G. Schwartz; J. Serrano; M. Silman; C. Silva; C. A. Silva; R. C. Silva; R. S. A. Silva; J. Silva-Espejo; M. Silveira; M. F. Simon; Y. C. Soto-Shareva; P. F. Souza; D. Storck-Tonon; J. Stropp; V. Swamy; J. S. Tello; J. Terborgh; R. Thomas; A. Torres-Lezama; J. D. Vale; L. Valenzuela Gamarra; G. van der Heijden; P. van der Hout; P. J. van der Meer; R. Vasquez Martinez; L. Vedovato; H. Verbeeck; I. Vieira; S. A. Vieira; E. Vilanova; B. Vinceti; V. A. Vos; R. Zagt; P. A. Zuidema; O. L. Phillips. Tree diversity is changing across tropical Andean and Amazonian forests in response to global change. Nature Ecology & Evolution (2026), Figure 4 (complete). https://doi.org/10.1038/s41559-025-02956-5. Copyright The Author(s) 2026, modified publication 2026. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `94fa6a1aa794fcbef6544529891ec6dd4e6a43e7df4414ffb439a62d53f25f9f`
+
+## fig-6ed7cf99607f5ab9b9abda21c32beb61
+
+Environmental gradients in tropical tree-richness change
+
+- Original paper: Tree diversity is changing across tropical Andean and Amazonian forests in response to global change
+- DOI: https://doi.org/10.1038/s41559-025-02956-5
+- Figure: Figure 2 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: B. Fadrique; F. Costa; F. Cuesta; G. Arellano; L. Cayuela; T. R. Baker; F. C. Draper; A. Esquivel-Muelbert; H. ter Steege; M. Bauters; J. Aguirre-Gutiérrez; Z. Aguirre-Mendoza; M. N. Alexiades; E. Alvarez-Davila; E. Arets; E. Ayala; C. G. A. Aymard; F. Baccaro; S. Báez; C. Baraloto; R. I. Barbosa; P. Barbosa Camargo; J. Barlow; P. E. Barni; J. Barroso; M. Benchimol; A. C. Bennett; E. Berenguer; L. Blanc; D. Bonal; F. Bongers; R. Brienen; F. Brown; M. BT Andrade; B. Burban; R. J. Burnham; J. L. Camargo; S. P. C. Carvalho; C. Castilho; J. Chave; F. Coelho de Souza; J. Comiskey; L. da Costa; R. B. de Lima; E. A. de Oliveira; R. L. C. de Oliveira; R. de Oliveira Perdiz; J. De Rutte; J. del Aguila-Pasquel; G. Derroire; A. Di Fiore; M. Disney; A. Duque; T. Emilio; W. Farfan-Rios; S. Fauset; P. M. Fearnside; K. J. Feeley; T. R. Feldpausch; J. Ferreira; L. Ferreira; G. R. Flores Llampazo; D. Galbraith; K. García-Cabrera; M. García Criado; E. Gloor; J. M. Grandez-Rios; B. Hérault; J. Homeier; E. N. Honorio Coronado; I. Huamantupa-Chuquimaco; W. Huaraca Huasco; Y. T. Huillca-Aedo; Á. Idárraga; O. Jadán-Maza; M. Kalamandeen; T. J. Killeen; S. G. W. Laurance; W. F. Laurance; A. Levesley; W. Lopez; M. J. Macía; W. E. Magnusson; Y. Malhi; A. G. Manzatto; B. S. Marimon; B. H. Marimon Junior; J. A. Martínez-Villa; M. B. Medeiros; K. Melgaço; L. Melo; T. Metzker; A. Monteagudo; P. S. Morandi; J. A. Myers; H. M. Nascimento; R. Nascimento; D. Neill; B. Nieto-Ariza; W. A. Palacios; S. Palacios-Ramos; N. C. Pallqui-Camacho; G. Pardo Molina; J. Peacock; M. A. Peña; R. T. Pennington; M. C. Peñuela; C. A. Peres; Á. J. Pérez; G. C. Pickavance; E. Pinto; J. Pipoly; N. Pitman; A. Prieto; H. Ramírez-Angulo; S. M. Reis; Z. Restrepo; C. Reynel; S. Ribeiro; G. Rivas-Torres; R. Rojas; A. Rudas; N. Salinas; R. P. Salomão; F. Santana; J. Schietti; G. Schwartz; J. Serrano; M. Silman; C. Silva; C. A. Silva; R. C. Silva; R. S. A. Silva; J. Silva-Espejo; M. Silveira; M. F. Simon; Y. C. Soto-Shareva; P. F. Souza; D. Storck-Tonon; J. Stropp; V. Swamy; J. S. Tello; J. Terborgh; R. Thomas; A. Torres-Lezama; J. D. Vale; L. Valenzuela Gamarra; G. van der Heijden; P. van der Hout; P. J. van der Meer; R. Vasquez Martinez; L. Vedovato; H. Verbeeck; I. Vieira; S. A. Vieira; E. Vilanova; B. Vinceti; V. A. Vos; R. Zagt; P. A. Zuidema; O. L. Phillips. Tree diversity is changing across tropical Andean and Amazonian forests in response to global change. Nature Ecology & Evolution (2026), Figure 2 (complete). https://doi.org/10.1038/s41559-025-02956-5. Copyright The Author(s) 2026, modified publication 2026. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `ee08027977960807cf232a8271bdfc406cde3ab26897e5a7edb81e423fff6aac`
+
+## fig-70980eed01855175a95b2c06c542ac8a
+
+Food-system outcomes across transformation scenarios
+
+- Original paper: A food system transformation pathway reconciles 1.5 °C global warming with improved health, environment and social inclusion
+- DOI: https://doi.org/10.1038/s43016-025-01268-y
+- Figure: Figure 2 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Benjamin Leon Bodirsky; Felicitas Beier; Florian Humpenöder; Debbora Leip; Michael S. Crawford; David Meng-Chuen Chen; Patrick von Jeetze; Marco Springmann; Bjoern Soergel; Zebedee Nicholls; Jessica Strefler; Jared Lewis; Jens Heinke; Christoph Müller; Kristine Karstens; Isabelle Weindl; Miodrag Stevanović; Patrick Rein; Pascal Sauer; Abhijeet Mishra; Edna Johanna Molina Bacca; Alexandre C. Köberle; Xiaoxi Wang; Vartika Singh; Claudia Hunecke; Quitterie Collignon; Pepijn Schreinemachers; Simon Dietz; Ravi Kanbur; Jan Philipp Dietrich; Hermann Lotze-Campen; Alexander Popp. A food system transformation pathway reconciles 1.5 °C global warming with improved health, environment and social inclusion. Nature Food (2025), Figure 2 (complete). https://doi.org/10.1038/s43016-025-01268-y. Copyright The Author(s) 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `48f6b397a9633107393dbdcff20e9f02bc446cbf15f55a19f7eed28c31df7909`
+
+## fig-7885cf07678656f5b85d74a5eaa4766e
+
+Predicted versus observed coral restoration success
+
+- Original paper: Restoration cannot be scaled up globally to save reefs from loss and degradation
+- DOI: https://doi.org/10.1038/s41559-025-02667-x
+- Figure: Figure 3 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Clelia Mulà; Corey J. A. Bradshaw; Mar Cabeza; Federica Manca; Simone Montano; Giovanni Strona. Restoration cannot be scaled up globally to save reefs from loss and degradation. Nature Ecology & Evolution (2025), Figure 3 (complete). https://doi.org/10.1038/s41559-025-02667-x. Copyright The Author(s) 2025, corrected publication 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `5fc25fc946fc2292f6a82f627da6724f69624fc5c83502f03a8ed143ca5eec5a`
+
+## fig-7ae87496d443522687fc8dd9a521fd43
+
+Boreal fire forcing along the treeline gradient
+
+- Original paper: Climate impacts from North American boreal forest fires
+- DOI: https://doi.org/10.1038/s41561-026-01940-3
+- Figure: Figure 2 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Max J. van Gerrevink; Sander Veraverbeke; Sol Cooperdock; Stefano Potter; Qirui Zhong; Michael Moubarak; Anna-Maria Virkkala; Scott J. Goetz; Michelle C. Mack; James T. Randerson; Nick Schutgens; Merritt R. Turetsky; Guido R. van der Werf; Brendan M. Rogers. Climate impacts from North American boreal forest fires. Nature Geoscience (2026), Figure 2 (complete). https://doi.org/10.1038/s41561-026-01940-3. Copyright The Author(s) 2026. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `c529a386fa651f8e858c4130f8324cea10d79c9d64ac0b7b9fe14b878eaa6881`
+
+## fig-7b711e75ea2857cd8d672b82dfb32506
+
+Amazon transition extent and contributing mechanisms
+
+- Original paper: Deforestation-induced drying lowers Amazon climate threshold
+- DOI: https://doi.org/10.1038/s41586-026-10456-0
+- Figure: Figure 2 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Nico Wunderling; Boris Sakschewski; Johan Rockström; Bernardo M. Flores; Marina Hirota; Arie Staal. Deforestation-induced drying lowers Amazon climate threshold. Nature (2026), Figure 2 (complete). https://doi.org/10.1038/s41586-026-10456-0. Copyright The Author(s) 2026. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `b60a9cbe7242ac4884201f426c1c2e525b3a2f4270878a5c620aaf3bf07c3fcf`
+
+## fig-7f92e0f0ad5a5701a0a547eb4372bea3
+
+Predicted response slopes against literature references
+
+- Original paper: Towards a unified theory of plant photosynthesis and hydraulics
+- DOI: https://doi.org/10.1038/s41477-022-01244-5
+- Figure: Figure 4 (a)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Jaideep Joshi; Benjamin D. Stocker; Florian Hofhansl; Shuangxi Zhou; Ulf Dieckmann; Iain Colin Prentice. Towards a unified theory of plant photosynthesis and hydraulics. Nature Plants (2022), Figure 4 (a). https://doi.org/10.1038/s41477-022-01244-5. Copyright The Author(s) 2022. CC BY 4.0. No endorsement implied.
+- Modification status: Original rectangular panel excerpt (a) from the final publisher version. Cropped from the publisher PNG without rearranging, redrawing, recoloring or relabeling; other panels are omitted. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `91712134c9f8d4927f36ec7dd4c593224d464739b8d14854c84f7184c9f42bdd`
+
+## fig-84aa9e33ff205b23a2a59cad6e0b2618
+
+Amazon carbon budgets across land categories
+
+- Original paper: Human influence on Amazon’s aboveground carbon dynamics intensified over the last decade
+- DOI: https://doi.org/10.1038/s41467-025-61856-1
+- Figure: Figure 2 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Arthur Fendrich; Yu Feng; Jean-Pierre Wigneron; Jerôme Chave; Arnan Araza; Zheyuan Li; Martin Herold; Jean Ometto; Luiz E. O. C. Aragão; Isabel Martinez Cano; Lei Zhu; Yidi Xu; Philippe Ciais. Human influence on Amazon’s aboveground carbon dynamics intensified over the last decade. Nature Communications (2025), Figure 2 (complete). https://doi.org/10.1038/s41467-025-61856-1. Copyright European Union, represented by The European Union, 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `7fc22c7db1e717aac14db1a97da695fd2ccfd5b1f89a6dfa5500177f80b71dd3`
+
+## fig-87fcf06ac6b752d9b9a890a42232b889
+
+Freshwater deviations against a planetary boundary
+
+- Original paper: Regionally divergent drivers behind transgressions of the freshwater change planetary boundary
+- DOI: https://doi.org/10.1038/s41467-026-73051-x
+- Figure: Figure 1 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Vili Virkki; Lauren Seaby Andersen; Sofie te Wierik; Dieter Gerten; Miina Porkka. Regionally divergent drivers behind transgressions of the freshwater change planetary boundary. Nature Communications (2026), Figure 1 (complete). https://doi.org/10.1038/s41467-026-73051-x. Copyright The Author(s) 2026. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `fe712d7e23f02cdcde81d4b3ee06cff8de3965e6e597daa647ae1862f8483c06`
+
+## fig-8d8750b5a5605f568baa1eff25603375
+
+Deforestation-associated heat mortality across the tropics
+
+- Original paper: Tropical deforestation is associated with considerable heat-related mortality
+- DOI: https://doi.org/10.1038/s41558-025-02411-0
+- Figure: Figure 3 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: C. L. Reddington; C. Smith; E. W. Butt; J. C. A. Baker; B. F. A. Oliveira; E. I. Yamba; D. V. Spracklen. Tropical deforestation is associated with considerable heat-related mortality. Nature Climate Change (2025), Figure 3 (complete). https://doi.org/10.1038/s41558-025-02411-0. Copyright The Author(s) 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `6c2f0c73cf82cd95f33075c7bd5d2268f92acd27e96656642b6df3fd0dbc0800`
+
+## fig-940e2019230a5f3b901483b153a2cb97
+
+Regional patterns of four freshwater deviation types
+
+- Original paper: Regionally divergent drivers behind transgressions of the freshwater change planetary boundary
+- DOI: https://doi.org/10.1038/s41467-026-73051-x
+- Figure: Figure 4 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Vili Virkki; Lauren Seaby Andersen; Sofie te Wierik; Dieter Gerten; Miina Porkka. Regionally divergent drivers behind transgressions of the freshwater change planetary boundary. Nature Communications (2026), Figure 4 (complete). https://doi.org/10.1038/s41467-026-73051-x. Copyright The Author(s) 2026. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `d04b48a20b8d0db34efa6c6268a03bccb0c4a53364aa686d644c6588ef1e68f6`
+
+## fig-95d1f124761e5c3eb85430485162fe7a
+
+Partial dependence of coral restoration site selection
+
+- Original paper: Restoration cannot be scaled up globally to save reefs from loss and degradation
+- DOI: https://doi.org/10.1038/s41559-025-02667-x
+- Figure: Figure 2 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Clelia Mulà; Corey J. A. Bradshaw; Mar Cabeza; Federica Manca; Simone Montano; Giovanni Strona. Restoration cannot be scaled up globally to save reefs from loss and degradation. Nature Ecology & Evolution (2025), Figure 2 (complete). https://doi.org/10.1038/s41559-025-02667-x. Copyright The Author(s) 2025, corrected publication 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `6001cd5bed6d65888c85fb1454e95280542f9d6c10722b5ff5a1a33b25cd786a`
+
+## fig-97e5a75523305b3abbcfd33c5ae9eba6
+
+Direct and indirect effects on tropical tree richness
+
+- Original paper: Tree diversity is changing across tropical Andean and Amazonian forests in response to global change
+- DOI: https://doi.org/10.1038/s41559-025-02956-5
+- Figure: Figure 5 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: B. Fadrique; F. Costa; F. Cuesta; G. Arellano; L. Cayuela; T. R. Baker; F. C. Draper; A. Esquivel-Muelbert; H. ter Steege; M. Bauters; J. Aguirre-Gutiérrez; Z. Aguirre-Mendoza; M. N. Alexiades; E. Alvarez-Davila; E. Arets; E. Ayala; C. G. A. Aymard; F. Baccaro; S. Báez; C. Baraloto; R. I. Barbosa; P. Barbosa Camargo; J. Barlow; P. E. Barni; J. Barroso; M. Benchimol; A. C. Bennett; E. Berenguer; L. Blanc; D. Bonal; F. Bongers; R. Brienen; F. Brown; M. BT Andrade; B. Burban; R. J. Burnham; J. L. Camargo; S. P. C. Carvalho; C. Castilho; J. Chave; F. Coelho de Souza; J. Comiskey; L. da Costa; R. B. de Lima; E. A. de Oliveira; R. L. C. de Oliveira; R. de Oliveira Perdiz; J. De Rutte; J. del Aguila-Pasquel; G. Derroire; A. Di Fiore; M. Disney; A. Duque; T. Emilio; W. Farfan-Rios; S. Fauset; P. M. Fearnside; K. J. Feeley; T. R. Feldpausch; J. Ferreira; L. Ferreira; G. R. Flores Llampazo; D. Galbraith; K. García-Cabrera; M. García Criado; E. Gloor; J. M. Grandez-Rios; B. Hérault; J. Homeier; E. N. Honorio Coronado; I. Huamantupa-Chuquimaco; W. Huaraca Huasco; Y. T. Huillca-Aedo; Á. Idárraga; O. Jadán-Maza; M. Kalamandeen; T. J. Killeen; S. G. W. Laurance; W. F. Laurance; A. Levesley; W. Lopez; M. J. Macía; W. E. Magnusson; Y. Malhi; A. G. Manzatto; B. S. Marimon; B. H. Marimon Junior; J. A. Martínez-Villa; M. B. Medeiros; K. Melgaço; L. Melo; T. Metzker; A. Monteagudo; P. S. Morandi; J. A. Myers; H. M. Nascimento; R. Nascimento; D. Neill; B. Nieto-Ariza; W. A. Palacios; S. Palacios-Ramos; N. C. Pallqui-Camacho; G. Pardo Molina; J. Peacock; M. A. Peña; R. T. Pennington; M. C. Peñuela; C. A. Peres; Á. J. Pérez; G. C. Pickavance; E. Pinto; J. Pipoly; N. Pitman; A. Prieto; H. Ramírez-Angulo; S. M. Reis; Z. Restrepo; C. Reynel; S. Ribeiro; G. Rivas-Torres; R. Rojas; A. Rudas; N. Salinas; R. P. Salomão; F. Santana; J. Schietti; G. Schwartz; J. Serrano; M. Silman; C. Silva; C. A. Silva; R. C. Silva; R. S. A. Silva; J. Silva-Espejo; M. Silveira; M. F. Simon; Y. C. Soto-Shareva; P. F. Souza; D. Storck-Tonon; J. Stropp; V. Swamy; J. S. Tello; J. Terborgh; R. Thomas; A. Torres-Lezama; J. D. Vale; L. Valenzuela Gamarra; G. van der Heijden; P. van der Hout; P. J. van der Meer; R. Vasquez Martinez; L. Vedovato; H. Verbeeck; I. Vieira; S. A. Vieira; E. Vilanova; B. Vinceti; V. A. Vos; R. Zagt; P. A. Zuidema; O. L. Phillips. Tree diversity is changing across tropical Andean and Amazonian forests in response to global change. Nature Ecology & Evolution (2026), Figure 5 (complete). https://doi.org/10.1038/s41559-025-02956-5. Copyright The Author(s) 2026, modified publication 2026. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `b422de0431964f875d1c0c8f4442d0c1641aa609e2c795c10271ae16dc1529f0`
+
+## fig-99ab3b55eb2c5ec1acf386e902fc9eb1
+
+Severe-heat exposure at restored and other reefs
+
+- Original paper: Restoration cannot be scaled up globally to save reefs from loss and degradation
+- DOI: https://doi.org/10.1038/s41559-025-02667-x
+- Figure: Figure 6 (right box-plot panels)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Clelia Mulà; Corey J. A. Bradshaw; Mar Cabeza; Federica Manca; Simone Montano; Giovanni Strona. Restoration cannot be scaled up globally to save reefs from loss and degradation. Nature Ecology & Evolution (2025), Figure 6 (right box-plot panels). https://doi.org/10.1038/s41559-025-02667-x. Copyright The Author(s) 2025, corrected publication 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Original rectangular panel excerpt (right box-plot panels) from the final publisher version. Cropped from the publisher PNG without rearranging, redrawing, recoloring or relabeling; other panels are omitted. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `a9bad2cef04cee85b99cd22a8dbd5936f935c6ebbf0961fcd0d090740082ce1f`
+
+## fig-9cdbd0ed238e55c1a823ca978382e578
+
+Radiative-forcing mechanisms in two boreal regions
+
+- Original paper: Climate impacts from North American boreal forest fires
+- DOI: https://doi.org/10.1038/s41561-026-01940-3
+- Figure: Figure 1 (b)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Max J. van Gerrevink; Sander Veraverbeke; Sol Cooperdock; Stefano Potter; Qirui Zhong; Michael Moubarak; Anna-Maria Virkkala; Scott J. Goetz; Michelle C. Mack; James T. Randerson; Nick Schutgens; Merritt R. Turetsky; Guido R. van der Werf; Brendan M. Rogers. Climate impacts from North American boreal forest fires. Nature Geoscience (2026), Figure 1 (b). https://doi.org/10.1038/s41561-026-01940-3. Copyright The Author(s) 2026. CC BY 4.0. No endorsement implied.
+- Modification status: Original rectangular panel excerpt (b) from the final publisher version. Cropped from the publisher PNG without rearranging, redrawing, recoloring or relabeling; other panels are omitted. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF. Basemap credit: Natural Earth, public-domain map data; https://www.naturalearthdata.com/about/terms-of-use/. Ecoregion data credit: United States Environmental Protection Agency; https://www.epa.gov/eco-research/ecoregions-north-america.
+- Approved source image SHA-256: `861c79d4d5449fdcb84c6ac43fb7938dd3630bb70faa31a9207abbea190037b1`
+
+## fig-9f11eca01468547dafab32e62ae27a05
+
+Variance preservation in reconstructed carbon maps
+
+- Original paper: Human influence on Amazon’s aboveground carbon dynamics intensified over the last decade
+- DOI: https://doi.org/10.1038/s41467-025-61856-1
+- Figure: Figure 1 (d)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Arthur Fendrich; Yu Feng; Jean-Pierre Wigneron; Jerôme Chave; Arnan Araza; Zheyuan Li; Martin Herold; Jean Ometto; Luiz E. O. C. Aragão; Isabel Martinez Cano; Lei Zhu; Yidi Xu; Philippe Ciais. Human influence on Amazon’s aboveground carbon dynamics intensified over the last decade. Nature Communications (2025), Figure 1 (d). https://doi.org/10.1038/s41467-025-61856-1. Copyright European Union, represented by The European Union, 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Original rectangular panel excerpt (d) from the final publisher version. Cropped from the publisher PNG without rearranging, redrawing, recoloring or relabeling; other panels are omitted. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `72afe6ab6ca15c8290cbacacd582a153d022c5839a52c5d4b2c8712bb4f01b29`
+
+## fig-9ff794a70ff25e9ea6697c4a7c778882
+
+Warming shifts drought distributions and event frequency
+
+- Original paper: Global field observations of tree die-off reveal hotter-drought fingerprint for Earth’s forests
+- DOI: https://doi.org/10.1038/s41467-022-29289-2
+- Figure: Figure 6 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: William M. Hammond; A. Park Williams; John T. Abatzoglou; Henry D. Adams; Tamir Klein; Rosana López; Cuauhtémoc Sáenz-Romero; Henrik Hartmann; David D. Breshears; Craig D. Allen. Global field observations of tree die-off reveal hotter-drought fingerprint for Earth’s forests. Nature Communications (2022), Figure 6 (complete). https://doi.org/10.1038/s41467-022-29289-2. Copyright The Author(s) 2022. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `324687295bc9c9ae47e620fb3824b7a42ffdfa2119d0d5e69a626b3faf949c80`
+
+## fig-a198c1b054e45833bbb62f14329bd05e
+
+Precision and recall of carbon-pulse detection
+
+- Original paper: Widespread underestimation of rain-induced soil carbon emissions from global drylands
+- DOI: https://doi.org/10.1038/s41561-025-01754-9
+- Figure: Figure 4 (a)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Ngoc B. Nguyen; Mirco Migliavacca; Maoya Bassiouni; Dennis D. Baldocchi; Laureano A. Gherardi; Julia K. Green; Dario Papale; Markus Reichstein; Kai-Hendrik Cohrs; Alessandro Cescatti; Tuan Dung Nguyen; Hoang H. Nguyen; Quang Minh Nguyen; Trevor F. Keenan. Widespread underestimation of rain-induced soil carbon emissions from global drylands. Nature Geoscience (2025), Figure 4 (a). https://doi.org/10.1038/s41561-025-01754-9. Copyright The Author(s) 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Original rectangular panel excerpt (a) from the final publisher version. Cropped from the publisher PNG without rearranging, redrawing, recoloring or relabeling; other panels are omitted. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `e12d7cbea1b1d92407fd52fd2b4e295e76d0f9c7265b3c0d793a9b0ca7ed6434`
+
+## fig-a2f72a40558055eabc61629b6a52d1f7
+
+Random-forest features for carbon-pulse detection
+
+- Original paper: Widespread underestimation of rain-induced soil carbon emissions from global drylands
+- DOI: https://doi.org/10.1038/s41561-025-01754-9
+- Figure: Figure 4 (c)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Ngoc B. Nguyen; Mirco Migliavacca; Maoya Bassiouni; Dennis D. Baldocchi; Laureano A. Gherardi; Julia K. Green; Dario Papale; Markus Reichstein; Kai-Hendrik Cohrs; Alessandro Cescatti; Tuan Dung Nguyen; Hoang H. Nguyen; Quang Minh Nguyen; Trevor F. Keenan. Widespread underestimation of rain-induced soil carbon emissions from global drylands. Nature Geoscience (2025), Figure 4 (c). https://doi.org/10.1038/s41561-025-01754-9. Copyright The Author(s) 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Original rectangular panel excerpt (c) from the final publisher version. Cropped from the publisher PNG without rearranging, redrawing, recoloring or relabeling; other panels are omitted. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `7394c6546aa0c69709fac343a62321b4154fcfcbcb762ba8b545dfee0586cb4d`
+
+## fig-b828adfa0caa55b78860d1b32df38664
+
+Biome-specific climate fingerprints with confidence intervals
+
+- Original paper: Global field observations of tree die-off reveal hotter-drought fingerprint for Earth’s forests
+- DOI: https://doi.org/10.1038/s41467-022-29289-2
+- Figure: Figure 4 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: William M. Hammond; A. Park Williams; John T. Abatzoglou; Henry D. Adams; Tamir Klein; Rosana López; Cuauhtémoc Sáenz-Romero; Henrik Hartmann; David D. Breshears; Craig D. Allen. Global field observations of tree die-off reveal hotter-drought fingerprint for Earth’s forests. Nature Communications (2022), Figure 4 (complete). https://doi.org/10.1038/s41467-022-29289-2. Copyright The Author(s) 2022. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `a96784962cb14c6f7570209de26b7f5a4b5b99bbc65a2ee39fc1ffc49de31a47`
+
+## fig-b8ef35f0b99e57b58e4784067871f394
+
+Costs of scaling eight coral restoration techniques
+
+- Original paper: Restoration cannot be scaled up globally to save reefs from loss and degradation
+- DOI: https://doi.org/10.1038/s41559-025-02667-x
+- Figure: Figure 1 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Clelia Mulà; Corey J. A. Bradshaw; Mar Cabeza; Federica Manca; Simone Montano; Giovanni Strona. Restoration cannot be scaled up globally to save reefs from loss and degradation. Nature Ecology & Evolution (2025), Figure 1 (complete). https://doi.org/10.1038/s41559-025-02667-x. Copyright The Author(s) 2025, corrected publication 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `fba514b9ced1d62263faa089eb57c36d5abbdeddfae53dc6d24f6039871d67cc`
+
+## fig-c297d0c2887b5eec8734d0ef7786af59
+
+Regional crop-group risks across climate scenarios
+
+- Original paper: Climate change threatens crop diversity at low latitudes
+- DOI: https://doi.org/10.1038/s43016-025-01135-w
+- Figure: Figure 2 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Sara Heikonen; Matias Heino; Mika Jalava; Stefan Siebert; Daniel Viviroli; Matti Kummu. Climate change threatens crop diversity at low latitudes. Nature Food (2025), Figure 2 (complete). https://doi.org/10.1038/s43016-025-01135-w. Copyright The Author(s) 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `1e3128250be1330df82b76128d900b02d5bbd8fc423e2a20aa89fd12366d9309`
+
+## fig-c89cf8d4e2425f8c931e947a1987f7c2
+
+Two Eucalyptus species under progressive drought
+
+- Original paper: Towards a unified theory of plant photosynthesis and hydraulics
+- DOI: https://doi.org/10.1038/s41477-022-01244-5
+- Figure: Figure 3 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Jaideep Joshi; Benjamin D. Stocker; Florian Hofhansl; Shuangxi Zhou; Ulf Dieckmann; Iain Colin Prentice. Towards a unified theory of plant photosynthesis and hydraulics. Nature Plants (2022), Figure 3 (complete). https://doi.org/10.1038/s41477-022-01244-5. Copyright The Author(s) 2022. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `185f73659a65b99b24018425e8502b539d7ff5c4777ad0b4506b7545892c06ca`
+
+## fig-cad416228d865446b028704c270a202c
+
+Whole-plant hydraulic pathways across scales
+
+- Original paper: Towards a unified theory of plant photosynthesis and hydraulics
+- DOI: https://doi.org/10.1038/s41477-022-01244-5
+- Figure: Figure 1 (a)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Jaideep Joshi; Benjamin D. Stocker; Florian Hofhansl; Shuangxi Zhou; Ulf Dieckmann; Iain Colin Prentice. Towards a unified theory of plant photosynthesis and hydraulics. Nature Plants (2022), Figure 1 (a). https://doi.org/10.1038/s41477-022-01244-5. Copyright The Author(s) 2022. CC BY 4.0. No endorsement implied.
+- Modification status: Original rectangular panel excerpt (a) from the final publisher version. Cropped from the publisher PNG without rearranging, redrawing, recoloring or relabeling; other panels are omitted. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `bff2e42ea532beaffaea7146d7ca47c9712f3e263e854c891235f2d1515488cd`
+
+## fig-caff11ee509c5977b31a701428f23853
+
+Food-system policies across outcome indicators
+
+- Original paper: A food system transformation pathway reconciles 1.5 °C global warming with improved health, environment and social inclusion
+- DOI: https://doi.org/10.1038/s43016-025-01268-y
+- Figure: Figure 4 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Benjamin Leon Bodirsky; Felicitas Beier; Florian Humpenöder; Debbora Leip; Michael S. Crawford; David Meng-Chuen Chen; Patrick von Jeetze; Marco Springmann; Bjoern Soergel; Zebedee Nicholls; Jessica Strefler; Jared Lewis; Jens Heinke; Christoph Müller; Kristine Karstens; Isabelle Weindl; Miodrag Stevanović; Patrick Rein; Pascal Sauer; Abhijeet Mishra; Edna Johanna Molina Bacca; Alexandre C. Köberle; Xiaoxi Wang; Vartika Singh; Claudia Hunecke; Quitterie Collignon; Pepijn Schreinemachers; Simon Dietz; Ravi Kanbur; Jan Philipp Dietrich; Hermann Lotze-Campen; Alexander Popp. A food system transformation pathway reconciles 1.5 °C global warming with improved health, environment and social inclusion. Nature Food (2025), Figure 4 (complete). https://doi.org/10.1038/s43016-025-01268-y. Copyright The Author(s) 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `0cb5057ef4049d1ac2882f281115e0c0c0cfa5dafafed1a7436cb8669894941b`
+
+## fig-cb44f3a06d1d59d985820284aa385172
+
+Fire forcing across permafrost classes
+
+- Original paper: Climate impacts from North American boreal forest fires
+- DOI: https://doi.org/10.1038/s41561-026-01940-3
+- Figure: Figure 3 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Max J. van Gerrevink; Sander Veraverbeke; Sol Cooperdock; Stefano Potter; Qirui Zhong; Michael Moubarak; Anna-Maria Virkkala; Scott J. Goetz; Michelle C. Mack; James T. Randerson; Nick Schutgens; Merritt R. Turetsky; Guido R. van der Werf; Brendan M. Rogers. Climate impacts from North American boreal forest fires. Nature Geoscience (2026), Figure 3 (complete). https://doi.org/10.1038/s41561-026-01940-3. Copyright The Author(s) 2026. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `14e814f852c4f90a6e645a276502f77f88b679d6099809fd46f66899fd89ac79`
+
+## fig-cc34757ea9115f85b226c295b4da2a1e
+
+Distributions of average forest disturbance costs
+
+- Original paper: Rising cost of disturbances for forestry in Europe under climate change
+- DOI: https://doi.org/10.1038/s41558-025-02408-9
+- Figure: Figure 2 (a_hist)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Johannes S. Mohr; Félix Bastit; Marc Grünig; Thomas Knoke; Werner Rammer; Cornelius Senf; Dominik Thom; Rupert Seidl. Rising cost of disturbances for forestry in Europe under climate change. Nature Climate Change (2025), Figure 2 (a_hist). https://doi.org/10.1038/s41558-025-02408-9. Copyright The Author(s) 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Original rectangular panel excerpt (a_hist) from the final publisher version. Cropped from the publisher PNG without rearranging, redrawing, recoloring or relabeling; other panels are omitted. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `9796f99ff4f471dd89f9d9f3d70d928386a266c23be1b3ce8a25a4ba47f2085d`
+
+## fig-cc8f5fca502354fca4580a7b922e4cab
+
+Climate forcing from North American boreal fires
+
+- Original paper: Climate impacts from North American boreal forest fires
+- DOI: https://doi.org/10.1038/s41561-026-01940-3
+- Figure: Figure 1 (a)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Max J. van Gerrevink; Sander Veraverbeke; Sol Cooperdock; Stefano Potter; Qirui Zhong; Michael Moubarak; Anna-Maria Virkkala; Scott J. Goetz; Michelle C. Mack; James T. Randerson; Nick Schutgens; Merritt R. Turetsky; Guido R. van der Werf; Brendan M. Rogers. Climate impacts from North American boreal forest fires. Nature Geoscience (2026), Figure 1 (a). https://doi.org/10.1038/s41561-026-01940-3. Copyright The Author(s) 2026. CC BY 4.0. No endorsement implied.
+- Modification status: Original rectangular panel excerpt (a) from the final publisher version. Cropped from the publisher PNG without rearranging, redrawing, recoloring or relabeling; other panels are omitted. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF. Basemap credit: Natural Earth, public-domain map data; https://www.naturalearthdata.com/about/terms-of-use/. Ecoregion data credit: United States Environmental Protection Agency; https://www.epa.gov/eco-research/ecoregions-north-america.
+- Approved source image SHA-256: `2922eb5b55eb9ac6fcddba423d378b3501f20d977106e11d83eeef09eb0ee42d`
+
+## fig-ce191c21aeef530b8275c47d4b86aa81
+
+Post-rain carbon-flux decay across sites
+
+- Original paper: Widespread underestimation of rain-induced soil carbon emissions from global drylands
+- DOI: https://doi.org/10.1038/s41561-025-01754-9
+- Figure: Figure 3 (a)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Ngoc B. Nguyen; Mirco Migliavacca; Maoya Bassiouni; Dennis D. Baldocchi; Laureano A. Gherardi; Julia K. Green; Dario Papale; Markus Reichstein; Kai-Hendrik Cohrs; Alessandro Cescatti; Tuan Dung Nguyen; Hoang H. Nguyen; Quang Minh Nguyen; Trevor F. Keenan. Widespread underestimation of rain-induced soil carbon emissions from global drylands. Nature Geoscience (2025), Figure 3 (a). https://doi.org/10.1038/s41561-025-01754-9. Copyright The Author(s) 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Original rectangular panel excerpt (a) from the final publisher version. Cropped from the publisher PNG without rearranging, redrawing, recoloring or relabeling; other panels are omitted. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `2948aebe963ffbaa8ede3a277a283e622c26bba53448988031dcb4d0b5f2cc39`
+
+## fig-cece8fa6150f549896fa71a1d7bec08e
+
+Net suitability changes across thirty crop types
+
+- Original paper: Climate change threatens crop diversity at low latitudes
+- DOI: https://doi.org/10.1038/s43016-025-01135-w
+- Figure: Figure 4 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Sara Heikonen; Matias Heino; Mika Jalava; Stefan Siebert; Daniel Viviroli; Matti Kummu. Climate change threatens crop diversity at low latitudes. Nature Food (2025), Figure 4 (complete). https://doi.org/10.1038/s43016-025-01135-w. Copyright The Author(s) 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `d111b148e33966c46084b8623e76cc0b4e9c7224f279a2afaf3fdaff00af3fb0`
+
+## fig-d064245c0579532fa28f82168fc667b6
+
+Potential crop diversity across maps and regional summaries
+
+- Original paper: Climate change threatens crop diversity at low latitudes
+- DOI: https://doi.org/10.1038/s43016-025-01135-w
+- Figure: Figure 5 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Sara Heikonen; Matias Heino; Mika Jalava; Stefan Siebert; Daniel Viviroli; Matti Kummu. Climate change threatens crop diversity at low latitudes. Nature Food (2025), Figure 5 (complete). https://doi.org/10.1038/s43016-025-01135-w. Copyright The Author(s) 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF. Basemap credit: Natural Earth, public-domain map data; https://www.naturalearthdata.com/about/terms-of-use/.
+- Approved source image SHA-256: `37fc745caf20e20bdbea68267e28237ee6580fc20555ed9abc7cf0961b0070b9`
+
+## fig-d17598829bd7500a9ad637f5c6ff5361
+
+Warming and populations exposed to harm
+
+- Original paper: Safe and just Earth system boundaries
+- DOI: https://doi.org/10.1038/s41586-023-06083-8
+- Figure: Figure 2 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Johan Rockström; Joyeeta Gupta; Dahe Qin; Steven J. Lade; Jesse F. Abrams; Lauren S. Andersen; David I. Armstrong McKay; Xuemei Bai; Govindasamy Bala; Stuart E. Bunn; Daniel Ciobanu; Fabrice DeClerck; Kristie Ebi; Lauren Gifford; Christopher Gordon; Syezlin Hasan; Norichika Kanie; Timothy M. Lenton; Sina Loriani; Diana M. Liverman; Awaz Mohamed; Nebojsa Nakicenovic; David Obura; Daniel Ospina; Klaudia Prodani; Crelis Rammelt; Boris Sakschewski; Joeri Scholtens; Ben Stewart-Koster; Thejna Tharammal; Detlef van Vuuren; Peter H. Verburg; Ricarda Winkelmann; Caroline Zimm; Elena M. Bennett; Stefan Bringezu; Wendy Broadgate; Pamela A. Green; Lei Huang; Lisa Jacobson; Christopher Ndehedehe; Simona Pedde; Juan Rocha; Marten Scheffer; Lena Schulte-Uebbing; Wim de Vries; Cunde Xiao; Chi Xu; Xinwu Xu; Noelia Zafra-Calvo; Xin Zhang. Safe and just Earth system boundaries. Nature (2023), Figure 2 (complete). https://doi.org/10.1038/s41586-023-06083-8. Copyright The Author(s) 2023. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `1ab9edd65273691e63de5c18ab5a38b7e001737d84c8dd3d11e4f770fe931e36`
+
+## fig-d4528510895a5948b9fd663a7f088552
+
+Safe and just Earth system boundaries
+
+- Original paper: Safe and just Earth system boundaries
+- DOI: https://doi.org/10.1038/s41586-023-06083-8
+- Figure: Figure 1 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Johan Rockström; Joyeeta Gupta; Dahe Qin; Steven J. Lade; Jesse F. Abrams; Lauren S. Andersen; David I. Armstrong McKay; Xuemei Bai; Govindasamy Bala; Stuart E. Bunn; Daniel Ciobanu; Fabrice DeClerck; Kristie Ebi; Lauren Gifford; Christopher Gordon; Syezlin Hasan; Norichika Kanie; Timothy M. Lenton; Sina Loriani; Diana M. Liverman; Awaz Mohamed; Nebojsa Nakicenovic; David Obura; Daniel Ospina; Klaudia Prodani; Crelis Rammelt; Boris Sakschewski; Joeri Scholtens; Ben Stewart-Koster; Thejna Tharammal; Detlef van Vuuren; Peter H. Verburg; Ricarda Winkelmann; Caroline Zimm; Elena M. Bennett; Stefan Bringezu; Wendy Broadgate; Pamela A. Green; Lei Huang; Lisa Jacobson; Christopher Ndehedehe; Simona Pedde; Juan Rocha; Marten Scheffer; Lena Schulte-Uebbing; Wim de Vries; Cunde Xiao; Chi Xu; Xinwu Xu; Noelia Zafra-Calvo; Xin Zhang. Safe and just Earth system boundaries. Nature (2023), Figure 1 (complete). https://doi.org/10.1038/s41586-023-06083-8. Copyright The Author(s) 2023. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `6d17d4a95f5e9b58f7e0a0ac5e7e31e510f263b2b44f72e49c7d39b0ff1cdd28`
+
+## fig-d52dab14f8135c8dbcbc55dc2110b75c
+
+Inputs, optimization and calibration of a plant model
+
+- Original paper: Towards a unified theory of plant photosynthesis and hydraulics
+- DOI: https://doi.org/10.1038/s41477-022-01244-5
+- Figure: Figure 1 (b)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Jaideep Joshi; Benjamin D. Stocker; Florian Hofhansl; Shuangxi Zhou; Ulf Dieckmann; Iain Colin Prentice. Towards a unified theory of plant photosynthesis and hydraulics. Nature Plants (2022), Figure 1 (b). https://doi.org/10.1038/s41477-022-01244-5. Copyright The Author(s) 2022. CC BY 4.0. No endorsement implied.
+- Modification status: Original rectangular panel excerpt (b) from the final publisher version. Cropped from the publisher PNG without rearranging, redrawing, recoloring or relabeling; other panels are omitted. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `d22c89287f4064529fbc4563b6562366a87581b3f2215a91c218fda161a93442`
+
+## fig-d5c6c4c11fa85deb8b1105d55b5870fb
+
+Species water-potential ranges and observed thresholds
+
+- Original paper: Towards a unified theory of plant photosynthesis and hydraulics
+- DOI: https://doi.org/10.1038/s41477-022-01244-5
+- Figure: Figure 5 (b)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Jaideep Joshi; Benjamin D. Stocker; Florian Hofhansl; Shuangxi Zhou; Ulf Dieckmann; Iain Colin Prentice. Towards a unified theory of plant photosynthesis and hydraulics. Nature Plants (2022), Figure 5 (b). https://doi.org/10.1038/s41477-022-01244-5. Copyright The Author(s) 2022. CC BY 4.0. No endorsement implied.
+- Modification status: Original rectangular panel excerpt (b) from the final publisher version. Cropped from the publisher PNG without rearranging, redrawing, recoloring or relabeling; other panels are omitted. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `421d9146bc95c42ea871d971f30a39f6fff919628085f3f3428f16bf04984034`
+
+## fig-d770635589f05b2cbb21824b15c6e604
+
+Distributions of extreme forest disturbance costs
+
+- Original paper: Rising cost of disturbances for forestry in Europe under climate change
+- DOI: https://doi.org/10.1038/s41558-025-02408-9
+- Figure: Figure 2 (b_hist)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Johannes S. Mohr; Félix Bastit; Marc Grünig; Thomas Knoke; Werner Rammer; Cornelius Senf; Dominik Thom; Rupert Seidl. Rising cost of disturbances for forestry in Europe under climate change. Nature Climate Change (2025), Figure 2 (b_hist). https://doi.org/10.1038/s41558-025-02408-9. Copyright The Author(s) 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Original rectangular panel excerpt (b_hist) from the final publisher version. Cropped from the publisher PNG without rearranging, redrawing, recoloring or relabeling; other panels are omitted. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `fba211e271902e042e3a849a97339e045ca91c2b39b92060edac94169c2b56fc`
+
+## fig-d88828932fd853e79b779f8de1efedc4
+
+Reconstructed biomass against field observations
+
+- Original paper: Human influence on Amazon’s aboveground carbon dynamics intensified over the last decade
+- DOI: https://doi.org/10.1038/s41467-025-61856-1
+- Figure: Figure 1 (c)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Arthur Fendrich; Yu Feng; Jean-Pierre Wigneron; Jerôme Chave; Arnan Araza; Zheyuan Li; Martin Herold; Jean Ometto; Luiz E. O. C. Aragão; Isabel Martinez Cano; Lei Zhu; Yidi Xu; Philippe Ciais. Human influence on Amazon’s aboveground carbon dynamics intensified over the last decade. Nature Communications (2025), Figure 1 (c). https://doi.org/10.1038/s41467-025-61856-1. Copyright European Union, represented by The European Union, 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Original rectangular panel excerpt (c) from the final publisher version. Cropped from the publisher PNG without rearranging, redrawing, recoloring or relabeling; other panels are omitted. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `7b26acb1c13a8fc97e1dcdf53a38240c1af3179bbd92615b0c177edd3097e4ee`
+
+## fig-db8d39d2b1c6518f81458cebd740bbd5
+
+Mapped changes in tropical tree richness
+
+- Original paper: Tree diversity is changing across tropical Andean and Amazonian forests in response to global change
+- DOI: https://doi.org/10.1038/s41559-025-02956-5
+- Figure: Figure 3 (a)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: B. Fadrique; F. Costa; F. Cuesta; G. Arellano; L. Cayuela; T. R. Baker; F. C. Draper; A. Esquivel-Muelbert; H. ter Steege; M. Bauters; J. Aguirre-Gutiérrez; Z. Aguirre-Mendoza; M. N. Alexiades; E. Alvarez-Davila; E. Arets; E. Ayala; C. G. A. Aymard; F. Baccaro; S. Báez; C. Baraloto; R. I. Barbosa; P. Barbosa Camargo; J. Barlow; P. E. Barni; J. Barroso; M. Benchimol; A. C. Bennett; E. Berenguer; L. Blanc; D. Bonal; F. Bongers; R. Brienen; F. Brown; M. BT Andrade; B. Burban; R. J. Burnham; J. L. Camargo; S. P. C. Carvalho; C. Castilho; J. Chave; F. Coelho de Souza; J. Comiskey; L. da Costa; R. B. de Lima; E. A. de Oliveira; R. L. C. de Oliveira; R. de Oliveira Perdiz; J. De Rutte; J. del Aguila-Pasquel; G. Derroire; A. Di Fiore; M. Disney; A. Duque; T. Emilio; W. Farfan-Rios; S. Fauset; P. M. Fearnside; K. J. Feeley; T. R. Feldpausch; J. Ferreira; L. Ferreira; G. R. Flores Llampazo; D. Galbraith; K. García-Cabrera; M. García Criado; E. Gloor; J. M. Grandez-Rios; B. Hérault; J. Homeier; E. N. Honorio Coronado; I. Huamantupa-Chuquimaco; W. Huaraca Huasco; Y. T. Huillca-Aedo; Á. Idárraga; O. Jadán-Maza; M. Kalamandeen; T. J. Killeen; S. G. W. Laurance; W. F. Laurance; A. Levesley; W. Lopez; M. J. Macía; W. E. Magnusson; Y. Malhi; A. G. Manzatto; B. S. Marimon; B. H. Marimon Junior; J. A. Martínez-Villa; M. B. Medeiros; K. Melgaço; L. Melo; T. Metzker; A. Monteagudo; P. S. Morandi; J. A. Myers; H. M. Nascimento; R. Nascimento; D. Neill; B. Nieto-Ariza; W. A. Palacios; S. Palacios-Ramos; N. C. Pallqui-Camacho; G. Pardo Molina; J. Peacock; M. A. Peña; R. T. Pennington; M. C. Peñuela; C. A. Peres; Á. J. Pérez; G. C. Pickavance; E. Pinto; J. Pipoly; N. Pitman; A. Prieto; H. Ramírez-Angulo; S. M. Reis; Z. Restrepo; C. Reynel; S. Ribeiro; G. Rivas-Torres; R. Rojas; A. Rudas; N. Salinas; R. P. Salomão; F. Santana; J. Schietti; G. Schwartz; J. Serrano; M. Silman; C. Silva; C. A. Silva; R. C. Silva; R. S. A. Silva; J. Silva-Espejo; M. Silveira; M. F. Simon; Y. C. Soto-Shareva; P. F. Souza; D. Storck-Tonon; J. Stropp; V. Swamy; J. S. Tello; J. Terborgh; R. Thomas; A. Torres-Lezama; J. D. Vale; L. Valenzuela Gamarra; G. van der Heijden; P. van der Hout; P. J. van der Meer; R. Vasquez Martinez; L. Vedovato; H. Verbeeck; I. Vieira; S. A. Vieira; E. Vilanova; B. Vinceti; V. A. Vos; R. Zagt; P. A. Zuidema; O. L. Phillips. Tree diversity is changing across tropical Andean and Amazonian forests in response to global change. Nature Ecology & Evolution (2026), Figure 3 (a). https://doi.org/10.1038/s41559-025-02956-5. Copyright The Author(s) 2026, modified publication 2026. CC BY 4.0. No endorsement implied.
+- Modification status: Original rectangular panel excerpt (a) from the final publisher version. Cropped from the publisher PNG without rearranging, redrawing, recoloring or relabeling; other panels are omitted. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `260761e9beeb3284f99864b8279868feb08a195cab5cabb208b2539bd11cefc8`
+
+## fig-dd5714fd690d50e0823096115bfc7b86
+
+Spatial timing and recurrence of severe reef heat
+
+- Original paper: Restoration cannot be scaled up globally to save reefs from loss and degradation
+- DOI: https://doi.org/10.1038/s41559-025-02667-x
+- Figure: Figure 6 (left map panels)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Clelia Mulà; Corey J. A. Bradshaw; Mar Cabeza; Federica Manca; Simone Montano; Giovanni Strona. Restoration cannot be scaled up globally to save reefs from loss and degradation. Nature Ecology & Evolution (2025), Figure 6 (left map panels). https://doi.org/10.1038/s41559-025-02667-x. Copyright The Author(s) 2025, corrected publication 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Original rectangular panel excerpt (left map panels) from the final publisher version. Cropped from the publisher PNG without rearranging, redrawing, recoloring or relabeling; other panels are omitted. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `dcb8cdaaa075de89aaebf05edcd0c54706d7eee09b3e968a96299e8b9312fbdd`
+
+## fig-de953c45473e5d109d09676c0670c321
+
+Predicted and observed plant physiological variables
+
+- Original paper: Towards a unified theory of plant photosynthesis and hydraulics
+- DOI: https://doi.org/10.1038/s41477-022-01244-5
+- Figure: Figure 2 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Jaideep Joshi; Benjamin D. Stocker; Florian Hofhansl; Shuangxi Zhou; Ulf Dieckmann; Iain Colin Prentice. Towards a unified theory of plant photosynthesis and hydraulics. Nature Plants (2022), Figure 2 (complete). https://doi.org/10.1038/s41477-022-01244-5. Copyright The Author(s) 2022. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `0bde83aad65fb87afe1ee45fb7b00b0b5ee0eaeff7fa6325471beb2dd0eb1cda`
+
+## fig-eb15b23e70655ffbb60c9b52295bca3e
+
+Climate and direct human forcing in freshwater change
+
+- Original paper: Regionally divergent drivers behind transgressions of the freshwater change planetary boundary
+- DOI: https://doi.org/10.1038/s41467-026-73051-x
+- Figure: Figure 2 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Vili Virkki; Lauren Seaby Andersen; Sofie te Wierik; Dieter Gerten; Miina Porkka. Regionally divergent drivers behind transgressions of the freshwater change planetary boundary. Nature Communications (2026), Figure 2 (complete). https://doi.org/10.1038/s41467-026-73051-x. Copyright The Author(s) 2026. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `2a3bf37fd13bff5dd2249a007741bed9037cd30b3a357667e3048863513b9bbb`
+
+## fig-eff386b76be2558d8ec7374bb5d0b9bb
+
+An observed ecosystem carbon pulse with environmental context
+
+- Original paper: Widespread underestimation of rain-induced soil carbon emissions from global drylands
+- DOI: https://doi.org/10.1038/s41561-025-01754-9
+- Figure: Figure 2 (c)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Ngoc B. Nguyen; Mirco Migliavacca; Maoya Bassiouni; Dennis D. Baldocchi; Laureano A. Gherardi; Julia K. Green; Dario Papale; Markus Reichstein; Kai-Hendrik Cohrs; Alessandro Cescatti; Tuan Dung Nguyen; Hoang H. Nguyen; Quang Minh Nguyen; Trevor F. Keenan. Widespread underestimation of rain-induced soil carbon emissions from global drylands. Nature Geoscience (2025), Figure 2 (c). https://doi.org/10.1038/s41561-025-01754-9. Copyright The Author(s) 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Original rectangular panel excerpt (c) from the final publisher version. Cropped from the publisher PNG without rearranging, redrawing, recoloring or relabeling; other panels are omitted. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `b6e997a879a2185fc7d9f7a5c30525b1c0500d00679e7b7c477fde46903bfe8d`
+
+## fig-f14e9cf6a1e151ce931bb8bcaa138ddc
+
+Drivers of carbon-pulse intensity and decay
+
+- Original paper: Widespread underestimation of rain-induced soil carbon emissions from global drylands
+- DOI: https://doi.org/10.1038/s41561-025-01754-9
+- Figure: Figure 3 (b-c)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Ngoc B. Nguyen; Mirco Migliavacca; Maoya Bassiouni; Dennis D. Baldocchi; Laureano A. Gherardi; Julia K. Green; Dario Papale; Markus Reichstein; Kai-Hendrik Cohrs; Alessandro Cescatti; Tuan Dung Nguyen; Hoang H. Nguyen; Quang Minh Nguyen; Trevor F. Keenan. Widespread underestimation of rain-induced soil carbon emissions from global drylands. Nature Geoscience (2025), Figure 3 (b-c). https://doi.org/10.1038/s41561-025-01754-9. Copyright The Author(s) 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Original rectangular panel excerpt (b-c) from the final publisher version. Cropped from the publisher PNG without rearranging, redrawing, recoloring or relabeling; other panels are omitted. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `aaf23b918c0c26c4d183fda84f14e365f0f29633ddadc54e66d0d71957c34b4a`
+
+## fig-f5a8c00116a357c8a9fa65aceef34401
+
+Mortality-year warming against annual background conditions
+
+- Original paper: Global field observations of tree die-off reveal hotter-drought fingerprint for Earth’s forests
+- DOI: https://doi.org/10.1038/s41467-022-29289-2
+- Figure: Figure 5 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: William M. Hammond; A. Park Williams; John T. Abatzoglou; Henry D. Adams; Tamir Klein; Rosana López; Cuauhtémoc Sáenz-Romero; Henrik Hartmann; David D. Breshears; Craig D. Allen. Global field observations of tree die-off reveal hotter-drought fingerprint for Earth’s forests. Nature Communications (2022), Figure 5 (complete). https://doi.org/10.1038/s41467-022-29289-2. Copyright The Author(s) 2022. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `0daa48aab049b949a24579b3a7bd5b287c6dbee0b75975a9be97c22557aa073e`
+
+## fig-fa333c446c985782b4b71f06a0c2a2e0
+
+First severe-heat year and repeated reef exposure
+
+- Original paper: Restoration cannot be scaled up globally to save reefs from loss and degradation
+- DOI: https://doi.org/10.1038/s41559-025-02667-x
+- Figure: Figure 5 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Clelia Mulà; Corey J. A. Bradshaw; Mar Cabeza; Federica Manca; Simone Montano; Giovanni Strona. Restoration cannot be scaled up globally to save reefs from loss and degradation. Nature Ecology & Evolution (2025), Figure 5 (complete). https://doi.org/10.1038/s41559-025-02667-x. Copyright The Author(s) 2025, corrected publication 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `ed0944769bba04504a194ddf34f3554987a0fdd64d77d433f3e5d5d1bda1e0d4`
+
+## fig-ff3be6fd66f05cb783b5a7d6e38f5c88
+
+Human influence on Amazon carbon dynamics
+
+- Original paper: Human influence on Amazon’s aboveground carbon dynamics intensified over the last decade
+- DOI: https://doi.org/10.1038/s41467-025-61856-1
+- Figure: Figure 3 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Arthur Fendrich; Yu Feng; Jean-Pierre Wigneron; Jerôme Chave; Arnan Araza; Zheyuan Li; Martin Herold; Jean Ometto; Luiz E. O. C. Aragão; Isabel Martinez Cano; Lei Zhu; Yidi Xu; Philippe Ciais. Human influence on Amazon’s aboveground carbon dynamics intensified over the last decade. Nature Communications (2025), Figure 3 (complete). https://doi.org/10.1038/s41467-025-61856-1. Copyright European Union, represented by The European Union, 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure from the final publisher version. Original downloaded PNG bytes retained. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `7e3a48b4b8c9c05488e2aec0585b7b64202b383658135630093c0d5ec6ab5984`
+
+## release101-s41467-026-73051-x-F6-full
+
+Freshwater forcing contributions and regional characteristics
+
+- Original paper: Regionally divergent drivers behind transgressions of the freshwater change planetary boundary
+- DOI: https://doi.org/10.1038/s41467-026-73051-x
+- Figure: Figure 6 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Vili Virkki; Lauren Seaby Andersen; Sofie te Wierik; Dieter Gerten; Miina Porkka. Regionally divergent drivers behind transgressions of the freshwater change planetary boundary. Nature Communications (2026), Figure 6 (complete). https://doi.org/10.1038/s41467-026-73051-x. Copyright The Author(s) 2026. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure 6 from the final publisher version; original downloaded PNG bytes retained, including all panels and shared legends. No redrawing, recoloring, relabeling or compositing. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `13ffb7a2e1d5d49acb1e97e6178ae2f4e01ad022ce6dcba8229c91127f1652b0`
+
+## release101-s41586-026-10456-0-F1-full
+
+Amazon transition risks with and without deforestation
+
+- Original paper: Deforestation-induced drying lowers Amazon climate threshold
+- DOI: https://doi.org/10.1038/s41586-026-10456-0
+- Figure: Figure 1 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Nico Wunderling; Boris Sakschewski; Johan Rockström; Bernardo M. Flores; Marina Hirota; Arie Staal. Deforestation-induced drying lowers Amazon climate threshold. Nature (2026), Figure 1 (complete). https://doi.org/10.1038/s41586-026-10456-0. Copyright The Author(s) 2026. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure 1 from the final publisher version; original downloaded PNG bytes retained, including all panels and shared legends. No redrawing, recoloring, relabeling or compositing. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF.
+- Approved source image SHA-256: `edf12765215dc3a9a6f1c394f08775ddf87402c1d8a6035aec405c3c1012b5b2`
+
+## release101-s41893-025-01598-6-F1-full
+
+Growth and geography of AI sustainability research
+
+- Original paper: Artificial intelligence in sustainable development research
+- DOI: https://doi.org/10.1038/s41893-025-01598-6
+- Figure: Figure 1 (complete)
+- License: [CC BY 4.0 (article); OGL v3.0 (WFP basemap)](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: C. Gohr; G. Rodríguez; S. Belomestnykh; D. Berg-Moelleken; N. Chauhan; J.-O. Engler; L. V. Heydebreck; M. J. Hintz; M. Kretschmer; C. Krügermeier; J. Meinberg; A.-L. Rau; C. Schwenck; I. Aoulkadi; S. Poll; E. Frank; F. Creutzig; O. Lemke; M. Maushart; J. Pfendtner-Heise; J. Rathgens; H. von Wehrden. Artificial intelligence in sustainable development research. Nature Sustainability (2025), Figure 1 (complete). https://doi.org/10.1038/s41893-025-01598-6. Copyright The Author(s) 2025, corrected publication 2025. CC BY 4.0 (article); OGL v3.0 (WFP basemap). No endorsement implied.
+- Modification status: Complete original Figure 1 from the final publisher version; original downloaded PNG bytes retained, including all panels and shared legends. No redrawing, recoloring, relabeling or compositing. Proportional resizing and WebP thumbnails only.
+- Additional credit: Article and original scientific graphics: CC BY 4.0. Basemap in panel b: World Food Programme, under the Open Government Licence v3.0. Contains public sector information licensed under the Open Government Licence v3.0: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/. Retains the source attribution; no endorsement is implied.
+- Approved source image SHA-256: `3bcd7237460abb22ccc461231185d82dc842c95d6110d69b6fe6c94d6017767e`
+
+## release101-s43016-025-01135-w-F1-full
+
+Crop-climate risks across warming levels and regions
+
+- Original paper: Climate change threatens crop diversity at low latitudes
+- DOI: https://doi.org/10.1038/s43016-025-01135-w
+- Figure: Figure 1 (complete)
+- License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Attribution: Sara Heikonen; Matias Heino; Mika Jalava; Stefan Siebert; Daniel Viviroli; Matti Kummu. Climate change threatens crop diversity at low latitudes. Nature Food (2025), Figure 1 (complete). https://doi.org/10.1038/s43016-025-01135-w. Copyright The Author(s) 2025. CC BY 4.0. No endorsement implied.
+- Modification status: Complete original Figure 1 from the final publisher version; original downloaded PNG bytes retained, including all panels and shared legends. No redrawing, recoloring, relabeling or compositing. Proportional resizing and WebP thumbnails only.
+- Additional credit: No separately excluded material identified in the reviewed publisher Figure, caption, article rights notice or PDF. Basemap credit: Natural Earth, public-domain map data; https://www.naturalearthdata.com/about/terms-of-use/.
+- Approved source image SHA-256: `ec3f29ffd70ae644cfd94bb07196b6c8fe8c646656b54ec11fa778355f412746`
