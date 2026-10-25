@@ -8,7 +8,7 @@ This repository maintains the public Gallery component used by Chutj's academic
 website. The live gallery remains at the existing address; this repository does
 not deploy a second website or replace the academic site's Home and GEE Access.
 
-The gallery contains **259 reviewed figures from 42 papers**: 168 figures from
+The gallery contains **464 reviewed figures from 78 papers**: 373 figures from
 CC BY 4.0 articles and 91 CC BY-NC-ND 4.0 figures. One CC BY figure also includes
 a World Food Programme basemap under OGL v3.0; its separate credit and terms are
 provided with the figure. These are individual reviewed image files, not a
