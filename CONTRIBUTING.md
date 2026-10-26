@@ -4,14 +4,19 @@ Thank you for helping improve SCI Figure Gallery.
 
 ## Suggest a figure
 
-Use the figure-suggestion issue template. Supply the paper title, DOI, journal/year,
-an official article or figure URL, the figure/panel number, and the visualization
-features you would like to learn from. If available, link the relevant license and
-identify any third-party credits or version information.
+Use the figure-suggestion issue template. The paper title and figure/panel number
+are required. You can enter `All` to recommend all figures in a paper. Examples
+include `Figure 1`, `Figure 2b`, and `Figure 3a–c`.
 
-**Submit references first.** Do not attach full PDFs, unverified image files,
-private review notes, contact lists or credentials. An issue or public PR exposes
-its contents immediately, regardless of whether it is merged later.
+A DOI or article link, your reasons for recommending the figure, and any license
+or credit information are optional. There is no need to research the license
+before making a suggestion.
+
+**Please provide references first.** To help us respect copyright, paper PDFs and
+image files are not needed at this stage. Maintainers will review the suggestion,
+check the applicable permissions, and add the figure files when permitted.
+Public issue and PR attachments are accessible immediately, so references are
+the preferred way to share a suggestion.
 
 Only maintainers may finalize publication approval after human review. Do not set
 `human_reviewed`, `public_use_allowed` or `status: approved` on the strength of an

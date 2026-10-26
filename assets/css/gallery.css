@@ -1,8 +1,9 @@
 /* Gallery-only width; Home and PaperMod core templates remain unchanged. */
 body.gallery-page .main{max-width:1180px}
 .gallery-heading{display:flex;align-items:center;justify-content:space-between;gap:12px 24px;flex-wrap:wrap}
-.gallery-heading>div{flex:1 1 280px;min-width:0}
-.gallery-heading .gallery-repository{display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:0 12px;border:1px solid var(--border);border-radius:6px;font-size:14px;font-weight:600;white-space:nowrap}
+.gallery-heading>div:first-child{flex:1 1 280px;min-width:0}
+.gallery-heading .gallery-actions{display:flex;align-items:center;flex:0 0 auto;gap:8px}
+.gallery-heading .gallery-repository{display:inline-flex;align-items:center;justify-content:center;gap:7px;flex:0 0 136px;box-sizing:border-box;width:136px;height:44px;padding:0 10px;border:1px solid var(--border);border-radius:6px;font-size:14px;font-weight:600;white-space:nowrap}
 .gallery-repository>span:first-child,.gallery-repository svg{display:block;width:20px;height:20px}
 .gallery-repository:hover{background:var(--code-bg)}
 .gallery-repository:focus-visible{outline:2px solid var(--primary);outline-offset:3px}

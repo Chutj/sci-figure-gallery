@@ -1,9 +1,12 @@
 {{ define "main" }}
 <header class="page-header gallery-heading">
   <div><h1>{{ .Title }}</h1><p>{{ .Description }}</p></div>
-  <a class="gallery-repository" href="https://github.com/Chutj/sci-figure-gallery" target="_blank" rel="noopener noreferrer" aria-label="SCI Figure Gallery on GitHub (opens in a new tab)">
-    <span aria-hidden="true">{{ partial "svg.html" (dict "name" "github") }}</span><span>GitHub</span>
-  </a>
+  <div class="gallery-actions" role="group" aria-label="Gallery links">
+    <a class="gallery-repository gallery-suggest" href="https://github.com/Chutj/sci-figure-gallery/issues/new?template=figure-suggestion.yml" target="_blank" rel="noopener noreferrer" aria-label="Suggest a scientific figure on GitHub (opens in a new tab)">Suggest a figure</a>
+    <a class="gallery-repository" href="https://github.com/Chutj/sci-figure-gallery" target="_blank" rel="noopener noreferrer" aria-label="SCI Figure Gallery on GitHub (opens in a new tab)">
+      <span aria-hidden="true">{{ partial "svg.html" (dict "name" "github") }}</span><span>GitHub</span>
+    </a>
+  </div>
 </header>
 {{ $css := resources.Get "css/gallery.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">

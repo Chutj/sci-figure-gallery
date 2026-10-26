@@ -1,44 +1,45 @@
 name: Suggest a scientific figure
-description: Recommend a paper and figure by reference, without uploading unreviewed material.
+description: Suggest a paper and the figures you would like to see in the gallery.
 title: "[Figure suggestion] "
 body:
   - type: markdown
     attributes:
-      value: Please provide references first. Do not upload PDFs, unverified images, private evidence or credentials. A suggestion is not publication approval.
+      value: |
+        Please provide references first. To help us respect copyright, only the paper and figure details below are needed. There is no need to upload paper PDFs or image files. We will review your suggestion and add the figure files ourselves if the applicable license or permission allows.
   - type: input
     id: paper
     attributes:
       label: Paper title
+      description: The title of the paper you would like to recommend.
+      placeholder: Enter the paper title
     validations:
       required: true
   - type: input
     id: doi
     attributes:
-      label: DOI or official article URL
+      label: DOI or article URL (optional)
+      description: If you have a DOI or article link handy, you can add it here.
     validations:
-      required: true
+      required: false
   - type: input
     id: figure
     attributes:
-      label: Figure or panel number and paper version
+      label: Figure or panel number
+      description: 'Examples: Figure 1, Figure 2b, or Figure 3a–c. Enter All if you recommend all figures in the paper.'
+      placeholder: Figure 1 / Figure 2b / Figure 3a–c / All
     validations:
       required: true
   - type: textarea
     id: learning
     attributes:
-      label: Visualization features worth learning
-      description: Describe the figure type, encoding, layout or scientific communication ideas.
+      label: Why you recommend this figure (optional)
+      description: 'Optional: describe the figure type, colors, layout, or anything you find worth learning. You can leave this blank.'
     validations:
-      required: true
+      required: false
   - type: textarea
     id: rights
     attributes:
-      label: License and credit references, if available
-      description: Link official terms and identify any third-party credit. Do not claim approval without review.
-  - type: checkboxes
-    id: acknowledgment
-    attributes:
-      label: Before submitting
-      options:
-        - label: I have not attached a PDF, unreviewed image, private evidence or credentials.
-          required: true
+      label: License or credit information (optional)
+      description: If you already know the license or any special credits, feel free to share a link or a short note.
+    validations:
+      required: false
