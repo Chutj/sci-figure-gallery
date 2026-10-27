@@ -39,7 +39,7 @@
   const paletteCache = new Map();
   let opener, activeFigure, zoom = 1, pendingLayout = 0;
   const text = (id, value) => { document.getElementById(id).textContent = value || ''; };
-  const meta = figure => [figure.journal, figure.year, figure.figure].filter(Boolean).join(' · ') || 'Source information unavailable';
+  const meta = figure => [figure.journal, figure.year, tools.formatFigureReference(figure.figure)].filter(Boolean).join(' · ') || 'Source information unavailable';
   const categories = [...new Set(figures.flatMap(f => f.categories))].sort();
   categories.forEach(name => {
     const option = document.createElement('option');
@@ -219,7 +219,7 @@
       const section = document.createElement('section');
       const heading = document.createElement('h3'); heading.textContent = 'Local PDF evidence and review';
       const summary = document.createElement('p');
-      summary.textContent = `${ref.figure || figure.figure} · PDF page ${ref.page || 'unresolved'} · Article license candidate: ${ref.article_license || 'unverified'} · Review: ${ref.review_status || 'unverified'}. No publication permission has been granted.`;
+      summary.textContent = `${tools.formatFigureReference(ref.figure || figure.figure)} · PDF page ${ref.page || 'unresolved'} · Article license candidate: ${ref.article_license || 'unverified'} · Review: ${ref.review_status || 'unverified'}. No publication permission has been granted.`;
       section.append(heading, summary);
       if (ref.candidate_title) {
         const title = document.createElement('h3'); title.textContent = `English draft — ${ref.candidate_title}`;

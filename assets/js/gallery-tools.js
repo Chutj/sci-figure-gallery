@@ -8,12 +8,49 @@
   const sections = ['What the figure shows', 'Statistics & symbols', 'Color & encoding', 'Design lessons'];
   const terms = value => String(value || '').toLocaleLowerCase('en').trim().split(/\s+/).filter(Boolean);
   const contains = (value, query) => terms(query).every(term => String(value || '').toLocaleLowerCase('en').includes(term));
+  // Presentation only: retain the reviewed source reference and its panel case.
+  // Never infer panel letters from a journal name or a positional description.
+  function formatFigureReference(value) {
+    const original = String(value || '').trim();
+    const match = original.match(/^fig(?:ure)?\.?\s*(\d+)(.*)$/i);
+    if (!match) return original;
+    const base = `Fig. ${match[1]}`;
+    const suffix = match[2].trim().replace(/^[·:]\s*/, '').replace(/^\(\s*/, '').replace(/\s*\)$/, '');
+    if (!suffix || /^(?:full\s+figure|complete|all)(?:\b|$)/i.test(suffix)) return base;
+    const handles = new Set(['aims','bars','budget','changes','curves','density','distributions','histograms','importance','key','left','leftmaps','lower','lowermaps','map','map_callouts','maps','middle','photo','photos','plot','points','rest','right','rightmaps','sections','series','stats','summary','trajectories','uppermaps','violin','violins']);
+    if (handles.has(suffix.toLowerCase())) return base;
+    const numbered = suffix.match(/^(?:[a-z]\d+){2,}$|^(?:[A-Z]\d+){2,}$/);
+    if (numbered) return base + suffix.match(/[A-Za-z]\d+/g).join(',');
+    if (/^(?:[a-z]{2,12}|[A-Z]{2,12})$/.test(suffix)) {
+      const panels = [...suffix];
+      if (panels.every((p, i) => i === 0 || p.charCodeAt(0) > panels[i - 1].charCodeAt(0))) {
+        const runs = [];
+        for (let i = 0; i < panels.length;) {
+          let end = i;
+          while (end + 1 < panels.length && panels[end + 1].charCodeAt(0) === panels[end].charCodeAt(0) + 1) end++;
+          runs.push(i === end ? panels[i] : panels[i]+'–'+panels[end]);
+          i = end + 1;
+        }
+        return base + runs.join(',');
+      }
+    }
+    const letter = '[A-Za-z](?:\\s*[-–—−]\\s*[A-Za-z])?';
+    const panels = suffix.match(new RegExp(`^(${letter}(?:\\s*(?:[, +&]\\s*)${letter})*)(?=$|[\\s_)])`));
+    if (panels) {
+      const compact = panels[1].replace(/\s+/g, '').replace(/[—−-]/g, '–').replace(/[+&]/g, ',');
+      return base + compact;
+    }
+    // Known source-library descriptors are not part of the figure citation.
+    if (/^(?:(?:left|right|top|bottom|central)\s+)?(?:maps?|regions?|region locator|global|area curve|ecosystem pies|box-plot panels)\b/i.test(suffix)) return base;
+    // Preserve unfamiliar references rather than silently inventing a panel set.
+    return original;
+  }
   function fields(figure) {
     const notes = figure.sections || {};
     const draft = figure.pdf_reference?.candidate || {};
     return {
       title: [figure.title, figure.paper, figure.pdf_reference?.candidate_title].join(' '), author: figure.author,
-      doi: figure.doi, journal: figure.journal, year: figure.year, figure: figure.figure,
+      doi: figure.doi, journal: figure.journal, year: figure.year, figure: [figure.figure, formatFigureReference(figure.figure)].join(' '),
       color: [notes['Color & encoding'], draft['Color & encoding'], ...(figure.colors?.hex_values || [])].join(' '),
       method: [figure.title, ...(figure.categories || []), ...sections.filter(s => s !== 'Color & encoding').flatMap(s => [notes[s], draft[s]])].join(' '),
     };
@@ -30,7 +67,7 @@
         return Boolean(range && Number(figure.year) >= Number(range[1]) && Number(figure.year) <= Number(range[2] || range[1]));
       }
       if (key === 'figure') {
-        const normalize = text => String(text || '').replace(/\bfig(?:ure)?\.?\s*/gi, 'figure ');
+        const normalize = text => String(text || '').replace(/\bfig(?:ure)?\.?\s*/gi, 'figure ').replace(/(\d)\s+(?=[a-z](?:[\s,).+&–-]|$))/gi, '$1').replace(/[–—−]/g, '-');
         return contains(normalize(values[key]), normalize(value));
       }
       return contains(values[key], value);
@@ -60,5 +97,5 @@
     }
     return selected.map(rgb => '#'+rgb.map(v => v.toString(16).padStart(2, '0')).join('').toUpperCase());
   }
-  return {sections, fields, matches, recordedColors, sampleColors};
+  return {sections, formatFigureReference, fields, matches, recordedColors, sampleColors};
 });
