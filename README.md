@@ -1,44 +1,43 @@
 # SCI Figure Gallery
 
-Scientific figures for academic learning and scientific visualization reference.
+Scientific figures for academic learning and scientific visualization reference.<br>
+用于学术学习与科学可视化参考的科研图件库。
 
-**[Explore the interactive gallery](https://chutj.github.io/gallery/)**
+**[Explore the interactive gallery](https://chutj.github.io/gallery/)**<br>
+点击上方链接，访问可交互图库。
 
-This repository maintains the public Gallery component used by Chutj's academic
-website. The live gallery remains at the existing address; this repository does
-not deploy a second website or replace the academic site's Home and GEE Access.
+This repository provides the gallery component for the academic website.<br>
+本仓库为个人学术网站的 Figure Gallery 提供代码和公开图件。
 
-The gallery contains **1,421 reviewed figures from 238 papers**: 985 figures from CC BY 4.0 articles, 210 from CC BY-NC 4.0 articles, and 226 from CC BY-NC-ND 4.0 articles. Some figures include separately licensed source frameworks or basemaps under CC BY 3.0, CC BY-SA 3.0 or OGL v3.0. Their specific attribution and additional terms remain with each figure. These are individual reviewed image files, not a blanket approval of every figure in those papers.
+As of **2026-10-28**, the gallery contains **1,523 reviewed figures from 238 papers**: 1,029 from CC BY 4.0 articles, 241 from CC BY-NC 4.0 articles, and 253 from CC BY-NC-ND 4.0 articles. Figure-specific credits and additional terms accompany each figure.<br>
+截至 **2026-10-28**，图库收录来自 **238 篇论文的 1,523 张已审核图件**：1,029 张来自 CC BY 4.0 论文，241 张来自 CC BY-NC 4.0 论文，253 张来自 CC BY-NC-ND 4.0 论文。逐图保留必要署名和附加条款。
 
-## Browse and learn
+## Browse and learn / 浏览与学习
 
-- Responsive three-column masonry layout, with two columns on smaller screens.
-- Category browsing, keyword search, sorting and collapsible field-specific filters.
-- Large-image details, zoom controls, source citations and individual licenses.
-- Copyable HEX swatches; image-sampled colors are explicitly approximate.
-- Notes on figure content, statistical symbols, color encoding and design ideas.
-- Category cards preserve the classified source excerpts; shared legends open
-  separately in figure details without merging different panel types.
+- Three-column masonry layout, with two columns on smaller screens.<br>
+  瀑布流布局，桌面显示三列，较小屏幕显示两列。
+- Figure-type and learning-focus filters, keyword search, advanced search and sorting.<br>
+  按图件类型和学习关注点筛选，支持关键词搜索、高级检索及排序。
+- Large-image details, zoom, source citations and individual licenses.<br>
+  查看大图与详细说明，支持缩放，并提供来源和逐图许可证。
+- Copy the figure’s main colors as HEX values.<br>
+  点击色块，复制图中多个主要颜色的 HEX 色值。
+- Notes on figure content, statistical symbols, color encoding and design ideas.<br>
+  学习图件内容、统计符号、颜色编码及设计思路。
+- Classified source excerpts, with shared legends displayed separately.<br>
+  保留按类别整理的原始摘录；共享图例单独展开，不拼接不同图型的面板。
 
-## Contribute
+## Contribute / 参与共建
 
-Suggestions, corrections, accessibility improvements and code contributions are
-welcome. Start with [CONTRIBUTING.md](CONTRIBUTING.md).
+Suggestions, corrections, accessibility improvements and code contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).<br>
+欢迎提出建议、纠正信息、改善无障碍体验或贡献代码。参与方式见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
-For a new figure, open a **figure suggestion** with the paper DOI, official source,
-figure/panel number and what makes the visualization useful. Please do not upload
-paper PDFs, unreviewed images, private metadata or personal credentials to an issue
-or pull request. Public submissions are already public before a PR is merged.
-
-Maintainers review the exact image version, third-party credits, permissions,
-attribution and modification status before admitting any public figure. A shared
-article license, an AI assessment or a passing CI check does not replace that review.
+To recommend a figure, use the **[figure suggestion form](https://github.com/Chutj/sci-figure-gallery/issues/new?template=figure-suggestion.yml)**.<br>
+如想推荐图片，可直接填写 **[图片建议表单](https://github.com/Chutj/sci-figure-gallery/issues/new?template=figure-suggestion.yml)**。
 
 ## Run locally
 
-Requirements: Git, Python 3.11+, Hugo Extended 0.168.0, and Node.js 20+ for frontend
-helper tests. The public build has no Python package dependencies and needs no
-account secrets, FIG library or original PDFs.
+Requirements: Git, Python 3.11+, Hugo Extended 0.168.0, and Node.js 20+ for frontend tests. No private FIG materials, PDFs or account secrets are required.
 
 ```sh
 git clone --recurse-submodules https://github.com/Chutj/sci-figure-gallery.git
@@ -48,12 +47,9 @@ python -m unittest discover -s scripts -p "test_*.py"
 python scripts/serve_preview.py
 ```
 
-The preview is available at `http://127.0.0.1:1320/gallery/`. It validates a clean
-production build first, then rewrites only its disposable local HTML to use the
-same reviewed image bytes locally. The tracked public dataset and approvals stay
-unchanged. If Hugo is outside PATH, use `--hugo /path/to/hugo`.
+Open `http://127.0.0.1:1320/gallery/`. The preview validates the public build and uses local image URLs without changing approved data. Use `--hugo /path/to/hugo` if Hugo is outside PATH.
 
-For a production check:
+Production check:
 
 ```sh
 hugo build --environment production --minify
@@ -64,45 +60,26 @@ python scripts/validate_public_gallery.py --output public
 
 | Path | Purpose |
 | --- | --- |
-| `assets/`, `layouts/` | Gallery UI and Hugo/PaperMod templates |
-| `data/gallery/public.json` | Reviewed public metadata |
-| `data/gallery/allowlist.json` | Explicit approvals with version and evidence pins |
-| `data/gallery/media.json` | Exact image and thumbnail hashes |
-| `static/figures/approved/` | Only the approved image versions |
-| `gallery-component.json` | Explicit files shared with the academic website |
-| `scripts/` | Validation, tests, preview and pinned website synchronization |
-| `PROVENANCE.json` | Original website commit and imported-file hashes |
+| `assets/`, `layouts/` | Gallery UI and templates |
+| `data/gallery/` | Public metadata, approvals and media hashes |
+| `static/figures/approved/` | Approved images and thumbnails |
+| `gallery-component.json` | Files shared with the academic website |
+| `scripts/` | Validation, tests, preview and synchronization |
+| `PROVENANCE.json` | Source history and import hashes |
 
 ## Website integration
 
-The independent repository is the maintenance source for the public Gallery.
-The website keeps a version-pinned, hash-checked copy so its existing Hugo build
-remains self-contained and its `/gallery/` address stays stable.
+This repository is the Gallery’s maintenance source. The academic website keeps a commit-pinned, hash-checked copy at `/gallery/`; upstream changes require separate review and deployment.
 
 ```sh
-python scripts/sync_website.py plan --website ../chutj.github.io
-python scripts/sync_website.py apply --website ../chutj.github.io
+python scripts/sync_website.py plan --website ../chutj.github.io --ref <commit>
+python scripts/sync_website.py apply --website ../chutj.github.io --ref <commit>
 ```
 
-Only a committed component version can be synced. The website records the exact
-commit and every managed file hash in `gallery-component.lock.json`; its existing
-production validation rejects drift. A community PR or new upstream commit does
-not automatically update the live site. Review and deploy the website separately.
-
-The owner's FIG import, PDF association and private rights evidence remain outside
-this repository. See [the maintainer workflow](docs/maintainers.zh-CN.md).
+Only committed versions can be synchronized. Private FIG imports, PDFs and review evidence stay outside this repository. See the [maintainer workflow](docs/maintainers.zh-CN.md).
 
 ## Licensing
 
-Project-owned software and project documentation use the **MIT License**. Research
-figures and other third-party material are excluded from MIT and retain their
-individual terms. In particular, CC BY-NC-ND images are not available for unrestricted
-commercial reuse or distribution of adaptations.
+Project code and documentation use the **MIT License**. Research figures and other third-party material are excluded and retain their individual licenses, attribution and modification notices. PaperMod has its own license.
 
-Read [LICENSE](LICENSE), [LICENSES.md](LICENSES.md) and each figure's attribution,
-license link and modification notice. No single Creative Commons license is
-applied to the entire collection. Rights questions: [chutj@foxmail.com](mailto:chutj@foxmail.com).
-
-The original website history is preserved. This project's initial extraction is
-documented in `PROVENANCE.json`; PaperMod remains a separately pinned submodule
-with its own license. Private FIG materials and original papers are not included.
+See [LICENSE](LICENSE), [LICENSES.md](LICENSES.md) and each figure’s details. Rights questions: [chutj@foxmail.com](mailto:chutj@foxmail.com).

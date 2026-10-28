@@ -44,8 +44,9 @@
     {{ if eq $mode "local" }}<p class="gallery-notice"><strong>Local preview</strong> · Rights assessment does not constitute publication approval.</p>{{ else if site.Params.galleryCandidatePreview }}<p class="gallery-notice"><strong>Candidate preview — pending final confirmation</strong> · This isolated preview does not approve or publish any figure.</p>{{ end }}
     <div class="gallery-controls">
       <label for="gallery-query">Search the library<input id="gallery-query" type="search" placeholder="Title, DOI, journal, color or method…" autocomplete="off"></label>
-      <label for="gallery-category">Category<select id="gallery-category"><option value="">All categories</option></select></label>
-      <label for="gallery-sort">Sort by<select id="gallery-sort"><option value="library">Library order</option><option value="title">Title A–Z</option><option value="newest">Year, newest first</option></select></label>
+      <label class="gallery-select" for="gallery-category">Figure type<select id="gallery-category"><option value="">All types</option></select></label>
+      <label class="gallery-select" for="gallery-focus">Focus<select id="gallery-focus"><option value="">Any focus</option></select></label>
+      <label class="gallery-select" for="gallery-sort">Sort by<select id="gallery-sort"><option value="library">Default</option><option value="title">Title A–Z</option><option value="newest">Year, newest first</option></select></label>
       <button id="gallery-reset" type="button">Reset</button>
     </div>
     <details id="gallery-advanced" class="gallery-advanced">
@@ -68,18 +69,20 @@
     <noscript>Enable JavaScript to browse this local figure library.</noscript>
   </section>
   <dialog id="figure-detail" aria-labelledby="detail-title">
-    <div class="detail-toolbar"><h2 id="detail-title"></h2><button id="detail-close" type="button" autofocus>Close</button></div>
+    <div class="detail-toolbar">
+      <div class="detail-heading"><h2 id="detail-title"></h2><p id="detail-meta"></p></div>
+      <button id="detail-close" type="button" autofocus>Close</button>
+    </div>
     <div class="detail-body">
-      <div class="detail-meta-row">
-        <p id="detail-meta"></p>
-        <a id="detail-original" target="_blank" rel="noopener">Open full-size image in a new tab</a>
-      </div>
       <div class="image-tools">
         <div class="image-controls" role="group" aria-label="Image zoom controls" aria-describedby="detail-zoom-help">
           <button id="zoom-fit" type="button">Fit image</button><button id="zoom-actual" type="button">Actual size</button>
           <button id="zoom-out" type="button" aria-label="Zoom out">−</button><button id="zoom-in" type="button" aria-label="Zoom in">+</button><span id="zoom-level" role="status" aria-live="polite"></span>
         </div>
-        <p id="detail-zoom-help" class="gallery-muted">Zoom to inspect panel labels. Scroll within the image when enlarged. Keys: + / − zoom, 0 fit, 1 actual size, Esc close.</p>
+        <div class="image-guidance">
+          <a id="detail-original" target="_blank" rel="noopener">Open full-size image in a new tab</a>
+          <p id="detail-zoom-help" class="gallery-muted">Zoom to inspect panel labels. Keys: +/−, 0 fit, 1 actual, Esc close.</p>
+        </div>
       </div>
       <div id="detail-viewport" tabindex="0" role="region" aria-label="Scrollable figure image" aria-describedby="detail-zoom-help"><img id="detail-image" alt=""></div>
       <p id="detail-image-error" hidden>Image unavailable. The reference notes remain available below.</p>

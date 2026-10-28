@@ -6,6 +6,15 @@
 })(globalThis, () => {
   'use strict';
   const sections = ['What the figure shows', 'Statistics & symbols', 'Color & encoding', 'Design lessons'];
+  const universalCategories = new Set(['Color references', 'Legends, color scales & symbols']);
+  const browsingCategories = figure => (figure.categories || []).filter(name => !universalCategories.has(name));
+  // Browsing facets only: do not rewrite the reviewed source categories.
+  const figureTypes = new Set(['Maps', 'Scatter plots', 'Lines, curves & time series',
+    'Bar charts', 'Histograms', 'Composition charts', 'Polar plots',
+    'Box, violin & raincloud plots', 'Heatmaps & matrices',
+    'Density, ridgelines & cumulative distributions', 'Error bars, intervals & forest plots',
+    'Bubble plots', 'Contours & response surfaces', 'Sankey & chord diagrams']);
+  const categoryGroup = name => figureTypes.has(name) ? 'type' : 'focus';
   const terms = value => String(value || '').toLocaleLowerCase('en').trim().split(/\s+/).filter(Boolean);
   const contains = (value, query) => terms(query).every(term => String(value || '').toLocaleLowerCase('en').includes(term));
   // Presentation only: retain the reviewed source reference and its panel case.
@@ -17,7 +26,7 @@
     const base = `Fig. ${match[1]}`;
     const suffix = match[2].trim().replace(/^[·:]\s*/, '').replace(/^\(\s*/, '').replace(/\s*\)$/, '');
     if (!suffix || /^(?:full\s+figure|complete|all)(?:\b|$)/i.test(suffix)) return base;
-    const handles = new Set(['aims','bars','budget','changes','curves','density','distributions','histograms','importance','key','left','leftmaps','lower','lowermaps','map','map_callouts','maps','middle','photo','photos','plot','points','rest','right','rightmaps','sections','series','stats','summary','trajectories','uppermaps','violin','violins']);
+    const handles = new Set(['aims','bars','budget','changes','curves','density','distributions','histograms','importance','key','left','leftmaps','lower','lowermaps','map','map_callouts','maps','middle','photo','photos','plot','points','regional','rest','right','rightmaps','sections','series','stats','summary','trajectories','uppermaps','violin','violins']);
     if (handles.has(suffix.toLowerCase())) return base;
     const numbered = suffix.match(/^(?:[a-z]\d+){2,}$|^(?:[A-Z]\d+){2,}$/);
     if (numbered) return base + suffix.match(/[A-Za-z]\d+/g).join(',');
@@ -52,12 +61,13 @@
       title: [figure.title, figure.paper, figure.pdf_reference?.candidate_title].join(' '), author: figure.author,
       doi: figure.doi, journal: figure.journal, year: figure.year, figure: [figure.figure, formatFigureReference(figure.figure)].join(' '),
       color: [notes['Color & encoding'], draft['Color & encoding'], ...(figure.colors?.hex_values || [])].join(' '),
-      method: [figure.title, ...(figure.categories || []), ...sections.filter(s => s !== 'Color & encoding').flatMap(s => [notes[s], draft[s]])].join(' '),
+      method: [figure.title, ...browsingCategories(figure), ...sections.filter(s => s !== 'Color & encoding').flatMap(s => [notes[s], draft[s]])].join(' '),
     };
   }
-  function matches(figure, query, category, advanced = {}) {
+  function matches(figure, query, category, advanced = {}, focus = '') {
     const values = fields(figure);
     if (category && !(figure.categories || []).includes(category)) return false;
+    if (focus && !(figure.categories || []).includes(focus)) return false;
     if (!contains(Object.values(values).join(' '), query)) return false;
     return Object.entries(advanced).every(([key, value]) => {
       if (!String(value).trim()) return true;
@@ -97,5 +107,5 @@
     }
     return selected.map(rgb => '#'+rgb.map(v => v.toString(16).padStart(2, '0')).join('').toUpperCase());
   }
-  return {sections, formatFigureReference, fields, matches, recordedColors, sampleColors};
+  return {sections, browsingCategories, categoryGroup, formatFigureReference, fields, matches, recordedColors, sampleColors};
 });

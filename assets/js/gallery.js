@@ -28,6 +28,7 @@
   document.body.classList.add('gallery-page');
   const query = document.getElementById('gallery-query');
   const category = document.getElementById('gallery-category');
+  const focus = document.getElementById('gallery-focus');
   const sort = document.getElementById('gallery-sort');
   const grid = document.getElementById('gallery-grid');
   const dialog = document.getElementById('figure-detail');
@@ -40,12 +41,12 @@
   let opener, activeFigure, zoom = 1, pendingLayout = 0;
   const text = (id, value) => { document.getElementById(id).textContent = value || ''; };
   const meta = figure => [figure.journal, figure.year, tools.formatFigureReference(figure.figure)].filter(Boolean).join(' · ') || 'Source information unavailable';
-  const categories = [...new Set(figures.flatMap(f => f.categories))].sort();
+  const categories = [...new Set(figures.flatMap(f => tools.browsingCategories(f)))].sort();
   categories.forEach(name => {
     const option = document.createElement('option');
     option.value = name;
     option.textContent = `${name} (${figures.filter(f => f.categories.includes(name)).length})`;
-    category.append(option);
+    (tools.categoryGroup(name) === 'type' ? category : focus).append(option);
   });
   function layout() {
     pendingLayout = 0;
@@ -146,7 +147,8 @@
   function openFigure(figure, button) {
     opener = button; activeFigure = figure;
     text('detail-title', figure.title); text('detail-meta', meta(figure));
-    text('detail-categories', figure.categories.length ? `Filed under: ${figure.categories.join(' · ')}` : 'Category unavailable');
+    const displayedCategories = tools.browsingCategories(figure);
+    text('detail-categories', displayedCategories.length ? `Filed under: ${displayedCategories.join(' · ')}` : 'Category unavailable');
     text('detail-paper', figure.paper || 'Paper title unavailable');
     document.getElementById('detail-translation').hidden = publicMode;
     text('detail-translation', publicMode ? '' : !figure.translation_status || figure.translation_status === 'reviewed'
@@ -241,7 +243,7 @@
     const advanced = Object.fromEntries(advancedInputs.map(input => [input.dataset.searchField, input.value]));
     const active = advancedInputs.filter(input => input.value.trim()).length;
     text('gallery-advanced-active', active ? ` · ${active} active` : '');
-    const matches = figures.filter(figure => tools.matches(figure, query.value, category.value, advanced));
+    const matches = figures.filter(figure => tools.matches(figure, query.value, category.value, advanced, focus.value));
     if (sort.value === 'title') matches.sort((a, b) => a.title.localeCompare(b.title, 'en'));
     if (sort.value === 'newest') matches.sort((a, b) => (Number(b.year) || 0) - (Number(a.year) || 0) || a.title.localeCompare(b.title, 'en'));
     [...grid.children].forEach(card => resizeObserver?.unobserve(card));
@@ -276,10 +278,10 @@
     document.getElementById('gallery-empty').hidden = matches.length > 0;
     layout();
   }
-  query.addEventListener('input', render); category.addEventListener('change', render); sort.addEventListener('change', render);
+  query.addEventListener('input', render); category.addEventListener('change', render); focus.addEventListener('change', render); sort.addEventListener('change', render);
   advancedInputs.forEach(input => input.addEventListener('input', render));
   document.getElementById('gallery-reset').addEventListener('click', () => {
-    query.value = ''; category.value = ''; sort.value = 'library';
+    query.value = ''; category.value = ''; focus.value = ''; sort.value = 'library';
     advancedInputs.forEach(input => { input.value = ''; }); advancedPanel.open = false;
     render(); query.focus();
   });

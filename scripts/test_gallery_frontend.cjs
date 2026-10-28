@@ -1,7 +1,7 @@
 /* Synthetic fixtures only; no real rights decisions or original FIG writes. */
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const {formatFigureReference, matches, recordedColors, sampleColors} = require('../assets/js/gallery-tools.js');
+const {browsingCategories, categoryGroup, formatFigureReference, matches, recordedColors, sampleColors} = require('../assets/js/gallery-tools.js');
 const figure = {
   title:'Drought response', paper:'A synthetic research paper', author:'Jane Example',
   doi:'10.1234/test', journal:'Example Journal', year:2026, figure:'Fig. 2 a–b',
@@ -11,6 +11,56 @@ const figure = {
     'Verification & limitations':'Hidden-evidence-token',
   },
 };
+test('universal browsing tags are hidden without deleting source metadata or colors', () => {
+  const record={...figure,categories:['Maps','Color references','Legends, color scales & symbols','Multi-panel layouts']};
+  const before=JSON.stringify(record);
+  assert.deepEqual(browsingCategories(record),['Maps','Multi-panel layouts']);
+  assert.equal(matches(record,'','',{method:'color references'}),false);
+  assert.equal(matches(record,'','',{color:'#abcdef'}),true);
+  assert.deepEqual(recordedColors(record),['#ABCDEF']);
+  assert.equal(JSON.stringify(record),before);
+  assert.deepEqual(browsingCategories({}),[]);
+});
+test('remaining focus filters still narrow real records after universal tags are removed', () => {
+  const fs=require('node:fs'),path=require('node:path');
+  const records=JSON.parse(fs.readFileSync(path.join(__dirname,'../data/gallery/public.json'),'utf8')).records;
+  const labels=[...new Set(records.flatMap(browsingCategories))];
+  assert.ok(!labels.includes('Color references'));
+  assert.ok(!labels.includes('Legends, color scales & symbols'));
+  for (const name of labels.filter(name=>categoryGroup(name)==='focus')) {
+    const count=records.filter(r=>matches(r,'','',{},name)).length;
+    assert.ok(count>0 && count<records.length,name);
+  }
+});
+test('figure types and learning focuses are separated without changing records', () => {
+  for (const label of ['Maps', 'Bar charts', 'Box, violin & raincloud plots', 'Sankey & chord diagrams'])
+    assert.equal(categoryGroup(label), 'type');
+  for (const label of ['Model evaluation', 'Paths & networks', 'Physical interpretation', 'SHAP plots', 'Schematics', 'Color references', 'Multi-panel layouts'])
+    assert.equal(categoryGroup(label), 'focus');
+  // Future source labels remain browsable instead of silently disappearing.
+  assert.equal(categoryGroup('New source learning category'), 'focus');
+});
+test('figure type and focus intersect with keywords and advanced queries', () => {
+  const record = {...figure, categories:['Maps','Model evaluation']};
+  const before = JSON.stringify(record);
+  assert.equal(matches(record,'drought','Maps',{journal:'Example'},'Model evaluation'),true);
+  assert.equal(matches(record,'drought','Bar charts',{},'Model evaluation'),false);
+  assert.equal(matches(record,'drought','Maps',{},'SHAP plots'),false);
+  assert.equal(matches(record,'','',{},'Model evaluation'),true);
+  assert.equal(matches(record,'','',{},''),true);
+  assert.equal(matches({},'','',{},'Model evaluation'),false);
+  assert.equal(JSON.stringify(record),before);
+});
+test('clearing both facets restores the full library, including focus-only figures', () => {
+  const rows = [{...figure,categories:['Maps','Model evaluation']},
+    {...figure,categories:['Bar charts','Color references']},
+    {...figure,categories:['SHAP plots']}];
+  const filter = (type,focus) => rows.filter(row => matches(row,'',type,{},focus));
+  assert.equal(filter('Maps','Model evaluation').length,1);
+  assert.equal(filter('Maps','Color references').length,0);
+  assert.equal(filter('','SHAP plots').length,1);
+  assert.equal(filter('','').length,3);
+});
 test('field queries use AND across fields and terms, ignoring case', () => {
   assert.equal(matches(figure,'drought','Maps',{author:'JANE example',journal:'example',doi:'10.1234'}),true);
   assert.equal(matches(figure,'drought','Maps',{author:'Other person'}),false);
@@ -104,6 +154,6 @@ test('every current public reference can be formatted without touching approved 
 test('new FIG batch separators and compact panel selections keep their exact membership', () => {
   const cases = [['Fig.2 · cd','Fig. 2c–d'],['Fig.1 · ABCEFG','Fig. 1A–C,E–G'],['Fig.3 · ch','Fig. 3c,h'],['Fig.2 · a1b1','Fig. 2a1,b1']];
   for (const [raw,expected] of cases) assert.equal(formatFigureReference(raw),expected);
-  for (const handle of ['aims','stats','maps','photo','leftmaps','distributions'])
+  for (const handle of ['aims','stats','maps','photo','leftmaps','distributions','regional'])
     assert.equal(formatFigureReference('Fig.1 · '+handle),'Fig. 1');
 });
