@@ -34,7 +34,8 @@ def build(hugo,root=ROOT,base_url='http://127.0.0.1:1320/'):
                     raise ValueError('Only the exact reviewed site-hosted media can be previewed')
                 return parsed.path
             for figure in figures:
-                figure['image']=local(figure['image']);figure['thumbnail']=local(figure['thumbnail'])
+                if figure.get('image'): figure['image']=local(figure['image'])
+                figure['thumbnail']=local(figure['thumbnail'])
                 if 'legend' in figure: figure['legend']['image']=local(figure['legend']['image'])
                 figure['srcset']=', '.join(local(part.strip().split()[0])+' '+part.strip().split()[1]
                     for part in figure['srcset'].split(',') if part.strip())
@@ -44,6 +45,21 @@ def build(hugo,root=ROOT,base_url='http://127.0.0.1:1320/'):
         html,count=pattern.subn(localize,html)
         if count!=1:raise ValueError('Expected exactly one reviewed Gallery data element')
         path.write_text(html,encoding='utf-8')
+    # Lazy detail payloads are localized only in the disposable preview output.
+    # Their approved source metadata and content-addressed production files stay unchanged.
+    for path in (output/'gallery/records').rglob('*.json'):
+        figure=json.loads(path.read_text(encoding='utf-8'))
+        def local_media(url):
+            parsed=urlsplit(url)
+            if parsed.scheme!='https' or parsed.netloc!='chutj.github.io' or not parsed.path.startswith('/figures/approved/'):
+                raise ValueError('Unexpected lazy-detail media origin')
+            return parsed.path
+        for key in ('image','thumbnail'):
+            if figure.get(key): figure[key]=local_media(figure[key])
+        if figure.get('legend'): figure['legend']['image']=local_media(figure['legend']['image'])
+        figure['srcset']=', '.join(local_media(part.strip().split()[0])+' '+part.strip().split()[1]
+            for part in figure.get('srcset','').split(',') if part.strip())
+        path.write_text(json.dumps(figure,ensure_ascii=False),encoding='utf-8')
     return output
 
 

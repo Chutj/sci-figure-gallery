@@ -27,7 +27,8 @@
     const suffix = match[2].trim().replace(/^[·:]\s*/, '').replace(/^\(\s*/, '').replace(/\s*\)$/, '');
     if (!suffix || /^(?:full\s+figure|complete|all)(?:\b|$)/i.test(suffix)) return base;
     const handles = new Set(['aims','bars','budget','changes','curves','density','distributions','histograms','importance','key','left','leftmaps','lower','lowermaps','map','map_callouts','maps','middle','photo','photos','plot','points','regional','rest','right','rightmaps','sections','series','stats','summary','trajectories','uppermaps','violin','violins']);
-    if (handles.has(suffix.toLowerCase())) return base;
+    if (handles.has(suffix.toLowerCase())
+        || /^(?:(?:left|right|top)_density|right_bars|panel label pending translation)$/i.test(suffix)) return base;
     const numbered = suffix.match(/^(?:[a-z]\d+){2,}$|^(?:[A-Z]\d+){2,}$/);
     if (numbered) return base + suffix.match(/[A-Za-z]\d+/g).join(',');
     if (/^(?:[a-z]{2,12}|[A-Z]{2,12})$/.test(suffix)) {
@@ -55,6 +56,11 @@
     return original;
   }
   function fields(figure) {
+    // The compact index carries only searchable text, not full notes or rights.
+    if (figure.search_fields && typeof figure.search_fields === 'object') {
+      return Object.fromEntries(['title', 'author', 'doi', 'journal', 'year', 'figure', 'color', 'method']
+        .map(key => [key, key === 'figure' ? [figure.figure, formatFigureReference(figure.figure)].join(' ') : String(figure.search_fields[key] ?? '')]));
+    }
     const notes = figure.sections || {};
     const draft = figure.pdf_reference?.candidate || {};
     return {
@@ -83,6 +89,65 @@
       return contains(values[key], value);
     });
   }
+  function creditSegments(value) {
+    const source = String(value || ''), parts = [];
+    let position = 0;
+    for (const match of source.matchAll(/https:\/\/[^\s<>"']+/gi)) {
+      let candidate = match[0].replace(/[.,;:!?]+$/, '');
+      // Credit prose often surrounds a URL with parentheses; keep those as text.
+      while (candidate.endsWith(')') && (candidate.match(/\)/g) || []).length > (candidate.match(/\(/g) || []).length)
+        candidate = candidate.slice(0, -1);
+      let url;
+      try { url = new URL(candidate); } catch { continue; }
+      const host = url.hostname.toLowerCase();
+      if (url.protocol !== 'https:' || url.username || url.password || url.port
+          || !host.includes('.') || /[:\[\]]/.test(host) || /^[\d.]+$/.test(host)
+          || /(?:^|\.)(?:localhost|local|internal|test|invalid|example)$/.test(host)) continue;
+      if (match.index > position) parts.push({text: source.slice(position, match.index)});
+      parts.push({text: candidate, href: url.href});
+      position = match.index + candidate.length;
+    }
+    if (position < source.length) parts.push({text: source.slice(position)});
+    return parts;
+  }
+  function figureURL(href, id) {
+    const url = new URL(href);
+    if (id == null) url.searchParams.delete('figure');
+    else url.searchParams.set('figure', String(id));
+    return url.href;
+  }
+  function resolveFigureLink(href, records) {
+    const ids = new URL(href).searchParams.getAll('figure');
+    if (!ids.length) return {status: 'none', figure: null};
+    if (ids.length !== 1 || !ids[0]) return {status: 'unknown', figure: null};
+    const figure = records.find(record => record.id === ids[0]);
+    return {status: figure ? 'found' : 'unknown', figure: figure || null};
+  }
+  function batch(records, shown, size = 48) {
+    return records.slice(shown, shown + size);
+  }
+  function createDetailLoader(fetcher, baseURL) {
+    const cache = new Map();
+    return async (figure, signal) => {
+      if (!figure.details_url) return figure;
+      const base = new URL(baseURL), url = new URL(figure.details_url, base);
+      if (url.origin !== base.origin || !/^https?:$/.test(url.protocol) || url.username || url.password
+          || url.search || url.hash || !url.pathname.endsWith('.json')) throw new Error('Invalid figure details URL');
+      if (cache.has(url.href)) {
+        const record = cache.get(url.href);
+        if (record.id !== figure.id) throw new Error('Figure details do not match');
+        return record;
+      }
+      const response = await fetcher(url.href, {signal, credentials: 'omit', mode: 'same-origin'});
+      if (!response.ok) throw new Error('Figure details unavailable');
+      const record = await response.json();
+      if (!record || typeof record !== 'object' || Array.isArray(record) || record.id !== figure.id)
+        throw new Error('Figure details do not match');
+      if (signal?.aborted) throw new Error('Figure details cancelled');
+      cache.set(url.href, record);
+      return record;
+    };
+  }
   function recordedColors(figure) {
     const value = [figure.sections?.['Color & encoding'], figure.pdf_reference?.candidate?.['Color & encoding'], ...(figure.colors?.hex_values || [])].join(' ');
     const colors = value.match(/#(?:[a-f0-9]{6}|[a-f0-9]{3})(?![a-z0-9_])/gi) || [];
@@ -107,5 +172,5 @@
     }
     return selected.map(rgb => '#'+rgb.map(v => v.toString(16).padStart(2, '0')).join('').toUpperCase());
   }
-  return {sections, browsingCategories, categoryGroup, formatFigureReference, fields, matches, recordedColors, sampleColors};
+  return {sections, browsingCategories, categoryGroup, formatFigureReference, fields, matches, creditSegments, figureURL, resolveFigureLink, batch, createDetailLoader, recordedColors, sampleColors};
 });

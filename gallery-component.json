@@ -24,6 +24,7 @@
     "gallery-component.json",
     "scripts/check_gallery_component.py",
     "third_party/sci-figure-gallery/LICENSE",
-    "third_party/sci-figure-gallery/NOTICE.md"
+    "third_party/sci-figure-gallery/NOTICE.md",
+    "scripts/test_gallery_payload.py"
   ]
 }

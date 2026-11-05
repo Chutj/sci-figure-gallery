@@ -9,8 +9,8 @@ Scientific figures for academic learning and scientific visualization reference.
 This repository provides the gallery component for the academic website.<br>
 本仓库为个人学术网站的 Figure Gallery 提供代码和公开图件。
 
-As of **2026-10-28**, the gallery contains **1,523 reviewed figures from 238 papers**: 1,029 from CC BY 4.0 articles, 241 from CC BY-NC 4.0 articles, and 253 from CC BY-NC-ND 4.0 articles. Figure-specific credits and additional terms accompany each figure.<br>
-截至 **2026-10-28**，图库收录来自 **238 篇论文的 1,523 张已审核图件**：1,029 张来自 CC BY 4.0 论文，241 张来自 CC BY-NC 4.0 论文，253 张来自 CC BY-NC-ND 4.0 论文。逐图保留必要署名和附加条款。
+As of **2026-11-05**, the gallery contains **1,707 reviewed figures from 263 papers**. Each figure lists its license, source version and required credits.<br>
+截至 **2026-11-05**，图库收录来自 **263 篇论文的 1,707 张已审核图件**。每张图均标明许可证、来源版本和必要署名。
 
 ## Browse and learn / 浏览与学习
 

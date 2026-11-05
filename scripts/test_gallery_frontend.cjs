@@ -1,7 +1,7 @@
 /* Synthetic fixtures only; no real rights decisions or original FIG writes. */
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const {browsingCategories, categoryGroup, formatFigureReference, matches, recordedColors, sampleColors} = require('../assets/js/gallery-tools.js');
+const {browsingCategories, categoryGroup, formatFigureReference, fields, matches, creditSegments, figureURL, resolveFigureLink, batch, createDetailLoader, recordedColors, sampleColors} = require('../assets/js/gallery-tools.js');
 const figure = {
   title:'Drought response', paper:'A synthetic research paper', author:'Jane Example',
   doi:'10.1234/test', journal:'Example Journal', year:2026, figure:'Fig. 2 a–b',
@@ -115,6 +115,8 @@ test('figure references share abbreviation, spacing, panel ranges and no redunda
     ['Fig.3 a maps', 'Fig. 3a'], ['Figure 2 (a_hist)', 'Fig. 2a'],
     ['Fig.3 a-c+e-g maps', 'Fig. 3a–c,e–g'], ['Fig.3 b+d+f bars', 'Fig. 3b,d,f'],
     ['Fig.3 central map', 'Fig. 3'], ['Figure 6 (right box-plot panels)', 'Fig. 6'],
+    ['Fig.3 left_density', 'Fig. 3'], ['Fig.5 right_bars', 'Fig. 5'],
+    ['Fig.2 (panel label pending translation)', 'Fig. 2'],
   ];
   for (const [raw, expected] of cases) assert.equal(formatFigureReference(raw), expected, raw);
 });
@@ -156,4 +158,132 @@ test('new FIG batch separators and compact panel selections keep their exact mem
   for (const [raw,expected] of cases) assert.equal(formatFigureReference(raw),expected);
   for (const handle of ['aims','stats','maps','photo','leftmaps','distributions','regional'])
     assert.equal(formatFigureReference('Fig.1 · '+handle),'Fig. 1');
+});
+
+
+test('compact index searches the same fields without loading full notes', () => {
+  const compact = {id:'figure-synthetic', title:figure.title, year:figure.year, figure:figure.figure,
+    categories:figure.categories, search_fields:fields(figure)};
+  for (const [query, advanced] of [['regional drought',{}],['',{color:'#abcdef'}],
+    ['',{method:'linear regression'}],['',{author:'jane',year:'2020–2026'}],
+    ['2a–b',{}],['',{figure:'Figure 2 a-b'}],['hidden-evidence-token',{}]]) {
+    assert.equal(matches(compact,query,'Maps',advanced),matches(figure,query,'Maps',advanced));
+  }
+  assert.equal(compact.sections,undefined);
+});
+
+test('batches preserve sorted order and global search reaches beyond first batch', () => {
+  const records=Array.from({length:121},(_,i)=>({...figure,id:`f${i}`,title:i===120?'Unique end-of-library method':`Figure ${i}`}));
+  const first=batch(records,0), second=batch(records,first.length), last=batch(records,96);
+  assert.equal(first.length,48); assert.equal(second.length,48);assert.equal(last.length,25);
+  assert.deepEqual([...first,...second,...last].map(r=>r.id),records.map(r=>r.id));
+  assert.equal(batch(records,records.length).length,0);
+  const found=records.filter(r=>matches(r,'end-of-library','',{}));
+  assert.equal(batch(found,0)[0].id,'f120');
+});
+
+test('details load only on request, cache validated records and reject foreign paths', async () => {
+  let calls=0;
+  const full={...figure,id:'f1'};
+  const load=createDetailLoader(async (url,options)=>{calls++;assert.equal(options.credentials,'omit');return {ok:true,json:async()=>full};},'https://example.test/gallery/');
+  const card={id:'f1',details_url:'/gallery/records/f1/hash.json'};
+  assert.equal(calls,0);
+  assert.equal(await load(card),full);assert.equal(await load(card),full);assert.equal(calls,1);
+  for (const details_url of ['https://elsewhere.test/f.json','//elsewhere.test/f.json','/file.html','/f.json?secret=x'])
+    await assert.rejects(load({...card,details_url}));
+  assert.equal(calls,1);
+  assert.equal(await load(full),full);
+  await assert.rejects(load({...card,id:'different-id'}));
+});
+
+test('failed or mismatched details are never cached and retry can succeed', async () => {
+  const card={id:'f1',details_url:'/records/f1.json'};
+  let attempt=0;
+  const load=createDetailLoader(async ()=>{
+    attempt++;
+    return {ok:attempt!==1,json:async()=>({id:attempt===2?'wrong':'f1',sections:{}})};
+  },'https://example.test/gallery/');
+  await assert.rejects(load(card));
+  await assert.rejects(load(card));
+  assert.equal((await load(card)).id,'f1');
+  assert.equal(attempt,3);
+});
+
+test('a cancelled in-flight detail cannot populate the cache after closing', async () => {
+  let complete, calls=0;
+  const card={id:'f1',details_url:'/records/f1.json'};
+  const load=createDetailLoader(async ()=>{
+    calls++;
+    return {ok:true,json:()=>new Promise(resolve=>{complete=resolve;})};
+  },'https://example.test/gallery/');
+  const controller=new AbortController();
+  const pending=load(card,controller.signal);
+  await Promise.resolve();
+  controller.abort();complete({id:'f1'});
+  await assert.rejects(pending);
+  const retry=load(card);await Promise.resolve();complete({id:'f1'});await retry;
+  assert.equal(calls,2);
+});
+
+
+test('figure links use stable IDs while retaining unrelated query values and hash', () => {
+  const initial='https://example.test/gallery/?campaign=group+meeting&lang=en#notes';
+  const linked=new URL(figureURL(initial,'fig-stable id/β'));
+  assert.equal(linked.pathname,'/gallery/');
+  assert.equal(linked.searchParams.get('figure'),'fig-stable id/β');
+  assert.equal(linked.searchParams.get('campaign'),'group meeting');
+  assert.equal(linked.searchParams.get('lang'),'en');
+  assert.equal(linked.hash,'#notes');
+  assert.equal(figureURL(linked.href,'fig-stable id/β'),linked.href);
+  const cleared=new URL(figureURL(linked.href,null));
+  assert.equal(cleared.searchParams.has('figure'),false);
+  assert.equal(cleared.searchParams.get('campaign'),'group meeting');
+  assert.equal(cleared.hash,'#notes');
+  assert.equal(new URL(figureURL(linked.href,'fig-next')).searchParams.getAll('figure').length,1);
+});
+
+test('direct figure links resolve against the entire catalog, never arbitrary assets', () => {
+  const rows=Array.from({length:121},(_,i)=>({id:`fig-${i}`}));
+  assert.equal(resolveFigureLink('https://example.test/gallery/?figure=fig-120',rows).figure,rows[120]);
+  assert.equal(resolveFigureLink('https://example.test/gallery/',rows).status,'none');
+  for (const suffix of ['?figure=missing','?figure=','?figure=fig-1&figure=fig-2',
+    '?figure=https%3A%2F%2Fprivate.test%2Ffile.json','?figure=..%2Fprivate%2Ffile.pdf']) {
+    const result=resolveFigureLink('https://example.test/gallery/'+suffix,rows);
+    assert.equal(result.status,'unknown');assert.equal(result.figure,null);
+  }
+});
+
+
+test('credit linkification keeps all prose and makes HTTPS attribution URLs actionable', () => {
+  const credit='© OpenStreetMap contributors (https://www.openstreetmap.org/copyright). ODbL: https://opendatacommons.org/licenses/odbl/1.0/; no new license granted.';
+  const segments=creditSegments(credit);
+  assert.equal(segments.map(s=>s.text).join(''),credit);
+  assert.deepEqual(segments.filter(s=>s.href).map(s=>s.href),[
+    'https://www.openstreetmap.org/copyright','https://opendatacommons.org/licenses/odbl/1.0/']);
+  assert.equal(creditSegments('Only original prose.')[0].text,'Only original prose.');
+  assert.deepEqual(creditSegments(''),[]);
+});
+
+test('credit URLs cannot make script, credential, localhost or literal IP links', () => {
+  for (const credit of ['javascript:alert(1)','http://example.org/copyright',
+    'https://localhost/','https://host.local/','https://internal.test/','https://127.0.0.1/',
+    'https://2130706433/','https://0x7f000001/','https://[::1]/','https://192.168.1.2/',
+    'https://user:password@example.org/','https://example.org:8443/']) {
+    const segments=creditSegments(credit);
+    assert.equal(segments.map(s=>s.text).join(''),credit);
+    assert.equal(segments.some(s=>s.href),false,credit);
+  }
+  const html='<img src=x onerror=alert(1)> https://www.openstreetmap.org/copyright';
+  const segments=creditSegments(html);
+  assert.equal(segments.map(s=>s.text).join(''),html);
+  assert.ok(segments[0].text.includes('<img'));
+});
+
+test('linkifying all existing approved credits preserves their text byte for byte', () => {
+  const fs=require('node:fs'),path=require('node:path');
+  const records=JSON.parse(fs.readFileSync(path.join(__dirname,'../data/gallery/public.json'),'utf8')).records;
+  for (const record of records) for (const key of ['attribution','additional_credit']) {
+    const credit=record.rights?.[key] || '';
+    assert.equal(creditSegments(credit).map(s=>s.text).join(''),credit,record.id+' '+key);
+  }
 });

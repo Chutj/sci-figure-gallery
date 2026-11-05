@@ -17,14 +17,15 @@
         && publicHosts.includes(url.host) ? value : '';
     } catch { return ''; }
   };
-  const figures = (Array.isArray(raw) ? raw : []).map(f => ({
+  const normalizeFigure = f => ({
     ...f, title: f.title || 'Untitled figure', primary: f.primary || 'Uncategorized',
     categories: Array.isArray(f.categories) ? f.categories.filter(v => typeof v === 'string') : [],
     sections: f.sections && typeof f.sections === 'object' ? f.sections : {},
     image: safePath(f.image), thumbnail: safePath(f.thumbnail),
     width: Number(f.width) > 0 ? Number(f.width) : 4,
     height: Number(f.height) > 0 ? Number(f.height) : 3,
-  }));
+  });
+  const figures = (Array.isArray(raw) ? raw : []).map(normalizeFigure);
   document.body.classList.add('gallery-page');
   const query = document.getElementById('gallery-query');
   const category = document.getElementById('gallery-category');
@@ -36,8 +37,80 @@
   const viewport = document.getElementById('detail-viewport');
   const count = document.getElementById('gallery-count');
   const advancedPanel = document.getElementById('gallery-advanced');
+  const advancedToggle = document.getElementById('gallery-advanced-toggle');
+  function setAdvancedOpen(open) {
+    advancedPanel.open = open;
+    advancedToggle?.setAttribute('aria-expanded', String(open));
+  }
+  advancedToggle?.addEventListener('click', () => setAdvancedOpen(!advancedPanel.open));
+  advancedPanel.addEventListener('toggle', () => advancedToggle?.setAttribute('aria-expanded', String(advancedPanel.open)));
   const advancedInputs = [...advancedPanel.querySelectorAll('[data-search-field]')];
+  const filters = document.getElementById('gallery-filters');
+  const filtersToggle = document.getElementById('gallery-filters-toggle');
+  function setFiltersOpen(open) {
+    filters?.classList.toggle('is-open', open);
+    filtersToggle?.setAttribute('aria-expanded', String(open));
+  }
+  filtersToggle?.addEventListener('click', () => setFiltersOpen(filtersToggle.getAttribute('aria-expanded') !== 'true'));
   const paletteCache = new Map();
+  const loadDetail = tools.createDetailLoader(window.fetch.bind(window), window.location.href);
+  const more = document.getElementById('gallery-more');
+  const progress = document.getElementById('gallery-progress');
+  const detailStatus = document.getElementById('detail-status');
+  const detailRetry = document.getElementById('detail-retry');
+  const detailBody = dialog.querySelector('.detail-body');
+  const linkStatus = document.getElementById('gallery-link-status');
+  const copyLink = document.getElementById('detail-copy-link');
+  const shareStatus = document.getElementById('detail-share-status');
+  const cardButtons = new Map();
+  const historyKey = '__sciFigureGallery';
+  const historyOwner = globalThis.crypto?.randomUUID?.() || `${Date.now()}-${Math.random()}`;
+  function setLinkStatus(value) {
+    if (linkStatus) { linkStatus.hidden = !value; linkStatus.textContent = value || ''; }
+  }
+  function clearDetailHistory(state) {
+    const next = state && typeof state === 'object' ? {...state} : {};
+    delete next[historyKey];
+    return next;
+  }
+  function updateFigureURL(figure) {
+    const next = tools.figureURL(window.location.href, figure.id);
+    if (next === window.location.href) return;
+    const state = clearDetailHistory(window.history.state);
+    state[historyKey] = {owner: historyOwner, figure: figure.id};
+    window.history.pushState(state, '', next);
+  }
+  function requestClose() {
+    if (!dialog.open) return;
+    const current = tools.resolveFigureLink(window.location.href, figures);
+    const state = window.history.state?.[historyKey];
+    if (current.status !== 'none') {
+      if (state?.owner === historyOwner && state.figure === current.figure?.id) window.history.back();
+      else window.history.replaceState(clearDetailHistory(window.history.state), '', tools.figureURL(window.location.href, null));
+    }
+    dialog.close();
+  }
+  function syncFigureFromURL() {
+    const link = tools.resolveFigureLink(window.location.href, figures);
+    setLinkStatus(link.status === 'unknown' ? 'This figure is not available in the current library. You can search the library below.' : '');
+    if (link.status === 'found') {
+      if (!dialog.open || pendingFigure?.id !== link.figure.id) openFigure(link.figure, cardButtons.get(link.figure.id), false);
+    } else if (dialog.open) dialog.close();
+  }
+  window.addEventListener('popstate', syncFigureFromURL);
+  copyLink?.addEventListener('click', async () => {
+    const figure = pendingFigure;
+    if (!figure || !dialog.open) return;
+    const link = tools.figureURL(window.location.href, figure.id);
+    try {
+      if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
+      await navigator.clipboard.writeText(link);
+      if (pendingFigure?.id === figure.id && shareStatus) shareStatus.textContent = 'Figure link copied.';
+    } catch {
+      if (pendingFigure?.id === figure.id && shareStatus) shareStatus.textContent = `Copy this figure link: ${link}`;
+    }
+  });
+  let matches = [], shown = 0, searchTimer, detailRequest = 0, detailController, pendingFigure;
   let opener, activeFigure, zoom = 1, pendingLayout = 0;
   const text = (id, value) => { document.getElementById(id).textContent = value || ''; };
   const meta = figure => [figure.journal, figure.year, tools.formatFigureReference(figure.figure)].filter(Boolean).join(' · ') || 'Source information unavailable';
@@ -144,8 +217,40 @@
     }
   }
   image.addEventListener('load', updatePalette);
-  function openFigure(figure, button) {
-    opener = button; activeFigure = figure;
+  async function openFigure(figure, button, navigate = true) {
+    if (navigate) updateFigureURL(figure);
+    setLinkStatus('');
+    if (shareStatus) shareStatus.textContent = '';
+    opener = button; pendingFigure = figure;
+    const request = ++detailRequest;
+    detailController?.abort();
+    detailController = new AbortController();
+    activeFigure = null;
+    image.removeAttribute('src');
+    document.getElementById('detail-notes').replaceChildren();
+    text('detail-title', figure.title); text('detail-meta', meta(figure));
+    detailBody.hidden = true;
+    if (detailStatus) { detailStatus.hidden = false; detailStatus.textContent = 'Loading figure details…'; }
+    if (detailRetry) detailRetry.hidden = true;
+    if (!dialog.open) dialog.showModal();
+    document.body.classList.add('gallery-modal-open');
+    dialog.scrollTop = 0;
+    try {
+      const loaded = await loadDetail(figure, detailController.signal);
+      if (request !== detailRequest || !dialog.open) return;
+      const full = normalizeFigure(loaded);
+      detailBody.hidden = false;
+      if (detailStatus) detailStatus.hidden = true;
+      populateFigure(full);
+    } catch {
+      if (request !== detailRequest || !dialog.open) return;
+      if (detailStatus) detailStatus.textContent = 'Figure details could not be loaded. Please try again.';
+      if (detailRetry) detailRetry.hidden = false;
+    }
+  }
+  detailRetry?.addEventListener('click', () => { if (pendingFigure) openFigure(pendingFigure, opener, false); });
+  function populateFigure(figure) {
+    activeFigure = figure;
     text('detail-title', figure.title); text('detail-meta', meta(figure));
     const displayedCategories = tools.browsingCategories(figure);
     text('detail-categories', displayedCategories.length ? `Filed under: ${displayedCategories.join(' · ')}` : 'Category unavailable');
@@ -164,11 +269,20 @@
         ['Modification Status', r.modification_status], ['Additional Credit or Permission Notice', r.additional_credit]]
         .forEach(([label, value]) => {
           const p = document.createElement('span'); p.style.display = 'block';
-          p.textContent = `${label}: ${value || 'Not recorded — publication review incomplete'}`;
+          const credit = `${label}: ${value || 'Not recorded — publication review incomplete'}`;
+          if (label === 'Authors / Attribution' || label === 'Additional Credit or Permission Notice') {
+            tools.creditSegments(credit).forEach(segment => {
+              if (segment.href) {
+                const link = document.createElement('a'); link.href = segment.href;
+                link.textContent = segment.text; link.target = '_blank'; link.rel = 'noopener noreferrer';
+                p.append(link);
+              } else p.append(document.createTextNode(segment.text));
+            });
+          } else p.textContent = credit;
           rights.append(p);
         });
     }
-    if (publicMode && typeof figure.rights.license_url === 'string'
+    if (publicMode && typeof figure.rights?.license_url === 'string'
         && figure.rights.license_url.startsWith('https://')) {
       const license = document.createElement('a'); license.href = figure.rights.license_url;
       license.textContent = ' License terms'; license.target = '_blank'; license.rel = 'noopener';
@@ -236,22 +350,34 @@
       });
       notes.append(section);
     }
-    dialog.showModal(); document.body.classList.add('gallery-modal-open');
-    dialog.scrollTop = 0; fitImage(); updatePalette();
+    fitImage(); updatePalette();
   }
   function render() {
     const advanced = Object.fromEntries(advancedInputs.map(input => [input.dataset.searchField, input.value]));
     const active = advancedInputs.filter(input => input.value.trim()).length;
-    text('gallery-advanced-active', active ? ` · ${active} active` : '');
-    const matches = figures.filter(figure => tools.matches(figure, query.value, category.value, advanced, focus.value));
+    text('gallery-advanced-active', active ? ` (${active})` : '');
+    if (filtersToggle) {
+      const selected = [category.value, focus.value, sort.value !== 'library' ? sort.value : ''].filter(Boolean).length;
+      filtersToggle.textContent = selected ? `Filters (${selected})` : 'Filters';
+    }
+    matches = figures.filter(figure => tools.matches(figure, query.value, category.value, advanced, focus.value));
     if (sort.value === 'title') matches.sort((a, b) => a.title.localeCompare(b.title, 'en'));
     if (sort.value === 'newest') matches.sort((a, b) => (Number(b.year) || 0) - (Number(a.year) || 0) || a.title.localeCompare(b.title, 'en'));
     [...grid.children].forEach(card => resizeObserver?.unobserve(card));
-    grid.replaceChildren();
-    matches.forEach(figure => {
+    grid.replaceChildren(); cardButtons.clear();
+    shown = 0;
+    appendBatch();
+    count.textContent = matches.length === figures.length ? `${figures.length} figures` : `${matches.length} of ${figures.length} figures`;
+    document.getElementById('gallery-empty').hidden = matches.length > 0;
+    layout();
+  }
+  function appendBatch() {
+    const next = tools.batch(matches, shown);
+    next.forEach(figure => {
       const article = document.createElement('article'); article.className = 'figure-card';
       const button = document.createElement('button'); button.type = 'button';
       button.setAttribute('aria-label', `View figure: ${figure.title}`);
+      cardButtons.set(figure.id, button);
       const unavailable = document.createElement('span'); unavailable.className = 'figure-image-missing';
       unavailable.textContent = 'Image unavailable'; unavailable.hidden = Boolean(figure.thumbnail);
       const img = document.createElement('img'); img.alt = ''; img.loading = 'lazy'; img.decoding = 'async';
@@ -274,16 +400,20 @@
       resizeObserver?.observe(article);
       button.addEventListener('click', () => openFigure(figure, button));
     });
-    count.textContent = `${matches.length} of ${figures.length} figures${count.dataset.permissionNote || ''}`;
-    document.getElementById('gallery-empty').hidden = matches.length > 0;
-    layout();
+    shown += next.length;
+    if (more) more.hidden = shown >= matches.length;
+    if (progress) { progress.hidden = !matches.length; progress.textContent = `Showing ${shown} of ${matches.length} figures`; }
+    scheduleLayout();
   }
-  query.addEventListener('input', render); category.addEventListener('change', render); focus.addEventListener('change', render); sort.addEventListener('change', render);
-  advancedInputs.forEach(input => input.addEventListener('input', render));
+  more?.addEventListener('click', appendBatch);
+  function renderNow() { clearTimeout(searchTimer); render(); }
+  function scheduleRender() { clearTimeout(searchTimer); searchTimer = setTimeout(render, 120); }
+  query.addEventListener('input', scheduleRender); category.addEventListener('change', renderNow); focus.addEventListener('change', renderNow); sort.addEventListener('change', renderNow);
+  advancedInputs.forEach(input => input.addEventListener('input', scheduleRender));
   document.getElementById('gallery-reset').addEventListener('click', () => {
     query.value = ''; category.value = ''; focus.value = ''; sort.value = 'library';
-    advancedInputs.forEach(input => { input.value = ''; }); advancedPanel.open = false;
-    render(); query.focus();
+    advancedInputs.forEach(input => { input.value = ''; }); setAdvancedOpen(false);
+    setFiltersOpen(false); renderNow(); query.focus();
   });
   document.getElementById('zoom-fit').addEventListener('click', fitImage);
   document.getElementById('zoom-actual').addEventListener('click', () => setZoom(1));
@@ -295,12 +425,16 @@
     if (e.key === '0') { e.preventDefault(); fitImage(); }
     if (e.key === '1') { e.preventDefault(); setZoom(1); }
   });
-  document.getElementById('detail-close').addEventListener('click', () => dialog.close());
+  document.getElementById('detail-close').addEventListener('click', requestClose);
+  dialog.addEventListener('cancel', e => { e.preventDefault(); requestClose(); });
   dialog.addEventListener('click', e => { if (e.target === dialog) {
     const rect = dialog.getBoundingClientRect();
-    if (e.clientX < rect.left || e.clientX > rect.right || e.clientY < rect.top || e.clientY > rect.bottom) dialog.close();
+    if (e.clientX < rect.left || e.clientX > rect.right || e.clientY < rect.top || e.clientY > rect.bottom) requestClose();
   }});
   dialog.addEventListener('close', () => {
+    // A queued close event must not clear a newly reopened history entry.
+    if (dialog.open) return;
+    detailRequest++; detailController?.abort(); pendingFigure = null;
     document.body.classList.remove('gallery-modal-open');
     // Do not leave a full-resolution src active on the overview page.
     image.removeAttribute('src'); activeFigure = null;
@@ -308,4 +442,5 @@
   });
   window.addEventListener('resize', () => { if (dialog.open) fitImage(); });
   render();
+  syncFigureFromURL();
 })();

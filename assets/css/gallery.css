@@ -1,5 +1,5 @@
 /* Gallery-only width; Home and PaperMod core templates remain unchanged. */
-body.gallery-page .main{max-width:1180px}
+body.gallery-page .main{max-width:1180px;padding-top:calc(var(--gap)*.6)}
 .gallery-heading{display:flex;align-items:center;justify-content:space-between;gap:12px 24px;flex-wrap:wrap}
 .gallery-heading>div:first-child{flex:1 1 280px;min-width:0}
 .gallery-heading .gallery-actions{display:flex;align-items:center;flex:0 0 auto;gap:8px}
@@ -82,3 +82,75 @@ body.gallery-page .main{max-width:1180px}
 .gallery-licensing p { margin: .7rem 0; }
 .gallery-licensing a { text-decoration: underline; overflow-wrap: anywhere; }
 .gallery-licensing details { border-bottom: 1px solid var(--border); padding-bottom: .6rem; }
+
+/* Compact browsing header and filters, shared by desktop and mobile. */
+.gallery-heading{margin-top:14px;margin-bottom:20px}
+.gallery-heading h1{margin-bottom:0}
+.gallery-controls{grid-template-columns:minmax(0,1.6fr) minmax(0,3fr)}
+.gallery-filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) auto;gap:12px;align-items:end;min-width:0}
+#gallery-filters-toggle{display:none}
+.gallery-results{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:0 18px;margin:10px 0 14px}
+.gallery-results #gallery-count{grid-column:1;grid-row:1;justify-self:start;align-self:start;z-index:1;margin:4px 0;pointer-events:none}
+.gallery-results .gallery-licensing{grid-column:1/-1;grid-row:1;min-width:0;margin:0;font-size:13px;line-height:1.65}
+.gallery-results .gallery-licensing details{border:0;padding:0}
+.gallery-results .gallery-licensing summary{width:max-content;margin-inline-start:auto;padding:4px 0;white-space:nowrap}
+.gallery-results .gallery-licensing details>div{padding:8px 16px;background:var(--code-bg);border:1px solid var(--border);border-radius:var(--radius);margin:8px 0 0}
+.gallery-pagination{display:grid;justify-items:center;gap:8px;margin:24px 0}
+.gallery-pagination p{margin:0}
+#gallery-more{border:1px solid var(--border);border-radius:var(--radius);padding:10px 20px;background:var(--entry);color:var(--primary);font:inherit;min-height:44px;cursor:pointer}
+#gallery-more:focus-visible{outline:2px solid var(--primary);outline-offset:3px}
+#detail-status{padding:16px 24px;margin:0;color:var(--secondary)}
+#detail-retry{margin:0 24px 20px}
+@media(max-width:899px){.gallery-controls{grid-template-columns:1fr}.gallery-controls label:first-child{grid-column:auto}.gallery-filters{grid-template-columns:repeat(3,minmax(0,1fr)) auto}}
+@media(max-width:600px){
+ .gallery-heading{margin-bottom:18px;gap:10px}
+ .gallery-heading h1{font-size:32px}
+ .gallery-heading .gallery-actions{gap:6px}
+ .gallery-heading .gallery-repository{width:128px;flex-basis:128px;height:40px;font-size:13px}
+ .gallery-controls{grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:end}
+ .gallery-controls label:first-child{grid-column:auto}
+ #gallery-filters-toggle{display:block;width:auto;font-size:13px;min-height:46px}
+ .gallery-filters{display:none;grid-column:1/-1;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .gallery-filters.is-open{display:grid}
+ .gallery-advanced{margin:10px 0;padding:8px 12px}
+ .gallery-results{gap:0 12px;margin:8px 0 12px}
+ .gallery-results #gallery-count,.gallery-results .gallery-licensing{font-size:12px}
+}
+@media(max-width:359px){.gallery-filters{grid-template-columns:1fr}.gallery-controls{grid-template-columns:minmax(0,1fr) auto}.gallery-controls label:first-child{grid-column:auto}}
+
+/* Regular controls use a 12px gap; the divider has 0.7 gaps on each side. */
+.gallery-controls{--gallery-control-gap:12px;column-gap:var(--gallery-control-gap);grid-template-columns:minmax(0,calc((100% - 256.25px)*.310345)) repeat(3,minmax(0,1fr)) auto auto}
+.gallery-filters{display:contents}
+.gallery-advanced-action{position:relative;padding-inline-start:calc(var(--gallery-control-gap)*.7 + 1px);margin-inline-start:calc(var(--gallery-control-gap)*-.3)}
+.gallery-advanced-action::before{content:"";position:absolute;inset-inline-start:0;top:11px;bottom:11px;width:1px;background:var(--border)}
+.gallery-controls #gallery-advanced-toggle{margin:0;padding:10px 12px;border:1px solid var(--border);border-radius:var(--radius);background:var(--entry);color:var(--primary);font:inherit;white-space:nowrap}
+.gallery-advanced:not([open]){display:none}
+.gallery-advanced>summary{display:none}
+.gallery-advanced[open]{margin:12px 0;padding:12px 18px}
+.detail-actions{display:flex;align-items:flex-start;align-self:flex-start;gap:8px;flex-shrink:0}
+#figure-detail #detail-copy-link{display:inline-flex;align-items:center;justify-content:center;width:44px;min-width:44px;padding:8px}
+#detail-share-status{margin:0;padding:8px 24px;overflow-wrap:anywhere;user-select:text}
+#detail-share-status:empty{display:none}
+@media(max-width:899px){
+ .gallery-controls{grid-template-columns:minmax(0,1fr) auto auto;align-items:end}
+ .gallery-controls label:first-child{grid-column:auto}
+ #gallery-filters-toggle{display:block;grid-column:2;grid-row:1}
+ .gallery-advanced-action{grid-column:3;grid-row:1}
+ .gallery-filters{display:none;grid-column:1/-1;grid-row:2;grid-template-columns:repeat(3,minmax(0,1fr)) auto;gap:12px}
+ .gallery-filters.is-open{display:grid}
+}
+@media(max-width:600px){
+ .gallery-controls{grid-template-columns:minmax(0,1fr) auto;gap:8px var(--gallery-control-gap)}
+ .gallery-controls>label:first-child{grid-column:1/-1}
+ #gallery-filters-toggle{grid-column:1;grid-row:2;justify-self:start;min-width:88px}
+ .gallery-advanced-action{grid-column:2;grid-row:2;justify-self:end}
+ .gallery-filters{grid-row:3;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .gallery-advanced[open]{margin:10px 0;padding:10px 12px}
+ #detail-share-status{padding:8px 16px}
+ .detail-toolbar{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;row-gap:6px}
+ .detail-heading{display:contents}
+ .detail-toolbar #detail-title{grid-column:1/-1;grid-row:1}
+ .detail-toolbar #detail-meta{grid-column:1;grid-row:2}
+ .detail-actions{grid-column:2;grid-row:2}
+}
+@media(max-width:359px){.gallery-filters{grid-template-columns:1fr}}
