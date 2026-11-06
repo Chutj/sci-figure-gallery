@@ -12,6 +12,7 @@
     "layouts/_partials/gallery/public-records.html",
     "content/gallery/_index.md",
     "data/gallery/public.json",
+    "data/gallery/title_labels.json",
     "data/gallery/allowlist.json",
     "data/gallery/media.json",
     "scripts/public_gallery_schema.py",

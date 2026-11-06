@@ -6,8 +6,8 @@ Scientific figures for academic learning and scientific visualization reference.
 **[Explore the interactive gallery](https://chutj.github.io/gallery/)**<br>
 点击上方链接，访问可交互图库。
 
-This repository provides the gallery component for the academic website.<br>
-本仓库为个人学术网站的 Figure Gallery 提供代码和公开图件。
+This repository provides the code and public figures for Figure Gallery.<br>
+本仓库为 Figure Gallery 提供代码和公开图鉴。
 
 As of **2026-11-05**, the gallery contains **1,707 reviewed figures from 263 papers**. Each figure lists its license, source version and required credits.<br>
 截至 **2026-11-05**，图库收录来自 **263 篇论文的 1,707 张已审核图件**。每张图均标明许可证、来源版本和必要署名。

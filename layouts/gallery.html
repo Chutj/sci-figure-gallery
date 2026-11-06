@@ -74,13 +74,18 @@
   </section>
   <dialog id="figure-detail" aria-labelledby="detail-title">
     <div class="detail-toolbar">
-      <div class="detail-heading"><h2 id="detail-title"></h2><p id="detail-meta"></p></div>
+      <div class="detail-heading">
+        <h2 id="detail-title"></h2>
+        <div class="detail-meta-row">
+          <p id="detail-meta"></p>
+          <span id="detail-share-status" role="status" aria-live="polite"></span>
+        </div>
+      </div>
       <div class="detail-actions">
         <button id="detail-copy-link" type="button" aria-label="Copy figure link" title="Copy link"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7 .1l3-3a5 5 0 0 0-7-7l-1.7 1.7M14 11a5 5 0 0 0-7-.1l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></button>
         <button id="detail-close" type="button" autofocus>Close</button>
       </div>
     </div>
-    <p id="detail-share-status" class="gallery-muted" role="status" aria-live="polite"></p>
     <p id="detail-status" role="status" aria-live="polite" hidden></p><button id="detail-retry" type="button" hidden>Retry</button>
     <div class="detail-body">
       <div class="image-tools">
@@ -95,7 +100,6 @@
       </div>
       <div id="detail-viewport" tabindex="0" role="region" aria-label="Scrollable figure image" aria-describedby="detail-zoom-help"><img id="detail-image" alt=""></div>
       <p id="detail-image-error" hidden>Image unavailable. The reference notes remain available below.</p>
-      <p id="detail-categories"></p>
       <p id="detail-translation" class="gallery-muted"></p>
       <div id="detail-notes"></div>
       <section class="detail-source" aria-labelledby="detail-source-heading">
@@ -107,23 +111,28 @@
   {{/* Build a compact full-library search index; long notes/rights load on demand.
        Only the already-gated public records above can produce public endpoints. */}}
   {{ $index := slice }}
+  {{ $titleLabels := index hugo.Data.gallery "title_labels" | default dict }}
   {{ range $f := $figures }}
     {{ if eq $mode "local" }}
       {{ $index = $index | append $f }}
     {{ else }}
-      {{ $payload := $f | jsonify }}
+      {{ $displayTitle := $f.title }}
+      {{ if strings.HasSuffix $f.title "…" }}
+        {{ $displayTitle = index $titleLabels $f.id | default $f.title }}
+      {{ end }}
+      {{ $payload := merge $f (dict "title" $displayTitle) | jsonify }}
       {{ $detail := resources.FromString (printf "gallery/records/%s/%s.json" $f.id (sha256 $payload)) $payload }}
       {{ $notes := $f.sections | default dict }}
       {{ $categories := slice }}
       {{ range $f.categories }}{{ if not (in (slice "Color references" "Legends, color scales & symbols") .) }}{{ $categories = $categories | append . }}{{ end }}{{ end }}
       {{ $method := slice $f.title (delimit $categories " ") }}
       {{ range slice "What the figure shows" "Statistics & symbols" "Design lessons" }}{{ $method = $method | append (index $notes . | default "") }}{{ end }}
-      {{ $search := dict "title" (printf "%s %s" $f.title $f.paper) "author" $f.author "doi" $f.doi "journal" $f.journal "year" $f.year "figure" $f.figure "color" (index $notes "Color & encoding" | default "") "method" (delimit $method " ") }}
+      {{ $search := dict "title" (printf "%s %s %s" $displayTitle $f.title $f.paper) "author" $f.author "doi" $f.doi "journal" $f.journal "year" $f.year "figure" $f.figure "color" (index $notes "Color & encoding" | default "") "method" (delimit $method " ") }}
       {{/* Search is AND over whitespace-separated terms, not phrase matching.
            Retain every searchable token once instead of repeating full prose. */}}
       {{ $tokens := dict }}
       {{ range $key, $value := $search }}{{ $tokens = merge $tokens (dict $key (delimit (uniq (findRE `\S+` (lower (printf "%v" $value)))) " ")) }}{{ end }}
-      {{ $card := dict "id" $f.id "title" $f.title "primary" $f.primary "categories" $f.categories "journal" $f.journal "year" $f.year "figure" $f.figure "thumbnail" $f.thumbnail "srcset" $f.srcset "width" $f.width "height" $f.height "search_fields" $tokens "details_url" $detail.RelPermalink }}
+      {{ $card := dict "id" $f.id "title" $displayTitle "primary" $f.primary "categories" $f.categories "journal" $f.journal "year" $f.year "figure" $f.figure "thumbnail" $f.thumbnail "srcset" $f.srcset "width" $f.width "height" $f.height "search_fields" $tokens "details_url" $detail.RelPermalink }}
       {{ $index = $index | append $card }}
     {{ end }}
   {{ end }}

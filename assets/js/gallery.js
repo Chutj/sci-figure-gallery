@@ -62,6 +62,13 @@
   const linkStatus = document.getElementById('gallery-link-status');
   const copyLink = document.getElementById('detail-copy-link');
   const shareStatus = document.getElementById('detail-share-status');
+  let shareTimer;
+  function showShareStatus(message) {
+    if (!shareStatus) return;
+    window.clearTimeout(shareTimer);
+    shareStatus.textContent = message;
+    if (message) shareTimer = window.setTimeout(() => { shareStatus.textContent = ''; }, 3000);
+  }
   const cardButtons = new Map();
   const historyKey = '__sciFigureGallery';
   const historyOwner = globalThis.crypto?.randomUUID?.() || `${Date.now()}-${Math.random()}`;
@@ -101,19 +108,26 @@
   copyLink?.addEventListener('click', async () => {
     const figure = pendingFigure;
     if (!figure || !dialog.open) return;
+    const request = detailRequest;
     const link = tools.figureURL(window.location.href, figure.id);
+    let message = 'Link copied.';
     try {
       if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
       await navigator.clipboard.writeText(link);
-      if (pendingFigure?.id === figure.id && shareStatus) shareStatus.textContent = 'Figure link copied.';
     } catch {
-      if (pendingFigure?.id === figure.id && shareStatus) shareStatus.textContent = `Copy this figure link: ${link}`;
+      message = 'Copy from address bar.';
     }
+    if (dialog.open && detailRequest === request) showShareStatus(message);
   });
   let matches = [], shown = 0, searchTimer, detailRequest = 0, detailController, pendingFigure;
   let opener, activeFigure, zoom = 1, pendingLayout = 0;
   const text = (id, value) => { document.getElementById(id).textContent = value || ''; };
   const meta = figure => [figure.journal, figure.year, tools.formatFigureReference(figure.figure)].filter(Boolean).join(' · ') || 'Source information unavailable';
+  function detailMeta(figure) {
+    const labels = tools.browsingCategories(figure);
+    const source = meta(figure);
+    return labels.length ? source + ': ' + labels.join(' · ') : source;
+  }
   const categories = [...new Set(figures.flatMap(f => tools.browsingCategories(f)))].sort();
   categories.forEach(name => {
     const option = document.createElement('option');
@@ -220,7 +234,7 @@
   async function openFigure(figure, button, navigate = true) {
     if (navigate) updateFigureURL(figure);
     setLinkStatus('');
-    if (shareStatus) shareStatus.textContent = '';
+    showShareStatus('');
     opener = button; pendingFigure = figure;
     const request = ++detailRequest;
     detailController?.abort();
@@ -228,7 +242,7 @@
     activeFigure = null;
     image.removeAttribute('src');
     document.getElementById('detail-notes').replaceChildren();
-    text('detail-title', figure.title); text('detail-meta', meta(figure));
+    text('detail-title', figure.title); text('detail-meta', detailMeta(figure));
     detailBody.hidden = true;
     if (detailStatus) { detailStatus.hidden = false; detailStatus.textContent = 'Loading figure details…'; }
     if (detailRetry) detailRetry.hidden = true;
@@ -251,9 +265,7 @@
   detailRetry?.addEventListener('click', () => { if (pendingFigure) openFigure(pendingFigure, opener, false); });
   function populateFigure(figure) {
     activeFigure = figure;
-    text('detail-title', figure.title); text('detail-meta', meta(figure));
-    const displayedCategories = tools.browsingCategories(figure);
-    text('detail-categories', displayedCategories.length ? `Filed under: ${displayedCategories.join(' · ')}` : 'Category unavailable');
+    text('detail-title', figure.title); text('detail-meta', detailMeta(figure));
     text('detail-paper', figure.paper || 'Paper title unavailable');
     document.getElementById('detail-translation').hidden = publicMode;
     text('detail-translation', publicMode ? '' : !figure.translation_status || figure.translation_status === 'reviewed'
@@ -435,6 +447,7 @@
     // A queued close event must not clear a newly reopened history entry.
     if (dialog.open) return;
     detailRequest++; detailController?.abort(); pendingFigure = null;
+    showShareStatus('');
     document.body.classList.remove('gallery-modal-open');
     // Do not leave a full-resolution src active on the overview page.
     image.removeAttribute('src'); activeFigure = null;
