@@ -29,11 +29,11 @@ As of **2026-11-05**, the gallery contains **1,707 reviewed figures from 263 pap
 
 ## Contribute / 参与共建
 
-Suggestions, corrections, accessibility improvements and code contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).<br>
-欢迎提出建议、纠正信息、改善无障碍体验或贡献代码。参与方式见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+**[Recommend a figure](https://github.com/Chutj/sci-figure-gallery/issues/new?template=figure-suggestion.yml)**<br>
+如想推荐图片，可直接填写上方链接中的表单。
 
-To recommend a figure, use the **[figure suggestion form](https://github.com/Chutj/sci-figure-gallery/issues/new?template=figure-suggestion.yml)**.<br>
-如想推荐图片，可直接填写 **[图片建议表单](https://github.com/Chutj/sci-figure-gallery/issues/new?template=figure-suggestion.yml)**。
+**[Other suggestions and contributions](CONTRIBUTING.md)**<br>
+若需提出其他建议、纠正信息或贡献代码，请查看上方参与说明。
 
 ## Run locally
 
