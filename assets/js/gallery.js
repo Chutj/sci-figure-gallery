@@ -26,6 +26,32 @@
     height: Number(f.height) > 0 ? Number(f.height) : 3,
   });
   const figures = (Array.isArray(raw) ? raw : []).map(normalizeFigure);
+  const doiKey = value => {
+    const doi = typeof value === 'string' ? value.trim() : '';
+    return /^10\.\d{4,9}\/\S+$/.test(doi) ? doi.toLowerCase() : '';
+  };
+  const figuresByPaper = new Map();
+  for (const figure of figures) {
+    const doi = doiKey(figure.doi || figure.search_fields?.doi);
+    if (!doi) continue;
+    if (!figuresByPaper.has(doi)) figuresByPaper.set(doi, []);
+    figuresByPaper.get(doi).push(figure);
+  }
+  const paperDOI = doiKey(new URL(window.location.href).searchParams.get('paper'));
+  const browseFigures = paperDOI ? figuresByPaper.get(paperDOI) || [] : figures;
+  function paperURL(doi) {
+    const url = new URL(window.location.href);
+    url.searchParams.delete('figure');
+    if (doi) url.searchParams.set('paper', doi);
+    else url.searchParams.delete('paper');
+    url.hash = '';
+    return url.href;
+  }
+  if (paperDOI) {
+    document.getElementById('gallery-paper-doi').textContent = paperDOI;
+    document.getElementById('gallery-clear-paper').href = paperURL('');
+    document.getElementById('gallery-paper-filter').hidden = false;
+  }
   document.body.classList.add('gallery-page');
   const query = document.getElementById('gallery-query');
   const category = document.getElementById('gallery-category');
@@ -36,6 +62,9 @@
   const image = document.getElementById('detail-image');
   const viewport = document.getElementById('detail-viewport');
   const count = document.getElementById('gallery-count');
+  const searchError = document.getElementById('gallery-search-error');
+  const searchURL = data.dataset.searchUrl;
+  let searchLoaded = !searchURL, searchPending = false;
   const advancedPanel = document.getElementById('gallery-advanced');
   const advancedToggle = document.getElementById('gallery-advanced-toggle');
   function setAdvancedOpen(open) {
@@ -45,6 +74,7 @@
   advancedToggle?.addEventListener('click', () => setAdvancedOpen(!advancedPanel.open));
   advancedPanel.addEventListener('toggle', () => advancedToggle?.setAttribute('aria-expanded', String(advancedPanel.open)));
   const advancedInputs = [...advancedPanel.querySelectorAll('[data-search-field]')];
+  const searchControls = [query, category, focus, sort, ...advancedInputs];
   const filters = document.getElementById('gallery-filters');
   const filtersToggle = document.getElementById('gallery-filters-toggle');
   function setFiltersOpen(open) {
@@ -84,7 +114,15 @@
     const next = tools.figureURL(window.location.href, figure.id);
     if (next === window.location.href) return;
     const state = clearDetailHistory(window.history.state);
-    state[historyKey] = {owner: historyOwner, figure: figure.id};
+    state[historyKey] = {
+      owner: historyOwner,
+      figure: figure.id,
+      search: {
+        values: Object.fromEntries(searchControls.map(control => [control.id, control.value])),
+        filtersOpen: filtersToggle?.getAttribute('aria-expanded') === 'true',
+        advancedOpen: advancedPanel.open,
+      },
+    };
     window.history.pushState(state, '', next);
   }
   function requestClose() {
@@ -128,11 +166,11 @@
     const source = meta(figure);
     return labels.length ? source + ': ' + labels.join(' · ') : source;
   }
-  const categories = [...new Set(figures.flatMap(f => tools.browsingCategories(f)))].sort();
+  const categories = [...new Set(browseFigures.flatMap(f => tools.browsingCategories(f)))].sort();
   categories.forEach(name => {
     const option = document.createElement('option');
     option.value = name;
-    option.textContent = `${name} (${figures.filter(f => f.categories.includes(name)).length})`;
+    option.textContent = `${name} (${browseFigures.filter(f => f.categories.includes(name)).length})`;
     (tools.categoryGroup(name) === 'type' ? category : focus).append(option);
   });
   function layout() {
@@ -182,40 +220,59 @@
     const caption = document.getElementById('detail-color-caption');
     if (caption && !tools.recordedColors(activeFigure || {}).length) caption.textContent = 'Color samples are unavailable for this image.';
   });
-  function showPalette(colors, caption) {
+  function showPalette(colors, emptyMessage = 'No distinct colors could be sampled from this image.') {
     const palette = document.getElementById('detail-palette');
     if (!palette) return;
-    palette.replaceChildren(); text('detail-color-caption', caption);
+
     const recorded = new Set(tools.recordedColors(activeFigure || {}));
+    const status = document.getElementById('detail-color-status');
+    let sourceNote = 'HEX values from the figure notes.';
+    if (colors.some(hex => !recorded.has(hex))) {
+      sourceNote = recorded.size ? 'Figure notes and approximate image samples.' : 'Image samples are approximate.';
+    }
+    text('detail-color-caption', colors.length ? `${sourceNote} Select a swatch to copy.` : emptyMessage);
+    palette.replaceChildren();
+
     colors.forEach(hex => {
-      const button = document.createElement('button'); button.type = 'button'; button.className = 'color-swatch';
-      button.setAttribute('aria-label', `Copy color ${hex}`); button.title = `Copy ${hex}`;
-      const chip = document.createElement('span'); chip.className = 'color-chip'; chip.style.backgroundColor = hex; chip.setAttribute('aria-hidden', 'true');
-      const code = document.createElement('code'); code.textContent = hex;
-      const source = document.createElement('span'); source.className = 'color-source';
-      source.textContent = recorded.has(hex) ? 'From notes' : 'Sampled';
-      button.append(chip, code, source); palette.append(button);
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'color-swatch';
+      const source = recorded.has(hex) ? 'from figure notes' : 'approximate image sample';
+      const label = `Copy ${hex} (${source})`;
+      button.setAttribute('aria-label', label);
+      button.title = label;
+
+      const chip = document.createElement('span');
+      chip.className = 'color-chip';
+      chip.style.backgroundColor = hex;
+      chip.setAttribute('aria-hidden', 'true');
+      const code = document.createElement('code');
+      code.textContent = hex;
+      button.append(chip, code);
+      palette.append(button);
+
       button.addEventListener('click', async () => {
+        let message = `Copied ${hex}`;
         try {
           if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
           await navigator.clipboard.writeText(hex);
-          text('detail-color-status', `Copied ${hex}`);
         } catch {
-          text('detail-color-status', `Copy is unavailable in this browser. Select this HEX value: ${hex}`);
+          message = `Copy unavailable. HEX: ${hex}`;
         }
+        if (status?.isConnected) status.textContent = message;
       });
     });
   }
   function updatePalette() {
     if (!activeFigure || !document.getElementById('detail-palette')) return;
     const recorded = tools.recordedColors(activeFigure);
-    if (recorded.length) showPalette(recorded, 'HEX values recorded in the figure notes. Click a swatch to copy.');
     const key = `${activeFigure.id}|${activeFigure.image}`;
-    const showSamples = colors => showPalette([...new Set([...recorded, ...colors])].slice(0, 8),
-      colors.length ? 'Each color is labeled as recorded or sampled. Sampled values are approximate, not author-specified HEX values. Click a swatch to copy.'
-      : recorded.length ? 'HEX values recorded in the figure notes. Click a swatch to copy.' : 'No distinct colors could be sampled from this image.');
+    const showSamples = colors => showPalette([...new Set([...recorded, ...colors])].slice(0, 8));
     if (paletteCache.has(key)) { showSamples(paletteCache.get(key)); return; }
-    if (!image.complete || !image.naturalWidth) return;
+    if (!image.complete || !image.naturalWidth) {
+      if (recorded.length) showPalette(recorded);
+      return;
+    }
     try {
       const canvas = document.createElement('canvas');
       const ratio = Math.min(1, 220 / Math.max(image.naturalWidth, image.naturalHeight));
@@ -227,7 +284,7 @@
       paletteCache.set(key, colors);
       showSamples(colors);
     } catch {
-      showPalette(recorded, 'Image sampling is unavailable. Any displayed HEX values come from the figure notes.');
+      showPalette(recorded, 'Image sampling is unavailable.');
     }
   }
   image.addEventListener('load', updatePalette);
@@ -313,6 +370,11 @@
     const validDOI = typeof figure.doi === 'string' && /^10\.\d{4,9}\/\S+$/.test(figure.doi);
     doi.textContent = validDOI ? `DOI: ${figure.doi}` : 'DOI unavailable';
     if (validDOI) doi.href = `https://doi.org/${figure.doi}`;
+    const related = document.getElementById('detail-paper-figures');
+    const paper = doiKey(figure.doi);
+    related.hidden = (figuresByPaper.get(paper)?.length || 0) < 2;
+    if (related.hidden) related.removeAttribute('href');
+    else related.href = paperURL(paper);
     const notes = document.getElementById('detail-notes'); notes.replaceChildren();
     tools.sections.forEach(heading => {
       const section = document.createElement('section');
@@ -322,11 +384,17 @@
       if (heading === 'Color & encoding') {
         const palette = document.createElement('div'); palette.id = 'detail-palette'; palette.className = 'figure-palette';
         palette.setAttribute('role', 'group'); palette.setAttribute('aria-label', 'Copy figure colors');
-        const caption = document.createElement('p'); caption.id = 'detail-color-caption'; caption.className = 'gallery-muted';
+        const caption = document.createElement('span');
+        caption.id = 'detail-color-caption';
         caption.textContent = 'Color samples appear when the figure finishes loading.';
-        const status = document.createElement('p'); status.id = 'detail-color-status'; status.className = 'gallery-muted';
-        status.setAttribute('role', 'status'); status.setAttribute('aria-live', 'polite');
-        section.append(palette, caption, status);
+        const status = document.createElement('span');
+        status.id = 'detail-color-status';
+        status.setAttribute('role', 'status');
+        status.setAttribute('aria-live', 'polite');
+        const feedback = document.createElement('p');
+        feedback.className = 'gallery-muted';
+        feedback.append(caption, ' ', status);
+        section.append(palette, feedback);
         const legend = figure.legend;
         const legendPath = legend && safePath(legend.image);
         if (legendPath) {
@@ -364,6 +432,32 @@
     }
     fitImage(); updatePalette();
   }
+  function needsSearchIndex() {
+    const textFields = ['title', 'author', 'color', 'method'];
+    return Boolean(query.value.trim()) || advancedInputs.some(input =>
+      input.value.trim() && textFields.includes(input.dataset.searchField));
+  }
+  async function loadSearchIndex() {
+    if (searchPending) return;
+    searchPending = true;
+    try {
+      const response = await window.fetch(searchURL, {credentials: 'omit', mode: 'same-origin'});
+      if (!response.ok) throw new Error('Search index unavailable');
+      const fields = tools.expandSearchIndex(figures, await response.json());
+      fields.forEach((entry, index) => { figures[index].search_fields = entry; });
+      searchLoaded = true;
+    } catch {
+      if (needsSearchIndex()) {
+        count.textContent = 'Search unavailable';
+        searchError.hidden = false;
+        grid.removeAttribute('aria-busy');
+      }
+      return;
+    } finally {
+      searchPending = false;
+    }
+    if (needsSearchIndex()) renderNow();
+  }
   function render() {
     const advanced = Object.fromEntries(advancedInputs.map(input => [input.dataset.searchField, input.value]));
     const active = advancedInputs.filter(input => input.value.trim()).length;
@@ -372,14 +466,24 @@
       const selected = [category.value, focus.value, sort.value !== 'library' ? sort.value : ''].filter(Boolean).length;
       filtersToggle.textContent = selected ? `Filters (${selected})` : 'Filters';
     }
-    matches = figures.filter(figure => tools.matches(figure, query.value, category.value, advanced, focus.value));
+    searchError.hidden = true;
+    if (!searchLoaded && needsSearchIndex()) {
+      count.textContent = 'Loading search…';
+      grid.setAttribute('aria-busy', 'true');
+      if (more) more.disabled = true;
+      loadSearchIndex();
+      return;
+    }
+    grid.removeAttribute('aria-busy');
+    if (more) more.disabled = false;
+    matches = browseFigures.filter(figure => tools.matches(figure, query.value, category.value, advanced, focus.value));
     if (sort.value === 'title') matches.sort((a, b) => a.title.localeCompare(b.title, 'en'));
     if (sort.value === 'newest') matches.sort((a, b) => (Number(b.year) || 0) - (Number(a.year) || 0) || a.title.localeCompare(b.title, 'en'));
     [...grid.children].forEach(card => resizeObserver?.unobserve(card));
     grid.replaceChildren(); cardButtons.clear();
     shown = 0;
     appendBatch();
-    count.textContent = matches.length === figures.length ? `${figures.length} figures` : `${matches.length} of ${figures.length} figures`;
+    count.textContent = matches.length === browseFigures.length ? `${browseFigures.length} figures` : `${matches.length} of ${browseFigures.length} figures`;
     document.getElementById('gallery-empty').hidden = matches.length > 0;
     layout();
   }
@@ -420,9 +524,11 @@
   more?.addEventListener('click', appendBatch);
   function renderNow() { clearTimeout(searchTimer); render(); }
   function scheduleRender() { clearTimeout(searchTimer); searchTimer = setTimeout(render, 120); }
+  document.getElementById('gallery-search-retry').addEventListener('click', renderNow);
   query.addEventListener('input', scheduleRender); category.addEventListener('change', renderNow); focus.addEventListener('change', renderNow); sort.addEventListener('change', renderNow);
   advancedInputs.forEach(input => input.addEventListener('input', scheduleRender));
   document.getElementById('gallery-reset').addEventListener('click', () => {
+    if (paperDOI) { window.location.assign(paperURL('')); return; }
     query.value = ''; category.value = ''; focus.value = ''; sort.value = 'library';
     advancedInputs.forEach(input => { input.value = ''; }); setAdvancedOpen(false);
     setFiltersOpen(false); renderNow(); query.focus();
@@ -454,6 +560,18 @@
     if (opener?.isConnected) opener.focus();
   });
   window.addEventListener('resize', () => { if (dialog.open) fitImage(); });
+  // A return from the paper results may reload this history entry.
+  const previousSearch = window.history.state?.[historyKey]?.search;
+  if (previousSearch) {
+    for (const control of searchControls) {
+      const value = previousSearch.values?.[control.id];
+      if (typeof value !== 'string') continue;
+      if (control.tagName === 'SELECT' && ![...control.options].some(option => option.value === value)) continue;
+      control.value = value;
+    }
+    setFiltersOpen(previousSearch.filtersOpen === true);
+    setAdvancedOpen(previousSearch.advancedOpen === true);
+  }
   render();
   syncFigureFromURL();
 })();

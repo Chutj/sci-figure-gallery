@@ -47,10 +47,13 @@ class GalleryDataParser(HTMLParser):
         super().__init__()
         self.inside = False
         self.chunks = []
+        self.search_url = None
 
     def handle_starttag(self, tag, attrs):
-        if tag == 'script' and dict(attrs).get('id') == 'gallery-data':
+        attrs = dict(attrs)
+        if tag == 'script' and attrs.get('id') == 'gallery-data':
             self.inside = True
+            self.search_url = attrs.get('data-search-url')
 
     def handle_endtag(self, tag):
         if tag == 'script':
@@ -126,11 +129,16 @@ class GalleryPayloadTest(unittest.TestCase):
         html = (output / 'gallery/index.html').read_text(encoding='utf-8')
         parser = GalleryDataParser()
         parser.feed(html)
+        self.search_url = parser.search_url
         cards = json.loads(''.join(parser.chunks)) if parser.chunks else []
         return output, html, cards
 
     def endpoint(self, output, card):
-        parsed = urlparse(card['details_url'])
+        return self.read_json_asset(output, card['details_url'])
+
+    def read_json_asset(self, output, url):
+        self.assertTrue(url)
+        parsed = urlparse(url)
         self.assertIn(parsed.netloc, ('', 'chutj.github.io'))
         self.assertFalse(parsed.query or parsed.fragment)
         path = output / parsed.path.lstrip('/')
@@ -142,8 +150,10 @@ class GalleryPayloadTest(unittest.TestCase):
         output, html, cards = self.build()
         self.assertEqual(len(cards), 1)
         card = cards[0]
-        for field in ('sections', 'rights', 'image', 'internal_review', 'pdf_reference'):
+        for field in ('sections', 'rights', 'image', 'internal_review', 'pdf_reference', 'search_fields'):
             self.assertNotIn(field, card)
+        self.assertEqual(card['doi'], self.record['doi'])
+        self.assertNotIn('synthetic monte carlo uncertainty', html.lower())
         self.assertNotIn('ATTRIBUTION-LAZY-ONLY-SENTINEL', html)
         self.assertNotIn('PRIVATE-REVIEW-FIELD-SENTINEL', html)
         _, detail = self.endpoint(output, card)
@@ -152,7 +162,13 @@ class GalleryPayloadTest(unittest.TestCase):
         self.assertEqual(detail['rights'], self.record['rights'])
         self.assertEqual(detail['sections'], self.record['sections'])
         self.assertNotIn('internal_review', detail)
-        self.assertNotIn('PRIVATE-HIDDEN-SECTION-SENTINEL', json.dumps(card['search_fields']))
+        _, search_rows = self.read_json_asset(output, self.search_url)
+        self.assertEqual([row['id'] for row in search_rows], [card['id']])
+        self.assertIn('#abcdef', search_rows[0]['color'])
+        search_text = json.dumps(search_rows).lower()
+        for sentinel in ('private-hidden-section-sentinel', 'private-review-field-sentinel',
+                         'attribution-lazy-only-sentinel'):
+            self.assertNotIn(sentinel, search_text)
         for path in output.rglob('*'):
             if path.is_file() and path.suffix in ('.html', '.json'):
                 self.assertNotIn('PRIVATE-CATALOG-SENTINEL', path.read_text(encoding='utf-8'))
@@ -171,8 +187,10 @@ class GalleryPayloadTest(unittest.TestCase):
             with self.subTest(kind=kind):
                 output, html, cards = self.build([bad])
                 self.assertEqual(cards, [])
+                self.assertIsNone(self.search_url)
                 self.assertIn('No public figures available', html)
                 self.assertFalse(list((output / 'gallery/records').rglob('*.json')))
+                self.assertFalse(list((output / 'gallery/search').glob('*.json')))
 
     def test_reapproved_description_gets_a_new_content_addressed_url(self):
         output, _, cards = self.build()
@@ -187,11 +205,14 @@ class GalleryPayloadTest(unittest.TestCase):
 
     @unittest.skipUnless(shutil.which('node'), 'Node is needed for full-library search parity')
     def test_compact_search_matches_full_record_for_all_existing_fields(self):
-        _, _, cards = self.build()
+        output, _, cards = self.build()
+        _, search_rows = self.read_json_asset(output, self.search_url)
         script = r'''const assert=require('node:assert/strict');
 const tools=require(process.argv[1]);
 let s='';process.stdin.on('data',c=>s+=c);process.stdin.on('end',()=>{
-const {full,card}=JSON.parse(s);
+const {full,card,searchRows}=JSON.parse(s);
+assert.throws(() => tools.expandSearchIndex([card], [{...searchRows[0], id:'wrong-figure'}]));
+[card.search_fields] = tools.expandSearchIndex([card], searchRows);
 for(const [query,category,advanced,focus] of [
  ['regional drought','',{},''],['Monte Carlo','',{},''],['#ABCDEF','',{},''],
  ['synthetic drought research','',{},''],['missing','',{},''],
@@ -204,7 +225,7 @@ for(const [query,category,advanced,focus] of [
 }
 });'''
         result = subprocess.run(['node', '-e', script, str(ROOT / 'assets/js/gallery-tools.js')],
-                                input=json.dumps({'full': self.record, 'card': cards[0]}),
+                                input=json.dumps({'full': self.record, 'card': cards[0], 'searchRows': search_rows}),
                                 capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 

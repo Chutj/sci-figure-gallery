@@ -45,7 +45,7 @@
       <button id="gallery-filters-toggle" type="button" aria-controls="gallery-filters" aria-expanded="false">Filters</button>
       <div id="gallery-filters" class="gallery-filters">
       <label class="gallery-select" for="gallery-category">Figure type<select id="gallery-category"><option value="">All types</option></select></label>
-      <label class="gallery-select" for="gallery-focus">Focus<select id="gallery-focus"><option value="">Any focus</option></select></label>
+      <label class="gallery-select" for="gallery-focus">Figure focus<select id="gallery-focus"><option value="">Any focus</option></select></label>
       <label class="gallery-select" for="gallery-sort">Sort by<select id="gallery-sort"><option value="library">Default</option><option value="title">Title A–Z</option><option value="newest">Year, newest first</option></select></label>
       <button id="gallery-reset" type="button">Reset</button>
       </div>
@@ -66,6 +66,8 @@
       </div>
     </details>
     <div class="gallery-results"><p id="gallery-count" role="status" aria-live="polite"></p>{{ partial "gallery/licensing.html" . }}</div>
+    <p id="gallery-paper-filter" class="gallery-muted" hidden>Paper DOI <span id="gallery-paper-doi"></span> · <a id="gallery-clear-paper">All figures</a></p>
+    <p id="gallery-search-error" class="gallery-muted" hidden>Full-library search could not load. <button id="gallery-search-retry" type="button">Try again</button></p>
     <p id="gallery-link-status" class="gallery-muted" role="status" hidden></p>
     <div id="gallery-grid" class="gallery-grid"></div>
     <p id="gallery-empty" hidden>No figures match your search. Try another keyword or reset the filters.</p>
@@ -103,14 +105,19 @@
       <p id="detail-translation" class="gallery-muted"></p>
       <div id="detail-notes"></div>
       <section class="detail-source" aria-labelledby="detail-source-heading">
-        <h3 id="detail-source-heading">Original Paper</h3><p id="detail-paper"></p><p id="detail-author"></p><a id="detail-doi" target="_blank" rel="noopener"></a>
+        <h3 id="detail-source-heading">Original Paper</h3><p id="detail-paper"></p><p id="detail-author"></p>
+        <div class="detail-paper-links">
+          <a id="detail-doi" target="_blank" rel="noopener"></a>
+          <a id="detail-paper-figures" hidden>More figures from this paper</a>
+        </div>
         <p id="detail-rights" class="gallery-muted" hidden></p>
       </section>
     </div>
   </dialog>
-  {{/* Build a compact full-library search index; long notes/rights load on demand.
-       Only the already-gated public records above can produce public endpoints. */}}
+  {{/* Browsing uses the card index. Full-text search and figure details load separately.
+       Only the already-gated records above can produce public endpoints. */}}
   {{ $index := slice }}
+  {{ $searchRows := slice }}
   {{ $titleLabels := index hugo.Data.gallery "title_labels" | default dict }}
   {{ range $f := $figures }}
     {{ if eq $mode "local" }}
@@ -123,20 +130,25 @@
       {{ $payload := merge $f (dict "title" $displayTitle) | jsonify }}
       {{ $detail := resources.FromString (printf "gallery/records/%s/%s.json" $f.id (sha256 $payload)) $payload }}
       {{ $notes := $f.sections | default dict }}
-      {{ $categories := slice }}
-      {{ range $f.categories }}{{ if not (in (slice "Color references" "Legends, color scales & symbols") .) }}{{ $categories = $categories | append . }}{{ end }}{{ end }}
-      {{ $method := slice $f.title (delimit $categories " ") }}
+      {{ $method := slice }}
       {{ range slice "What the figure shows" "Statistics & symbols" "Design lessons" }}{{ $method = $method | append (index $notes . | default "") }}{{ end }}
-      {{ $search := dict "title" (printf "%s %s %s" $displayTitle $f.title $f.paper) "author" $f.author "doi" $f.doi "journal" $f.journal "year" $f.year "figure" $f.figure "color" (index $notes "Color & encoding" | default "") "method" (delimit $method " ") }}
-      {{/* Search is AND over whitespace-separated terms, not phrase matching.
-           Retain every searchable token once instead of repeating full prose. */}}
-      {{ $tokens := dict }}
+      {{ $search := dict "paper" $f.paper "author" $f.author "color" (index $notes "Color & encoding" | default "") "method" (delimit $method " ") }}
+      {{/* Reuse card fields for searching and retain unique terms from the notes. */}}
+      {{ $tokens := dict "id" $f.id }}
+      {{ if ne $displayTitle $f.title }}{{ $tokens = merge $tokens (dict "original_title" $f.title) }}{{ end }}
       {{ range $key, $value := $search }}{{ $tokens = merge $tokens (dict $key (delimit (uniq (findRE `\S+` (lower (printf "%v" $value)))) " ")) }}{{ end }}
-      {{ $card := dict "id" $f.id "title" $displayTitle "primary" $f.primary "categories" $f.categories "journal" $f.journal "year" $f.year "figure" $f.figure "thumbnail" $f.thumbnail "srcset" $f.srcset "width" $f.width "height" $f.height "search_fields" $tokens "details_url" $detail.RelPermalink }}
+      {{ $searchRows = $searchRows | append $tokens }}
+      {{ $card := dict "id" $f.id "title" $displayTitle "primary" $f.primary "categories" $f.categories "journal" $f.journal "year" $f.year "figure" $f.figure "doi" $f.doi "thumbnail" $f.thumbnail "srcset" $f.srcset "width" $f.width "height" $f.height "details_url" $detail.RelPermalink }}
       {{ $index = $index | append $card }}
     {{ end }}
   {{ end }}
-  <script id="gallery-data" type="application/json" data-mode="{{ $mode }}" data-image-hosts="{{ if eq $mode "public" }}{{ delimit hugo.Data.gallery.allowlist.image_hosts "," }}{{ end }}">{{ $index | jsonify | safeJS }}</script>
+  {{ $searchURL := "" }}
+  {{ with $searchRows }}
+    {{ $payload := . | jsonify }}
+    {{ $resource := resources.FromString (printf "gallery/search/%s.json" (sha256 $payload)) $payload }}
+    {{ $searchURL = $resource.RelPermalink }}
+  {{ end }}
+  <script id="gallery-data" type="application/json" data-mode="{{ $mode }}" data-image-hosts="{{ if eq $mode "public" }}{{ delimit hugo.Data.gallery.allowlist.image_hosts "," }}{{ end }}"{{ with $searchURL }} data-search-url="{{ . }}"{{ end }}>{{ $index | jsonify | safeJS }}</script>
   {{ $js := slice (resources.Get "js/gallery-tools.js") (resources.Get "js/gallery.js") | resources.Concat "js/figure-gallery.js" | minify | fingerprint }}
   <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
 {{ else }}

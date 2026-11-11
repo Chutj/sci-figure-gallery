@@ -70,6 +70,28 @@
       method: [figure.title, ...browsingCategories(figure), ...sections.filter(s => s !== 'Color & encoding').flatMap(s => [notes[s], draft[s]])].join(' '),
     };
   }
+  function expandSearchIndex(figures, rows) {
+    if (!Array.isArray(rows) || rows.length !== figures.length) throw new Error('Incomplete figure search index');
+    return rows.map((row, index) => {
+      const figure = figures[index];
+      if (row?.id !== figure.id
+          || !['paper', 'author', 'color', 'method'].every(key => typeof row[key] === 'string')
+          || (row.original_title !== undefined && typeof row.original_title !== 'string')) {
+        throw new Error('Search index does not match the gallery');
+      }
+      const originalTitle = row.original_title || figure.title;
+      return {
+        title: [figure.title, originalTitle, row.paper].join(' '),
+        author: row.author,
+        doi: figure.doi,
+        journal: figure.journal,
+        year: figure.year,
+        figure: figure.figure,
+        color: row.color,
+        method: [originalTitle, ...browsingCategories(figure), row.method].join(' '),
+      };
+    });
+  }
   function matches(figure, query, category, advanced = {}, focus = '') {
     const values = fields(figure);
     if (category && !(figure.categories || []).includes(category)) return false;
@@ -172,5 +194,5 @@
     }
     return selected.map(rgb => '#'+rgb.map(v => v.toString(16).padStart(2, '0')).join('').toUpperCase());
   }
-  return {sections, browsingCategories, categoryGroup, formatFigureReference, fields, matches, creditSegments, figureURL, resolveFigureLink, batch, createDetailLoader, recordedColors, sampleColors};
+  return {sections, browsingCategories, categoryGroup, formatFigureReference, fields, expandSearchIndex, matches, creditSegments, figureURL, resolveFigureLink, batch, createDetailLoader, recordedColors, sampleColors};
 });
