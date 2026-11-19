@@ -2635,6 +2635,52 @@
       "year": 2024
     },
     {
+      "author": "Churui Huang; Haoran Zhang; Jinyue Yan",
+      "categories": [
+        "Composition charts",
+        "Bar charts"
+      ],
+      "doi": "10.1038/s41467-026-75606-4",
+      "figure": "Fig. 2d",
+      "height": 680,
+      "id": "fig-08b7dcb1e05c546f8fc3102a033b0016",
+      "image": "https://chutj.github.io/figures/approved/080d8d91f07f210e059d6c2306d04fb53e841f6a3baefdcc90abff0a28bec189/figure.png",
+      "journal": "Nature Communications",
+      "metadata_sha256": "2dda5a49b0908b2d1ed9690dc2e658a78a3f3bd672b8e091e75a7d21e29d3b23",
+      "paper": "A global feasibility gap in resilient island energy transitions",
+      "primary": "Composition charts",
+      "rights": {
+        "additional_credit": "Parent figure’s caption credits the regional reference material. IPCC AR6 reference regions adapted by the paper authors from Iturbide et al. (2020), https://doi.org/10.5194/essd-12-2959-2020, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Colors, shading and labels were added in the paper.",
+        "approved_at": "2026-11-19",
+        "approved_by": "Chutj",
+        "attribution": "Huang, C., Zhang, H. & Yan, J. A global feasibility gap in resilient island energy transitions. Nature Communications 17, 8684 (2026). Fig. 2d. https://doi.org/10.1038/s41467-026-75606-4. © The Author(s) 2026. CC BY-NC-ND 4.0, subject to the disclaimer of warranties in the license terms.",
+        "evidence_reference": "GALLERY-ISSUE-1-2-d",
+        "human_reviewed": true,
+        "license": "CC BY-NC-ND 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "modification_status": "Continuous rectangular excerpt of the publisher’s Version of Record figure. Pixels inside the excerpt match the source; thumbnails use proportional resizing and WebP encoding. A source legend is shown separately when linked.",
+        "permission_basis": "license",
+        "public_use_allowed": true,
+        "review_evidence_sha256": "dbee7d524973b911e7b41ee108738850a4fb779b3860c2e2f6b8843da4d048cf",
+        "status": "approved"
+      },
+      "sections": {
+        "Color & encoding": "The bars retain the six blue and red class colors. The inset reduces them to one blue and one red.",
+        "Design lessons": "Label counts at the end of aligned bars, then use a small part-to-whole summary for the aggregate split.",
+        "Statistics & symbols": "Of 1,830 islands, 834 are feasible and 996 infeasible in the Ideal scenario. Count labels and percentages refer to islands.",
+        "Verification & limitations": "The panel was checked against the Version of Record, the exact classified crop and the source caption. The paper and regional-material licenses are recorded separately.",
+        "What the figure shows": "Horizontal bars show counts for six classes. The inset combines them into feasible and infeasible shares."
+      },
+      "source": "https://doi.org/10.1038/s41467-026-75606-4",
+      "source_image_sha256": "080d8d91f07f210e059d6c2306d04fb53e841f6a3baefdcc90abff0a28bec189",
+      "srcset": "https://chutj.github.io/figures/approved/080d8d91f07f210e059d6c2306d04fb53e841f6a3baefdcc90abff0a28bec189/figure-320.webp 320w, https://chutj.github.io/figures/approved/080d8d91f07f210e059d6c2306d04fb53e841f6a3baefdcc90abff0a28bec189/figure-616.webp 616w",
+      "thumbnail": "https://chutj.github.io/figures/approved/080d8d91f07f210e059d6c2306d04fb53e841f6a3baefdcc90abff0a28bec189/figure-616.webp",
+      "title": "Island counts and shares by feasibility class",
+      "translation_status": "reviewed",
+      "width": 616,
+      "year": 2026
+    },
+    {
       "author": "Amirhossein Hassani; Adisa Azapagic; Nima Shokri",
       "categories": [
         "Legends, color scales & symbols",
@@ -11191,6 +11237,59 @@
       "year": 2025
     },
     {
+      "author": "Churui Huang; Haoran Zhang; Jinyue Yan",
+      "categories": [
+        "Composition charts",
+        "Bar charts"
+      ],
+      "doi": "10.1038/s41467-026-75606-4",
+      "figure": "Fig. 3c",
+      "height": 503,
+      "id": "fig-21f0b7d37f80588bbb49e8a63a69df1a",
+      "image": "https://chutj.github.io/figures/approved/299525f58f432f2ff7ce6821bc3c16d85f2841dd94cf871fe3223751027b5f39/figure.png",
+      "journal": "Nature Communications",
+      "legend": {
+        "height": 900,
+        "image": "https://chutj.github.io/figures/approved/299525f58f432f2ff7ce6821bc3c16d85f2841dd94cf871fe3223751027b5f39/shared-legend.png",
+        "label": "Feasibility class definitions",
+        "sha256": "5f2151bca5a37514698870dc9d436e7fe6c3a85f5551cc140bd20a3e10273518",
+        "width": 375
+      },
+      "metadata_sha256": "012d3f73641cb35077a4fbcc4bc0cbd6c7f42d4b004b3ec55ab211b523cc99d1",
+      "paper": "A global feasibility gap in resilient island energy transitions",
+      "primary": "Composition charts",
+      "rights": {
+        "additional_credit": "Parent figure’s caption credits the regional reference material. IPCC AR6 reference regions adapted by the paper authors from Iturbide et al. (2020), https://doi.org/10.5194/essd-12-2959-2020, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Colors, shading and labels were added in the paper.",
+        "approved_at": "2026-11-19",
+        "approved_by": "Chutj",
+        "attribution": "Huang, C., Zhang, H. & Yan, J. A global feasibility gap in resilient island energy transitions. Nature Communications 17, 8684 (2026). Fig. 3c. https://doi.org/10.1038/s41467-026-75606-4. © The Author(s) 2026. CC BY-NC-ND 4.0, subject to the disclaimer of warranties in the license terms.",
+        "evidence_reference": "GALLERY-ISSUE-1-3-c",
+        "human_reviewed": true,
+        "license": "CC BY-NC-ND 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "modification_status": "Continuous rectangular excerpt of the publisher’s Version of Record figure. Pixels inside the excerpt match the source; thumbnails use proportional resizing and WebP encoding. A source legend is shown separately when linked.",
+        "permission_basis": "license",
+        "public_use_allowed": true,
+        "review_evidence_sha256": "7352c5660cc851d9b49d3de745d0bc15ffe52c12017ce68c9c950dfd446a10df",
+        "status": "approved"
+      },
+      "sections": {
+        "Color & encoding": "Three blues and three reds consistently distinguish the same classes in every column.",
+        "Design lessons": "Keep class order and color fixed, place counts inside segments where possible, and call out very narrow bands with leader lines.",
+        "Statistics & symbols": "Each column totals 1,830 islands. The bands between columns connect category totals; the individual transitions are shown in Fig. 3d.",
+        "Verification & limitations": "The panel was checked against the Version of Record, the exact classified crop and the source caption. The paper and regional-material licenses are recorded separately.",
+        "What the figure shows": "Stacked columns compare the six classes under Ideal, Baseline and Climate Stress. Q1 falls from 324 to 278 islands and Q6 rises from 396 to 445."
+      },
+      "source": "https://doi.org/10.1038/s41467-026-75606-4",
+      "source_image_sha256": "299525f58f432f2ff7ce6821bc3c16d85f2841dd94cf871fe3223751027b5f39",
+      "srcset": "https://chutj.github.io/figures/approved/299525f58f432f2ff7ce6821bc3c16d85f2841dd94cf871fe3223751027b5f39/figure-320.webp 320w, https://chutj.github.io/figures/approved/299525f58f432f2ff7ce6821bc3c16d85f2841dd94cf871fe3223751027b5f39/figure-640.webp 640w",
+      "thumbnail": "https://chutj.github.io/figures/approved/299525f58f432f2ff7ce6821bc3c16d85f2841dd94cf871fe3223751027b5f39/figure-640.webp",
+      "title": "Feasibility class counts across climate scenarios",
+      "translation_status": "reviewed",
+      "width": 880,
+      "year": 2026
+    },
+    {
       "author": "Krishna Rao; A. Park Williams; Noah S. Diffenbaugh; Marta Yebra; Alexandra G. Konings",
       "categories": [
         "Legends, color scales & symbols",
@@ -11480,6 +11579,58 @@
       "translation_status": "reviewed",
       "width": 1026,
       "year": 2025
+    },
+    {
+      "author": "Churui Huang; Haoran Zhang; Jinyue Yan",
+      "categories": [
+        "Maps"
+      ],
+      "doi": "10.1038/s41467-026-75606-4",
+      "figure": "Fig. 2c",
+      "height": 680,
+      "id": "fig-22c5bd8793e15d11bec948ff52c57a7c",
+      "image": "https://chutj.github.io/figures/approved/31444856a34f8544044cbfcc332e2c1eac22c59228b12b592069471df08ff76d/figure.png",
+      "journal": "Nature Communications",
+      "legend": {
+        "height": 255,
+        "image": "https://chutj.github.io/figures/approved/31444856a34f8544044cbfcc332e2c1eac22c59228b12b592069471df08ff76d/shared-legend.png",
+        "label": "Six feasibility categories",
+        "sha256": "7e5677c17c6e74dbf2710f0acf961f920f91d39a6bfd2815d4ee53f1c1cfb40b",
+        "width": 751
+      },
+      "metadata_sha256": "bf09c5a86571283dfb26c83e0e8e2ac0bf204cc4946f0c4b6177eb9fae37396a",
+      "paper": "A global feasibility gap in resilient island energy transitions",
+      "primary": "Maps",
+      "rights": {
+        "additional_credit": "IPCC AR6 reference regions adapted by the paper authors from Iturbide et al. (2020), https://doi.org/10.5194/essd-12-2959-2020, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Colors, shading and labels were added in the paper.",
+        "approved_at": "2026-11-19",
+        "approved_by": "Chutj",
+        "attribution": "Huang, C., Zhang, H. & Yan, J. A global feasibility gap in resilient island energy transitions. Nature Communications 17, 8684 (2026). Fig. 2c. https://doi.org/10.1038/s41467-026-75606-4. © The Author(s) 2026. CC BY-NC-ND 4.0, subject to the disclaimer of warranties in the license terms.",
+        "evidence_reference": "GALLERY-ISSUE-1-2-c",
+        "human_reviewed": true,
+        "license": "CC BY-NC-ND 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "modification_status": "Continuous rectangular excerpt of the publisher’s Version of Record figure. Pixels inside the excerpt match the source; thumbnails use proportional resizing and WebP encoding. A source legend is shown separately when linked.",
+        "permission_basis": "license",
+        "public_use_allowed": true,
+        "review_evidence_sha256": "07c9f3618109217dc9c9403cd11b1bfc2540e3fb88e42280099747a1fd7d03df",
+        "status": "approved"
+      },
+      "sections": {
+        "Color & encoding": "Three blues identify feasible classes and three reds identify infeasible classes. These are discrete groups.",
+        "Design lessons": "Reuse the scatterplot's class colors on the map so the reader can connect a decision category to its geography.",
+        "Statistics & symbols": "Points represent islands and use the paper's cost and affordability thresholds. The display does not weight islands by population or land area.",
+        "Verification & limitations": "The panel was checked against the Version of Record, the exact classified crop and the source caption. The paper and regional-material licenses are recorded separately.",
+        "What the figure shows": "The six feasibility classes defined by the cost-affordability plot are mapped to island locations."
+      },
+      "source": "https://doi.org/10.1038/s41467-026-75606-4",
+      "source_image_sha256": "31444856a34f8544044cbfcc332e2c1eac22c59228b12b592069471df08ff76d",
+      "srcset": "https://chutj.github.io/figures/approved/31444856a34f8544044cbfcc332e2c1eac22c59228b12b592069471df08ff76d/figure-320.webp 320w, https://chutj.github.io/figures/approved/31444856a34f8544044cbfcc332e2c1eac22c59228b12b592069471df08ff76d/figure-640.webp 640w",
+      "thumbnail": "https://chutj.github.io/figures/approved/31444856a34f8544044cbfcc332e2c1eac22c59228b12b592069471df08ff76d/figure-640.webp",
+      "title": "Where the six island feasibility classes occur",
+      "translation_status": "reviewed",
+      "width": 1240,
+      "year": 2026
     },
     {
       "author": "Wantong Li; Javier Pacheco-Labrador; Mirco Migliavacca; Diego Miralles; Anne Hoek van Dijke; Markus Reichstein; Matthias Forkel; Weijie Zhang; Christian Frankenberg; Annu Panwar; Qian Zhang; Ulrich Weber; Pierre Gentine; Rene Orth",
@@ -36601,6 +36752,58 @@
       "year": 2024
     },
     {
+      "author": "Churui Huang; Haoran Zhang; Jinyue Yan",
+      "categories": [
+        "Maps"
+      ],
+      "doi": "10.1038/s41467-026-75606-4",
+      "figure": "Fig. 3b (map inset)",
+      "height": 338,
+      "id": "fig-76e0d851d0ff5da385eb44ca250d91e7",
+      "image": "https://chutj.github.io/figures/approved/55b1ef6cb6ee93d8de1b9802fc14a9bf9428b27e0b426aa5c311b460cb35ebc1/figure.png",
+      "journal": "Nature Communications",
+      "legend": {
+        "height": 110,
+        "image": "https://chutj.github.io/figures/approved/55b1ef6cb6ee93d8de1b9802fc14a9bf9428b27e0b426aa5c311b460cb35ebc1/shared-legend.png",
+        "label": "Cost change and regional island-count scales",
+        "sha256": "20ec1b2231dfe0a3f521c2973e89e9b0600ef4f7dd7d94933ca66b168dac11d5",
+        "width": 910
+      },
+      "metadata_sha256": "140cdbca6d4e8a18d2175d898a8374e80a73ae6f7f30fc9fcb15a4ee5a9af0bf",
+      "paper": "A global feasibility gap in resilient island energy transitions",
+      "primary": "Maps",
+      "rights": {
+        "additional_credit": "IPCC AR6 reference regions adapted by the paper authors from Iturbide et al. (2020), https://doi.org/10.5194/essd-12-2959-2020, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Colors, shading and labels were added in the paper.",
+        "approved_at": "2026-11-19",
+        "approved_by": "Chutj",
+        "attribution": "Huang, C., Zhang, H. & Yan, J. A global feasibility gap in resilient island energy transitions. Nature Communications 17, 8684 (2026). Fig. 3b (map inset). https://doi.org/10.1038/s41467-026-75606-4. © The Author(s) 2026. CC BY-NC-ND 4.0, subject to the disclaimer of warranties in the license terms.",
+        "evidence_reference": "GALLERY-ISSUE-1-3-b-map",
+        "human_reviewed": true,
+        "license": "CC BY-NC-ND 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "modification_status": "Continuous rectangular excerpt of the publisher’s Version of Record figure. Pixels inside the excerpt match the source; thumbnails use proportional resizing and WebP encoding. A source legend is shown separately when linked.",
+        "permission_basis": "license",
+        "public_use_allowed": true,
+        "review_evidence_sha256": "a9fe4aeedebeaff76a1976d070a2a10e5d9105e34d194ef07bbd2b209471fe5b",
+        "status": "approved"
+      },
+      "sections": {
+        "Color & encoding": "Dark-red bubbles represent islands and a light-to-dark red scale represents counts by region.",
+        "Design lessons": "Combine point and area encodings to show site magnitude and regional concentration. Consult the separate source legend for both scales.",
+        "Statistics & symbols": "Point size represents the magnitude of the change in USD/kWh. Shading summarizes the count of islands above the change threshold.",
+        "Verification & limitations": "The panel was checked against the Version of Record, the exact classified crop and the source caption. The paper and regional-material licenses are recorded separately.",
+        "What the figure shows": "This inset from Fig. 3b combines individual islands' cost changes with counts of affected islands by reference region."
+      },
+      "source": "https://doi.org/10.1038/s41467-026-75606-4",
+      "source_image_sha256": "55b1ef6cb6ee93d8de1b9802fc14a9bf9428b27e0b426aa5c311b460cb35ebc1",
+      "srcset": "https://chutj.github.io/figures/approved/55b1ef6cb6ee93d8de1b9802fc14a9bf9428b27e0b426aa5c311b460cb35ebc1/figure-320.webp 320w, https://chutj.github.io/figures/approved/55b1ef6cb6ee93d8de1b9802fc14a9bf9428b27e0b426aa5c311b460cb35ebc1/figure-640.webp 640w",
+      "thumbnail": "https://chutj.github.io/figures/approved/55b1ef6cb6ee93d8de1b9802fc14a9bf9428b27e0b426aa5c311b460cb35ebc1/figure-640.webp",
+      "title": "Where climate stress raises island electricity costs",
+      "translation_status": "reviewed",
+      "width": 766,
+      "year": 2026
+    },
+    {
       "author": "Chris A. Boulton; Timothy M. Lenton; Niklas Boers",
       "categories": [
         "Legends, color scales & symbols",
@@ -36883,6 +37086,52 @@
       "translation_status": "reviewed",
       "width": 865,
       "year": 2022
+    },
+    {
+      "author": "Churui Huang; Haoran Zhang; Jinyue Yan",
+      "categories": [
+        "Map insets & close-ups",
+        "Box, violin & raincloud plots"
+      ],
+      "doi": "10.1038/s41467-026-75606-4",
+      "figure": "Fig. 1b",
+      "height": 1873,
+      "id": "fig-77b1c54fd31d58e79c55319f5e6415ad",
+      "image": "https://chutj.github.io/figures/approved/35c7789a77084dcd9acfbe1adc874a00672ba64e9991e728b92a80cc9a81a74b/figure.png",
+      "journal": "Nature Communications",
+      "metadata_sha256": "c09d724835ad414d7743bd75b68dff6e32213c3b573ba2c787c84c5814dd48c1",
+      "paper": "A global feasibility gap in resilient island energy transitions",
+      "primary": "Box, violin & raincloud plots",
+      "rights": {
+        "additional_credit": "IPCC AR6 reference regions adapted by the paper authors from Iturbide et al. (2020), https://doi.org/10.5194/essd-12-2959-2020, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Colors, shading and labels were added in the paper.",
+        "approved_at": "2026-11-19",
+        "approved_by": "Chutj",
+        "attribution": "Huang, C., Zhang, H. & Yan, J. A global feasibility gap in resilient island energy transitions. Nature Communications 17, 8684 (2026). Fig. 1b. https://doi.org/10.1038/s41467-026-75606-4. © The Author(s) 2026. CC BY-NC-ND 4.0, subject to the disclaimer of warranties in the license terms.",
+        "evidence_reference": "GALLERY-ISSUE-1-1-b",
+        "human_reviewed": true,
+        "license": "CC BY-NC-ND 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "modification_status": "Continuous rectangular excerpt of the publisher’s Version of Record figure. Pixels inside the excerpt match the source; thumbnails use proportional resizing and WebP encoding. A source legend is shown separately when linked.",
+        "permission_basis": "license",
+        "public_use_allowed": true,
+        "review_evidence_sha256": "4278f739dc1e8239743d096b62a5261d1c3ef8fe34985054696e265d39688501",
+        "status": "approved"
+      },
+      "sections": {
+        "Color & encoding": "Blue marks renewables, yellow storage, gray conventional generation, purple sector coupling, orange curtailment penalties, and red unserved energy.",
+        "Design lessons": "Keep regional order fixed across rows. Use the same component color in a row and its inset to link distribution and geography.",
+        "Statistics & symbols": "Violins show distributions and contain box plots. The source does not define whiskers as confidence intervals. The cost scale varies by row, and inset shading is relative to the component.",
+        "Verification & limitations": "The panel was checked against the Version of Record, the exact classified crop and the source caption. The paper and regional-material licenses are recorded separately.",
+        "What the figure shows": "Six rows compare island costs by IPCC AR6 region. The inset beside each row maps the regional mean for that cost component."
+      },
+      "source": "https://doi.org/10.1038/s41467-026-75606-4",
+      "source_image_sha256": "35c7789a77084dcd9acfbe1adc874a00672ba64e9991e728b92a80cc9a81a74b",
+      "srcset": "https://chutj.github.io/figures/approved/35c7789a77084dcd9acfbe1adc874a00672ba64e9991e728b92a80cc9a81a74b/figure-320.webp 320w, https://chutj.github.io/figures/approved/35c7789a77084dcd9acfbe1adc874a00672ba64e9991e728b92a80cc9a81a74b/figure-640.webp 640w",
+      "thumbnail": "https://chutj.github.io/figures/approved/35c7789a77084dcd9acfbe1adc874a00672ba64e9991e728b92a80cc9a81a74b/figure-640.webp",
+      "title": "Regional distributions of six energy-system costs",
+      "translation_status": "reviewed",
+      "width": 1140,
+      "year": 2026
     },
     {
       "author": "Nico Lang; Walter Jetz; Konrad Schindler; Jan Dirk Wegner",
@@ -42001,6 +42250,59 @@
       "year": 2023
     },
     {
+      "author": "Churui Huang; Haoran Zhang; Jinyue Yan",
+      "categories": [
+        "Legends, color scales & symbols",
+        "Scatter plots"
+      ],
+      "doi": "10.1038/s41467-026-75606-4",
+      "figure": "Fig. 2b",
+      "height": 650,
+      "id": "fig-837d9f160cea5771a172e4c4328acc89",
+      "image": "https://chutj.github.io/figures/approved/8e964b70f4122ea552b78c08179c9e4fd79be81de330e515566951070bf73503/figure.png",
+      "journal": "Nature Communications",
+      "legend": {
+        "height": 255,
+        "image": "https://chutj.github.io/figures/approved/8e964b70f4122ea552b78c08179c9e4fd79be81de330e515566951070bf73503/shared-legend.png",
+        "label": "IPCC AR6 region colors",
+        "sha256": "8b99fbbe69dc458e7e4611dbc01525f389ef4637656b7e52081d01e8b5abff7b",
+        "width": 1225
+      },
+      "metadata_sha256": "4dba168b057873eda830632cb98b5ef73b5ce7c1e75b41a7df04ad8c0dea3ada",
+      "paper": "A global feasibility gap in resilient island energy transitions",
+      "primary": "Scatter plots",
+      "rights": {
+        "additional_credit": "IPCC AR6 reference regions adapted by the paper authors from Iturbide et al. (2020), https://doi.org/10.5194/essd-12-2959-2020, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Colors, shading and labels were added in the paper.",
+        "approved_at": "2026-11-19",
+        "approved_by": "Chutj",
+        "attribution": "Huang, C., Zhang, H. & Yan, J. A global feasibility gap in resilient island energy transitions. Nature Communications 17, 8684 (2026). Fig. 2b. https://doi.org/10.1038/s41467-026-75606-4. © The Author(s) 2026. CC BY-NC-ND 4.0, subject to the disclaimer of warranties in the license terms.",
+        "evidence_reference": "GALLERY-ISSUE-1-2-b",
+        "human_reviewed": true,
+        "license": "CC BY-NC-ND 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "modification_status": "Continuous rectangular excerpt of the publisher’s Version of Record figure. Pixels inside the excerpt match the source; thumbnails use proportional resizing and WebP encoding. A source legend is shown separately when linked.",
+        "permission_basis": "license",
+        "public_use_allowed": true,
+        "review_evidence_sha256": "1bedc1b904cea6637bdb84eb8496c2298c0e2f1509741849ec7aef0239eca2cf",
+        "status": "approved"
+      },
+      "sections": {
+        "Color & encoding": "Points encode IPCC regions, while the blue and pink backgrounds encode feasible and infeasible classes. The region colors are in the shared key. The six-class key also appears with Fig. 2c in the gallery.",
+        "Design lessons": "Use different visual layers for group membership and a decision region. Place the magnified view beside the original rather than silently changing the axis.",
+        "Statistics & symbols": "The equality line marks break-even. Median-based reference lines split the space into six classes. The cost axis is reversed and the boundaries are classification rules.",
+        "Verification & limitations": "The panel was checked against the Version of Record, the exact classified crop and the source caption. The paper and regional-material licenses are recorded separately.",
+        "What the figure shows": "This quadrant-style chart uses six regions in the cost–affordability plane. Marginal density plots show the distribution along each axis and accompany the magnified view."
+      },
+      "source": "https://doi.org/10.1038/s41467-026-75606-4",
+      "source_image_sha256": "8e964b70f4122ea552b78c08179c9e4fd79be81de330e515566951070bf73503",
+      "srcset": "https://chutj.github.io/figures/approved/8e964b70f4122ea552b78c08179c9e4fd79be81de330e515566951070bf73503/figure-320.webp 320w, https://chutj.github.io/figures/approved/8e964b70f4122ea552b78c08179c9e4fd79be81de330e515566951070bf73503/figure-640.webp 640w",
+      "thumbnail": "https://chutj.github.io/figures/approved/8e964b70f4122ea552b78c08179c9e4fd79be81de330e515566951070bf73503/figure-640.webp",
+      "title": "Six feasibility classes in cost-affordability space",
+      "translation_status": "reviewed",
+      "width": 831,
+      "year": 2026
+    },
+    {
       "author": "Luke Grant; Inne Vanderkelen; Lukas Gudmundsson; Erich Fischer; Sonia I. Seneviratne; Wim Thiery",
       "categories": [
         "Legends, color scales & symbols",
@@ -44102,6 +44404,51 @@
       "translation_status": "reviewed",
       "width": 1137,
       "year": 2022
+    },
+    {
+      "author": "Churui Huang; Haoran Zhang; Jinyue Yan",
+      "categories": [
+        "Sankey & chord diagrams"
+      ],
+      "doi": "10.1038/s41467-026-75606-4",
+      "figure": "Fig. 4b",
+      "height": 1078,
+      "id": "fig-8af1248b7c7358349417742afe52b201",
+      "image": "https://chutj.github.io/figures/approved/ae4f8d0b6544db8d42f217594d5eb60a43f9e263304cddd75d9949b2d5bcd732/figure.png",
+      "journal": "Nature Communications",
+      "metadata_sha256": "27aa8ecd72c306bd97aded27ab97c409b7d28ca172f555abde69a9a6546b7de5",
+      "paper": "A global feasibility gap in resilient island energy transitions",
+      "primary": "Sankey & chord diagrams",
+      "rights": {
+        "additional_credit": "Parent figure’s caption credits IPCC AR6 reference regions to Iturbide et al. (2020), https://doi.org/10.5194/essd-12-2959-2020, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).",
+        "approved_at": "2026-11-19",
+        "approved_by": "Chutj",
+        "attribution": "Huang, C., Zhang, H. & Yan, J. A global feasibility gap in resilient island energy transitions. Nature Communications 17, 8684 (2026). Fig. 4b. https://doi.org/10.1038/s41467-026-75606-4. © The Author(s) 2026. CC BY-NC-ND 4.0, subject to the disclaimer of warranties in the license terms.",
+        "evidence_reference": "GALLERY-ISSUE-1-4-b",
+        "human_reviewed": true,
+        "license": "CC BY-NC-ND 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "modification_status": "Continuous rectangular excerpt of the publisher’s Version of Record figure. Pixels inside the excerpt match the source; thumbnails use proportional resizing and WebP encoding. A source legend is shown separately when linked.",
+        "permission_basis": "license",
+        "public_use_allowed": true,
+        "review_evidence_sha256": "5289bdf5f53550e00fc34068edce9569af8c9be2f2888a040d7a80bb15d4f5ed",
+        "status": "approved"
+      },
+      "sections": {
+        "Color & encoding": "The same blue and red class colors are repeated at every stage, with lighter connecting flows.",
+        "Design lessons": "Keep class order and labels consistent across stages so the reader can follow switches between feasible and infeasible groups. The 2030, 2040 and 2050 columns make sequential changes easy to follow from the Climate Stress baseline.",
+        "Statistics & symbols": "Flow width represents islands, and the years label scenarios. The study reports three switches from infeasible to feasible globally.",
+        "Verification & limitations": "The panel was checked against the Version of Record, the exact classified crop and the source caption. The paper and regional-material licenses are recorded separately.",
+        "What the figure shows": "A Sankey diagram traces changes from Climate Stress through modeled technology scenarios for 2030, 2040 and 2050."
+      },
+      "source": "https://doi.org/10.1038/s41467-026-75606-4",
+      "source_image_sha256": "ae4f8d0b6544db8d42f217594d5eb60a43f9e263304cddd75d9949b2d5bcd732",
+      "srcset": "https://chutj.github.io/figures/approved/ae4f8d0b6544db8d42f217594d5eb60a43f9e263304cddd75d9949b2d5bcd732/figure-320.webp 320w, https://chutj.github.io/figures/approved/ae4f8d0b6544db8d42f217594d5eb60a43f9e263304cddd75d9949b2d5bcd732/figure-640.webp 640w",
+      "thumbnail": "https://chutj.github.io/figures/approved/ae4f8d0b6544db8d42f217594d5eb60a43f9e263304cddd75d9949b2d5bcd732/figure-640.webp",
+      "title": "Feasibility transitions in the 2030 to 2050 technology scenarios",
+      "translation_status": "reviewed",
+      "width": 1946,
+      "year": 2026
     },
     {
       "author": "Lingcheng Li; Yilin Fang; Jiafu Mao; Shiqin Xu; Zhonghua Zheng; Wantong Li; Mingjie Shi; Charles D. Koven; Jeffrey Chambers; L. Ruby Leung; Nate McDowell",
@@ -47309,6 +47656,51 @@
       "year": 2025
     },
     {
+      "author": "Churui Huang; Haoran Zhang; Jinyue Yan",
+      "categories": [
+        "Sankey & chord diagrams"
+      ],
+      "doi": "10.1038/s41467-026-75606-4",
+      "figure": "Fig. 3d",
+      "height": 999,
+      "id": "fig-94a7048abaa0580aade8f1ead3db3128",
+      "image": "https://chutj.github.io/figures/approved/6b2294469a3a713b6741c31d2dfdacb9cb59fe569fced30af9a3f26fd92fabb2/figure.png",
+      "journal": "Nature Communications",
+      "metadata_sha256": "ce8bd99cfec3802427660d14d44230f21f1416716a7745676de57d6e154fec21",
+      "paper": "A global feasibility gap in resilient island energy transitions",
+      "primary": "Sankey & chord diagrams",
+      "rights": {
+        "additional_credit": "Parent figure’s caption credits the regional reference material. IPCC AR6 reference regions adapted by the paper authors from Iturbide et al. (2020), https://doi.org/10.5194/essd-12-2959-2020, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Colors, shading and labels were added in the paper.",
+        "approved_at": "2026-11-19",
+        "approved_by": "Chutj",
+        "attribution": "Huang, C., Zhang, H. & Yan, J. A global feasibility gap in resilient island energy transitions. Nature Communications 17, 8684 (2026). Fig. 3d. https://doi.org/10.1038/s41467-026-75606-4. © The Author(s) 2026. CC BY-NC-ND 4.0, subject to the disclaimer of warranties in the license terms.",
+        "evidence_reference": "GALLERY-ISSUE-1-3-d",
+        "human_reviewed": true,
+        "license": "CC BY-NC-ND 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "modification_status": "Continuous rectangular excerpt of the publisher’s Version of Record figure. Pixels inside the excerpt match the source; thumbnails use proportional resizing and WebP encoding. A source legend is shown separately when linked. The external panel letter d is outside the excerpt; the diagram, its labels and key are retained.",
+        "permission_basis": "license",
+        "public_use_allowed": true,
+        "review_evidence_sha256": "33f3d9ad04bb88fe97f8b5aa61cb693ee6105725bf40046f26561209a61f38e2",
+        "status": "approved"
+      },
+      "sections": {
+        "Color & encoding": "Blue and red identify feasible and infeasible classes. Pale flows keep the class nodes and labels distinct.",
+        "Design lessons": "Use a dedicated start column for geography and keep the same class labels and colors across scenarios.",
+        "Statistics & symbols": "The flows represent islands that change class. The paper reports 131 changes out of 1,830 islands. This selected subset is the denominator for the flows.",
+        "Verification & limitations": "The panel was checked against the Version of Record, the exact classified crop and the source caption. The paper and regional-material licenses are recorded separately.",
+        "What the figure shows": "The Sankey diagram connects island regions to feasibility categories under Ideal, Baseline and Climate Stress."
+      },
+      "source": "https://doi.org/10.1038/s41467-026-75606-4",
+      "source_image_sha256": "6b2294469a3a713b6741c31d2dfdacb9cb59fe569fced30af9a3f26fd92fabb2",
+      "srcset": "https://chutj.github.io/figures/approved/6b2294469a3a713b6741c31d2dfdacb9cb59fe569fced30af9a3f26fd92fabb2/figure-320.webp 320w, https://chutj.github.io/figures/approved/6b2294469a3a713b6741c31d2dfdacb9cb59fe569fced30af9a3f26fd92fabb2/figure-640.webp 640w",
+      "thumbnail": "https://chutj.github.io/figures/approved/6b2294469a3a713b6741c31d2dfdacb9cb59fe569fced30af9a3f26fd92fabb2/figure-640.webp",
+      "title": "Island feasibility transitions under climate stress",
+      "translation_status": "reviewed",
+      "width": 1971,
+      "year": 2026
+    },
+    {
       "author": "Lobell, David B.; Di Tommaso, Stefania; Burney, Jennifer A.",
       "categories": [
         "Legends, color scales & symbols",
@@ -48989,6 +49381,53 @@
       "translation_status": "reviewed",
       "width": 686,
       "year": 2022
+    },
+    {
+      "author": "Churui Huang; Haoran Zhang; Jinyue Yan",
+      "categories": [
+        "Maps",
+        "Map insets & close-ups",
+        "Bubble plots"
+      ],
+      "doi": "10.1038/s41467-026-75606-4",
+      "figure": "Fig. 1a",
+      "height": 641,
+      "id": "fig-982c7ff154125015873c96658e65d94c",
+      "image": "https://chutj.github.io/figures/approved/f4b3d61a729191194c658725ae0c9782bae7dc56316f48946bd43d64981109c4/figure.png",
+      "journal": "Nature Communications",
+      "metadata_sha256": "b353280d08405cd78be640ecd6aa38796a9325e04e2c94fb886503d0cb54ba9a",
+      "paper": "A global feasibility gap in resilient island energy transitions",
+      "primary": "Maps",
+      "rights": {
+        "additional_credit": "IPCC AR6 reference regions adapted by the paper authors from Iturbide et al. (2020), https://doi.org/10.5194/essd-12-2959-2020, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Colors, shading and labels were added in the paper.",
+        "approved_at": "2026-11-19",
+        "approved_by": "Chutj",
+        "attribution": "Huang, C., Zhang, H. & Yan, J. A global feasibility gap in resilient island energy transitions. Nature Communications 17, 8684 (2026). Fig. 1a. https://doi.org/10.1038/s41467-026-75606-4. © The Author(s) 2026. CC BY-NC-ND 4.0, subject to the disclaimer of warranties in the license terms.",
+        "evidence_reference": "GALLERY-ISSUE-1-1-a",
+        "human_reviewed": true,
+        "license": "CC BY-NC-ND 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "modification_status": "Continuous rectangular excerpt of the publisher’s Version of Record figure. Pixels inside the excerpt match the source; thumbnails use proportional resizing and WebP encoding. A source legend is shown separately when linked.",
+        "permission_basis": "license",
+        "public_use_allowed": true,
+        "review_evidence_sha256": "99192f46defcb7cd97b079a507503b98b6233e512be7d1e416899ee4699f79f1",
+        "status": "approved"
+      },
+      "sections": {
+        "Color & encoding": "Point size and a blue-to-red scale both encode cost. The muted reference-region boundaries keep the data points prominent.",
+        "Design lessons": "Align marginal profiles to the map coordinates so readers can connect high-cost locations to geographic gradients. The paper calls the longitude and latitude margins histograms. They appear as filled profiles aligned to the map and summarize mean cost.",
+        "Statistics & symbols": "Costs are in USD per person. The Ideal scenario uses 2020 technology costs and excludes climate hazards. The marginal profiles summarize mean costs rather than island frequencies.",
+        "Verification & limitations": "The panel was checked against the Version of Record, the exact classified crop and the source caption. The paper and regional-material licenses are recorded separately.",
+        "What the figure shows": "The map shows total energy-system cost per person for 1,830 islands in the Ideal scenario. The margins summarize average cost along latitude and longitude."
+      },
+      "source": "https://doi.org/10.1038/s41467-026-75606-4",
+      "source_image_sha256": "f4b3d61a729191194c658725ae0c9782bae7dc56316f48946bd43d64981109c4",
+      "srcset": "https://chutj.github.io/figures/approved/f4b3d61a729191194c658725ae0c9782bae7dc56316f48946bd43d64981109c4/figure-320.webp 320w, https://chutj.github.io/figures/approved/f4b3d61a729191194c658725ae0c9782bae7dc56316f48946bd43d64981109c4/figure-640.webp 640w",
+      "thumbnail": "https://chutj.github.io/figures/approved/f4b3d61a729191194c658725ae0c9782bae7dc56316f48946bd43d64981109c4/figure-640.webp",
+      "title": "Island energy costs on a global point map",
+      "translation_status": "reviewed",
+      "width": 855,
+      "year": 2026
     },
     {
       "author": "Amitesh Sabut; Ashok Mishra; Ruby Leung; Dara Entekhabi",
@@ -54073,6 +54512,52 @@
       "translation_status": "reviewed",
       "width": 750,
       "year": 2022
+    },
+    {
+      "author": "Churui Huang; Haoran Zhang; Jinyue Yan",
+      "categories": [
+        "Maps",
+        "Color references"
+      ],
+      "doi": "10.1038/s41467-026-75606-4",
+      "figure": "Fig. 2a",
+      "height": 650,
+      "id": "fig-a9952c9c1a925f86868fe15562f9d608",
+      "image": "https://chutj.github.io/figures/approved/3f51e594f12e67ef8b83b28d850ecafd6602ad98678510454fb27318f041223e/figure.png",
+      "journal": "Nature Communications",
+      "metadata_sha256": "6d52df8f390704a36c4b3ea043aa67bfacfabdd367d83ab7d61fd5a4f6df7675",
+      "paper": "A global feasibility gap in resilient island energy transitions",
+      "primary": "Maps",
+      "rights": {
+        "additional_credit": "IPCC AR6 reference regions adapted by the paper authors from Iturbide et al. (2020), https://doi.org/10.5194/essd-12-2959-2020, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Colors, shading and labels were added in the paper.",
+        "approved_at": "2026-11-19",
+        "approved_by": "Chutj",
+        "attribution": "Huang, C., Zhang, H. & Yan, J. A global feasibility gap in resilient island energy transitions. Nature Communications 17, 8684 (2026). Fig. 2a. https://doi.org/10.1038/s41467-026-75606-4. © The Author(s) 2026. CC BY-NC-ND 4.0, subject to the disclaimer of warranties in the license terms.",
+        "evidence_reference": "GALLERY-ISSUE-1-2-a",
+        "human_reviewed": true,
+        "license": "CC BY-NC-ND 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "modification_status": "Continuous rectangular excerpt of the publisher’s Version of Record figure. Pixels inside the excerpt match the source; thumbnails use proportional resizing and WebP encoding. A source legend is shown separately when linked.",
+        "permission_basis": "license",
+        "public_use_allowed": true,
+        "review_evidence_sha256": "935c98580634f128fc5486af81098f0ef63beb266f1f9b5f0ed80043bc154c16",
+        "status": "approved"
+      },
+      "sections": {
+        "Color & encoding": "A diverging scale encodes each island’s feasibility gap, red below zero and blue above zero. The regional background has a separate white-to-teal scale for the share of infeasible islands.",
+        "Design lessons": "Give the point layer and regional summary separate color bars so their different units cannot be confused.",
+        "Statistics & symbols": "The Ideal scenario covers 1,830 islands. The gap is in USD/kWh. The affordability calculation assumes electricity spending up to 10% of income.",
+        "Verification & limitations": "The panel was checked against the Version of Record, the exact classified crop and the source caption. The paper and regional-material licenses are recorded separately.",
+        "What the figure shows": "Island markers show affordability minus levelized cost of electricity. Regional shading shows the share of assessed islands with a negative gap."
+      },
+      "source": "https://doi.org/10.1038/s41467-026-75606-4",
+      "source_image_sha256": "3f51e594f12e67ef8b83b28d850ecafd6602ad98678510454fb27318f041223e",
+      "srcset": "https://chutj.github.io/figures/approved/3f51e594f12e67ef8b83b28d850ecafd6602ad98678510454fb27318f041223e/figure-320.webp 320w, https://chutj.github.io/figures/approved/3f51e594f12e67ef8b83b28d850ecafd6602ad98678510454fb27318f041223e/figure-640.webp 640w",
+      "thumbnail": "https://chutj.github.io/figures/approved/3f51e594f12e67ef8b83b28d850ecafd6602ad98678510454fb27318f041223e/figure-640.webp",
+      "title": "Two scales of island energy affordability on one map",
+      "translation_status": "reviewed",
+      "width": 1135,
+      "year": 2026
     },
     {
       "author": "Peiyu Cao; Franco Bilotto; Carlos Gonzalez Fischer; Nathaniel D. Mueller; Kimberly M. Carlson; Avery W. Driscoll; James S. Gerber; Pete Smith; Francesco N. Tubiello; Paul C. West; Liangzhi You; Mario Herrero",
@@ -62151,6 +62636,52 @@
       "year": 2022
     },
     {
+      "author": "Churui Huang; Haoran Zhang; Jinyue Yan",
+      "categories": [
+        "Map insets & close-ups",
+        "Box, violin & raincloud plots"
+      ],
+      "doi": "10.1038/s41467-026-75606-4",
+      "figure": "Fig. 3b",
+      "height": 760,
+      "id": "fig-c4100233ca855994b3176132800a89b8",
+      "image": "https://chutj.github.io/figures/approved/ff43ecf45fc71b1fed0399f30bfc39667db97186284935af6a47f64c05a50d89/figure.png",
+      "journal": "Nature Communications",
+      "metadata_sha256": "5e5e4f3e8b276eb378c42438925de2e4ae6da965d3742c4129a9c43df557c0bd",
+      "paper": "A global feasibility gap in resilient island energy transitions",
+      "primary": "Box, violin & raincloud plots",
+      "rights": {
+        "additional_credit": "IPCC AR6 reference regions adapted by the paper authors from Iturbide et al. (2020), https://doi.org/10.5194/essd-12-2959-2020, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Colors, shading and labels were added in the paper.",
+        "approved_at": "2026-11-19",
+        "approved_by": "Chutj",
+        "attribution": "Huang, C., Zhang, H. & Yan, J. A global feasibility gap in resilient island energy transitions. Nature Communications 17, 8684 (2026). Fig. 3b. https://doi.org/10.1038/s41467-026-75606-4. © The Author(s) 2026. CC BY-NC-ND 4.0, subject to the disclaimer of warranties in the license terms.",
+        "evidence_reference": "GALLERY-ISSUE-1-3-b",
+        "human_reviewed": true,
+        "license": "CC BY-NC-ND 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "modification_status": "Continuous rectangular excerpt of the publisher’s Version of Record figure. Pixels inside the excerpt match the source; thumbnails use proportional resizing and WebP encoding. A source legend is shown separately when linked.",
+        "permission_basis": "license",
+        "public_use_allowed": true,
+        "review_evidence_sha256": "02990a7ade964ba5f18ab4cec613ac2265edd59b23bdfafa27f13e8484e02d47",
+        "status": "approved"
+      },
+      "sections": {
+        "Color & encoding": "Orange and dark red distinguish scenarios; the inset uses red shades for regional counts and separately varies point size.",
+        "Design lessons": "Place the inset in open space and retain the complete violins, including their tails. Distinguish the statistic shown by each legend.",
+        "Statistics & symbols": "The vertical scale is percentage cost increase. Black points are medians and intervals span the 25th to 75th percentiles. The inset's point-size scale instead uses absolute cost change in USD/kWh.",
+        "Verification & limitations": "The panel was checked against the Version of Record, the exact classified crop and the source caption. The paper and regional-material licenses are recorded separately.",
+        "What the figure shows": "Paired half-violins compare regional increases under Baseline and Climate Stress, with a map inset for spatial context."
+      },
+      "source": "https://doi.org/10.1038/s41467-026-75606-4",
+      "source_image_sha256": "ff43ecf45fc71b1fed0399f30bfc39667db97186284935af6a47f64c05a50d89",
+      "srcset": "https://chutj.github.io/figures/approved/ff43ecf45fc71b1fed0399f30bfc39667db97186284935af6a47f64c05a50d89/figure-320.webp 320w, https://chutj.github.io/figures/approved/ff43ecf45fc71b1fed0399f30bfc39667db97186284935af6a47f64c05a50d89/figure-640.webp 640w",
+      "thumbnail": "https://chutj.github.io/figures/approved/ff43ecf45fc71b1fed0399f30bfc39667db97186284935af6a47f64c05a50d89/figure-640.webp",
+      "title": "Climate-resilience cost increases by region",
+      "translation_status": "reviewed",
+      "width": 1071,
+      "year": 2026
+    },
+    {
       "author": "Sam Coggins; Andrew J. McDonald; João Vasco Silva; Anton Urfels; Hari Sankar Nayak; Sonam Rinchen Sherpa; Mangi Lal Jat; Hanuman Sahay Jat; Tim Krupnik; Virender Kumar; Ram. K. Malik; Tek B. Sapkota; Amaresh Kumar Nayak; Peter Craufurd",
       "categories": [
         "Legends, color scales & symbols",
@@ -62245,6 +62776,51 @@
       "translation_status": "reviewed",
       "width": 1060,
       "year": 2025
+    },
+    {
+      "author": "Churui Huang; Haoran Zhang; Jinyue Yan",
+      "categories": [
+        "Bar charts"
+      ],
+      "doi": "10.1038/s41467-026-75606-4",
+      "figure": "Fig. 3e",
+      "height": 500,
+      "id": "fig-c45f0e21bca752a68e767736f79e0699",
+      "image": "https://chutj.github.io/figures/approved/bcb8181fe64868f5cf4594825b27b6ebf81932874f8e09d732448a073405993e/figure.png",
+      "journal": "Nature Communications",
+      "metadata_sha256": "1426bc797ff3d12ea51b95c5682cd378394b84f2f20b991fed72a610e181e766",
+      "paper": "A global feasibility gap in resilient island energy transitions",
+      "primary": "Bar charts",
+      "rights": {
+        "additional_credit": "Parent figure’s caption credits the regional reference material. IPCC AR6 reference regions adapted by the paper authors from Iturbide et al. (2020), https://doi.org/10.5194/essd-12-2959-2020, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Colors, shading and labels were added in the paper.",
+        "approved_at": "2026-11-19",
+        "approved_by": "Chutj",
+        "attribution": "Huang, C., Zhang, H. & Yan, J. A global feasibility gap in resilient island energy transitions. Nature Communications 17, 8684 (2026). Fig. 3e. https://doi.org/10.1038/s41467-026-75606-4. © The Author(s) 2026. CC BY-NC-ND 4.0, subject to the disclaimer of warranties in the license terms.",
+        "evidence_reference": "GALLERY-ISSUE-1-3-e",
+        "human_reviewed": true,
+        "license": "CC BY-NC-ND 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "modification_status": "Continuous rectangular excerpt of the publisher’s Version of Record figure. Pixels inside the excerpt match the source; thumbnails use proportional resizing and WebP encoding. A source legend is shown separately when linked.",
+        "permission_basis": "license",
+        "public_use_allowed": true,
+        "review_evidence_sha256": "2c4a6aa075ae2a0f2d8eaaa0ca7af425d4c09b1711810247083fb0ea5eef2c58",
+        "status": "approved"
+      },
+      "sections": {
+        "Color & encoding": "Blue, teal and gray identify the three modeled cost components.",
+        "Design lessons": "Use the same predictor order and a zero baseline across panels. Keep the significance key near the coefficients.",
+        "Statistics & symbols": "The regression predictors are renewable penetration, heating demand and hazard intensity. One, two and three asterisks denote p < 0.05, p < 0.01 and p < 0.001, respectively. Read the coefficients against the scale of each panel.",
+        "Verification & limitations": "The panel was checked against the Version of Record, the exact classified crop and the source caption. The paper and regional-material licenses are recorded separately.",
+        "What the figure shows": "Three panels compare standardized coefficients for changes in renewable generation, storage and conventional generation costs."
+      },
+      "source": "https://doi.org/10.1038/s41467-026-75606-4",
+      "source_image_sha256": "bcb8181fe64868f5cf4594825b27b6ebf81932874f8e09d732448a073405993e",
+      "srcset": "https://chutj.github.io/figures/approved/bcb8181fe64868f5cf4594825b27b6ebf81932874f8e09d732448a073405993e/figure-320.webp 320w, https://chutj.github.io/figures/approved/bcb8181fe64868f5cf4594825b27b6ebf81932874f8e09d732448a073405993e/figure-640.webp 640w",
+      "thumbnail": "https://chutj.github.io/figures/approved/bcb8181fe64868f5cf4594825b27b6ebf81932874f8e09d732448a073405993e/figure-640.webp",
+      "title": "Cost-change regression coefficients by technology",
+      "translation_status": "reviewed",
+      "width": 1071,
+      "year": 2026
     },
     {
       "author": "H. H. E. van Zanten; W. Simon; B. van Selm; J. Wacker; T. I. Maindl; A. Frehner; R. Hijbeek; M. K. van Ittersum; M. Herrero",
@@ -63433,6 +64009,52 @@
       "title": "Overview of the BERTH pipeline and framework",
       "translation_status": "reviewed",
       "width": 800,
+      "year": 2026
+    },
+    {
+      "author": "Churui Huang; Haoran Zhang; Jinyue Yan",
+      "categories": [
+        "Legends, color scales & symbols",
+        "Bar charts"
+      ],
+      "doi": "10.1038/s41467-026-75606-4",
+      "figure": "Fig. 1c",
+      "height": 1232,
+      "id": "fig-c9fe79f37bc554b287f9b78fba646453",
+      "image": "https://chutj.github.io/figures/approved/84e5953ed01811c7d03037172061d6d9bbb2645790bc769b03be274252659b90/figure.png",
+      "journal": "Nature Communications",
+      "metadata_sha256": "65422d2d544b2f34f0c7ab74029cc65ad04939148b9b57cecc078d588cf6171e",
+      "paper": "A global feasibility gap in resilient island energy transitions",
+      "primary": "Bar charts",
+      "rights": {
+        "additional_credit": "Parent figure’s caption credits the regional reference material. IPCC AR6 reference regions adapted by the paper authors from Iturbide et al. (2020), https://doi.org/10.5194/essd-12-2959-2020, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Colors, shading and labels were added in the paper.",
+        "approved_at": "2026-11-19",
+        "approved_by": "Chutj",
+        "attribution": "Huang, C., Zhang, H. & Yan, J. A global feasibility gap in resilient island energy transitions. Nature Communications 17, 8684 (2026). Fig. 1c. https://doi.org/10.1038/s41467-026-75606-4. © The Author(s) 2026. CC BY-NC-ND 4.0, subject to the disclaimer of warranties in the license terms.",
+        "evidence_reference": "GALLERY-ISSUE-1-1-c",
+        "human_reviewed": true,
+        "license": "CC BY-NC-ND 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "modification_status": "Continuous rectangular excerpt of the publisher’s Version of Record figure. Pixels inside the excerpt match the source; thumbnails use proportional resizing and WebP encoding. A source legend is shown separately when linked.",
+        "permission_basis": "license",
+        "public_use_allowed": true,
+        "review_evidence_sha256": "c6c3f2033fabee444b0882b438b03b00c3b1a8391ea0d87df6d5db2fadf581b3",
+        "status": "approved"
+      },
+      "sections": {
+        "Color & encoding": "Red and blue distinguish significant and nonsignificant coefficients at p < 0.05. Solid and hatched bars separate demand and renewable variability predictors.",
+        "Design lessons": "Use color and texture for independent meanings. Order predictors consistently and put fit statistics in the panel headings.",
+        "Statistics & symbols": "Bars extend from zero to standardized coefficients for models of log costs. The paper uses robust standard errors for significance. Read each panel's scale and its reported R².",
+        "Verification & limitations": "The panel was checked against the Version of Record, the exact classified crop and the source caption. The paper and regional-material licenses are recorded separately.",
+        "What the figure shows": "Six regressions relate demand and renewable resource variability to individual cost components and total cost."
+      },
+      "source": "https://doi.org/10.1038/s41467-026-75606-4",
+      "source_image_sha256": "84e5953ed01811c7d03037172061d6d9bbb2645790bc769b03be274252659b90",
+      "srcset": "https://chutj.github.io/figures/approved/84e5953ed01811c7d03037172061d6d9bbb2645790bc769b03be274252659b90/figure-320.webp 320w, https://chutj.github.io/figures/approved/84e5953ed01811c7d03037172061d6d9bbb2645790bc769b03be274252659b90/figure-640.webp 640w",
+      "thumbnail": "https://chutj.github.io/figures/approved/84e5953ed01811c7d03037172061d6d9bbb2645790bc769b03be274252659b90/figure-640.webp",
+      "title": "Regression coefficients for island energy costs",
+      "translation_status": "reviewed",
+      "width": 855,
       "year": 2026
     },
     {
@@ -65637,6 +66259,52 @@
       "title": "Participatory scenario-development workshops",
       "translation_status": "reviewed",
       "width": 1599,
+      "year": 2026
+    },
+    {
+      "author": "Churui Huang; Haoran Zhang; Jinyue Yan",
+      "categories": [
+        "Density, ridgelines & cumulative distributions",
+        "Bar charts"
+      ],
+      "doi": "10.1038/s41467-026-75606-4",
+      "figure": "Fig. 4a",
+      "height": 1380,
+      "id": "fig-d0251a0ede3453e7b13eb690db8c9003",
+      "image": "https://chutj.github.io/figures/approved/782ec7f8d4765dc3c12c106e670607d6de816363a4443ba7cfed3fc7d39434fc/figure.png",
+      "journal": "Nature Communications",
+      "metadata_sha256": "1e3b7c4486df9dc47364995a3458d19e233ce11b112f8f6c78986e232aa36b52",
+      "paper": "A global feasibility gap in resilient island energy transitions",
+      "primary": "Density, ridgelines & cumulative distributions",
+      "rights": {
+        "additional_credit": "Parent figure’s caption credits IPCC AR6 reference regions to Iturbide et al. (2020), https://doi.org/10.5194/essd-12-2959-2020, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).",
+        "approved_at": "2026-11-19",
+        "approved_by": "Chutj",
+        "attribution": "Huang, C., Zhang, H. & Yan, J. A global feasibility gap in resilient island energy transitions. Nature Communications 17, 8684 (2026). Fig. 4a. https://doi.org/10.1038/s41467-026-75606-4. © The Author(s) 2026. CC BY-NC-ND 4.0, subject to the disclaimer of warranties in the license terms.",
+        "evidence_reference": "GALLERY-ISSUE-1-4-a",
+        "human_reviewed": true,
+        "license": "CC BY-NC-ND 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "modification_status": "Continuous rectangular excerpt of the publisher’s Version of Record figure. Pixels inside the excerpt match the source; thumbnails use proportional resizing and WebP encoding. A source legend is shown separately when linked.",
+        "permission_basis": "license",
+        "public_use_allowed": true,
+        "review_evidence_sha256": "f68ef321aebc12622124a36f1914eb2e8fae31c93bbec7fb7b083ca386a6e13d",
+        "status": "approved"
+      },
+      "sections": {
+        "Color & encoding": "Dark red identifies Climate Stress and blue identifies the 2050 technology-progress scenario in both views.",
+        "Design lessons": "Keep the density and count views aligned to a shared list of regions, giving distribution shape and sample size separate scales.",
+        "Statistics & symbols": "The panel includes changes larger than 0.01 USD/kWh in absolute value. Mirrored bars still represent positive counts. The density heights describe the shape of the distributions.",
+        "Verification & limitations": "The panel was checked against the Version of Record, the exact classified crop and the source caption. The paper and regional-material licenses are recorded separately.",
+        "What the figure shows": "Density curves show regional changes relative to Ideal. Adjacent mirrored bars count the islands included for each scenario."
+      },
+      "source": "https://doi.org/10.1038/s41467-026-75606-4",
+      "source_image_sha256": "782ec7f8d4765dc3c12c106e670607d6de816363a4443ba7cfed3fc7d39434fc",
+      "srcset": "https://chutj.github.io/figures/approved/782ec7f8d4765dc3c12c106e670607d6de816363a4443ba7cfed3fc7d39434fc/figure-320.webp 320w, https://chutj.github.io/figures/approved/782ec7f8d4765dc3c12c106e670607d6de816363a4443ba7cfed3fc7d39434fc/figure-640.webp 640w",
+      "thumbnail": "https://chutj.github.io/figures/approved/782ec7f8d4765dc3c12c106e670607d6de816363a4443ba7cfed3fc7d39434fc/figure-640.webp",
+      "title": "Regional electricity cost changes under technology progress",
+      "translation_status": "reviewed",
+      "width": 1946,
       "year": 2026
     },
     {
@@ -73411,6 +74079,58 @@
       "translation_status": "reviewed",
       "width": 3364,
       "year": 2025
+    },
+    {
+      "author": "Churui Huang; Haoran Zhang; Jinyue Yan",
+      "categories": [
+        "Scatter plots"
+      ],
+      "doi": "10.1038/s41467-026-75606-4",
+      "figure": "Fig. 3a",
+      "height": 680,
+      "id": "fig-e489616a00c658df9d253de916aef1c5",
+      "image": "https://chutj.github.io/figures/approved/5d8fcfe7ec3a739d0f075a32417d971d084e2828789e54eee04c79d69453ad31/figure.png",
+      "journal": "Nature Communications",
+      "legend": {
+        "height": 900,
+        "image": "https://chutj.github.io/figures/approved/5d8fcfe7ec3a739d0f075a32417d971d084e2828789e54eee04c79d69453ad31/shared-legend.png",
+        "label": "Feasibility class definitions",
+        "sha256": "5f2151bca5a37514698870dc9d436e7fe6c3a85f5551cc140bd20a3e10273518",
+        "width": 375
+      },
+      "metadata_sha256": "ed6b5f4186f04e6eb2a0318f7cd1a805fdceaab3bbf422b69f4321c57d246e6c",
+      "paper": "A global feasibility gap in resilient island energy transitions",
+      "primary": "Scatter plots",
+      "rights": {
+        "additional_credit": "Parent figure’s caption credits the regional reference material. IPCC AR6 reference regions adapted by the paper authors from Iturbide et al. (2020), https://doi.org/10.5194/essd-12-2959-2020, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Colors, shading and labels were added in the paper.",
+        "approved_at": "2026-11-19",
+        "approved_by": "Chutj",
+        "attribution": "Huang, C., Zhang, H. & Yan, J. A global feasibility gap in resilient island energy transitions. Nature Communications 17, 8684 (2026). Fig. 3a. https://doi.org/10.1038/s41467-026-75606-4. © The Author(s) 2026. CC BY-NC-ND 4.0, subject to the disclaimer of warranties in the license terms.",
+        "evidence_reference": "GALLERY-ISSUE-1-3-a",
+        "human_reviewed": true,
+        "license": "CC BY-NC-ND 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "modification_status": "Continuous rectangular excerpt of the publisher’s Version of Record figure. Pixels inside the excerpt match the source; thumbnails use proportional resizing and WebP encoding. A source legend is shown separately when linked.",
+        "permission_basis": "license",
+        "public_use_allowed": true,
+        "review_evidence_sha256": "5dbcbdc0f2e1cecfd746c7a09812438d41a49e7ff4326b2c5931d945049a553d",
+        "status": "approved"
+      },
+      "sections": {
+        "Color & encoding": "Blue marks Ideal, orange Baseline and red Climate Stress. The six background regions encode feasibility classes independently of the scenario points.",
+        "Design lessons": "Put decision boundaries on the same axes as the outcomes. Use marginal densities to show where the displayed points concentrate.",
+        "Statistics & symbols": "The panel shows the 201 islands whose cost rises by more than 0.05 USD/kWh from Ideal to Climate Stress. Leftward movement on the reversed cost axis means a higher cost.",
+        "Verification & limitations": "The panel was checked against the Version of Record, the exact classified crop and the source caption. The paper and regional-material licenses are recorded separately.",
+        "What the figure shows": "This scatterplot compares Ideal, Baseline and Climate Stress positions in the same cost-affordability space."
+      },
+      "source": "https://doi.org/10.1038/s41467-026-75606-4",
+      "source_image_sha256": "5d8fcfe7ec3a739d0f075a32417d971d084e2828789e54eee04c79d69453ad31",
+      "srcset": "https://chutj.github.io/figures/approved/5d8fcfe7ec3a739d0f075a32417d971d084e2828789e54eee04c79d69453ad31/figure-320.webp 320w, https://chutj.github.io/figures/approved/5d8fcfe7ec3a739d0f075a32417d971d084e2828789e54eee04c79d69453ad31/figure-640.webp 640w",
+      "thumbnail": "https://chutj.github.io/figures/approved/5d8fcfe7ec3a739d0f075a32417d971d084e2828789e54eee04c79d69453ad31/figure-640.webp",
+      "title": "How climate scenarios shift islands in cost-affordability space",
+      "translation_status": "reviewed",
+      "width": 880,
+      "year": 2026
     },
     {
       "author": "Lei Gu; Dominik L. Schumacher; Erich M. Fischer; Louise J. Slater; Jiabo Yin; Sebastian Sippel; Jie Chen; Pan Liu; Reto Knutti",

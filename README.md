@@ -9,8 +9,8 @@ Scientific figures for academic learning and scientific visualization reference.
 This repository provides the code and public figures for Figure Gallery.<br>
 本仓库为 Figure Gallery 提供代码和公开图鉴。
 
-As of **2026-11-05**, the gallery contains **1,707 reviewed figures from 263 papers**. Each figure lists its license, source version and required credits.<br>
-截至 **2026-11-05**，图库收录来自 **263 篇论文的 1,707 张已审核图件**。每张图均标明许可证、来源版本和必要署名。
+As of **2026-11-19**, the gallery contains **1,722 reviewed figures from 264 papers**. Each figure lists its license, source version and required credits.<br>
+截至 **2026-11-19**，图库收录来自 **264 篇论文的 1,722 张已审核图件**。每张图均标明许可证、来源版本和必要署名。
 
 ## Browse and learn / 浏览与学习
 
