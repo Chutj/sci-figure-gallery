@@ -39400,52 +39400,6 @@
       "thumbnail": "https://chutj.github.io/figures/approved/31444856a34f8544044cbfcc332e2c1eac22c59228b12b592069471df08ff76d/figure-640.webp"
     },
     {
-      "id": "fig-08b7dcb1e05c546f8fc3102a033b0016",
-      "image": "https://chutj.github.io/figures/approved/080d8d91f07f210e059d6c2306d04fb53e841f6a3baefdcc90abff0a28bec189/figure.png",
-      "metadata_sha256": "2dda5a49b0908b2d1ed9690dc2e658a78a3f3bd672b8e091e75a7d21e29d3b23",
-      "rights": {
-        "additional_credit": "Parent figure’s caption credits the regional reference material. IPCC AR6 reference regions adapted by the paper authors from Iturbide et al. (2020), https://doi.org/10.5194/essd-12-2959-2020, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Colors, shading and labels were added in the paper.",
-        "approved_at": "2026-11-19",
-        "approved_by": "Chutj",
-        "attribution": "Huang, C., Zhang, H. & Yan, J. A global feasibility gap in resilient island energy transitions. Nature Communications 17, 8684 (2026). Fig. 2d. https://doi.org/10.1038/s41467-026-75606-4. © The Author(s) 2026. CC BY-NC-ND 4.0, subject to the disclaimer of warranties in the license terms.",
-        "evidence_reference": "GALLERY-ISSUE-1-2-d",
-        "human_reviewed": true,
-        "license": "CC BY-NC-ND 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
-        "modification_status": "Continuous rectangular excerpt of the publisher’s Version of Record figure. Pixels inside the excerpt match the source; thumbnails use proportional resizing and WebP encoding. A source legend is shown separately when linked.",
-        "permission_basis": "license",
-        "public_use_allowed": true,
-        "review_evidence_sha256": "dbee7d524973b911e7b41ee108738850a4fb779b3860c2e2f6b8843da4d048cf",
-        "status": "approved"
-      },
-      "source_image_sha256": "080d8d91f07f210e059d6c2306d04fb53e841f6a3baefdcc90abff0a28bec189",
-      "srcset": "https://chutj.github.io/figures/approved/080d8d91f07f210e059d6c2306d04fb53e841f6a3baefdcc90abff0a28bec189/figure-320.webp 320w, https://chutj.github.io/figures/approved/080d8d91f07f210e059d6c2306d04fb53e841f6a3baefdcc90abff0a28bec189/figure-616.webp 616w",
-      "thumbnail": "https://chutj.github.io/figures/approved/080d8d91f07f210e059d6c2306d04fb53e841f6a3baefdcc90abff0a28bec189/figure-616.webp"
-    },
-    {
-      "id": "fig-e489616a00c658df9d253de916aef1c5",
-      "image": "https://chutj.github.io/figures/approved/5d8fcfe7ec3a739d0f075a32417d971d084e2828789e54eee04c79d69453ad31/figure.png",
-      "metadata_sha256": "ed6b5f4186f04e6eb2a0318f7cd1a805fdceaab3bbf422b69f4321c57d246e6c",
-      "rights": {
-        "additional_credit": "Parent figure’s caption credits the regional reference material. IPCC AR6 reference regions adapted by the paper authors from Iturbide et al. (2020), https://doi.org/10.5194/essd-12-2959-2020, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Colors, shading and labels were added in the paper.",
-        "approved_at": "2026-11-19",
-        "approved_by": "Chutj",
-        "attribution": "Huang, C., Zhang, H. & Yan, J. A global feasibility gap in resilient island energy transitions. Nature Communications 17, 8684 (2026). Fig. 3a. https://doi.org/10.1038/s41467-026-75606-4. © The Author(s) 2026. CC BY-NC-ND 4.0, subject to the disclaimer of warranties in the license terms.",
-        "evidence_reference": "GALLERY-ISSUE-1-3-a",
-        "human_reviewed": true,
-        "license": "CC BY-NC-ND 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
-        "modification_status": "Continuous rectangular excerpt of the publisher’s Version of Record figure. Pixels inside the excerpt match the source; thumbnails use proportional resizing and WebP encoding. A source legend is shown separately when linked.",
-        "permission_basis": "license",
-        "public_use_allowed": true,
-        "review_evidence_sha256": "5dbcbdc0f2e1cecfd746c7a09812438d41a49e7ff4326b2c5931d945049a553d",
-        "status": "approved"
-      },
-      "source_image_sha256": "5d8fcfe7ec3a739d0f075a32417d971d084e2828789e54eee04c79d69453ad31",
-      "srcset": "https://chutj.github.io/figures/approved/5d8fcfe7ec3a739d0f075a32417d971d084e2828789e54eee04c79d69453ad31/figure-320.webp 320w, https://chutj.github.io/figures/approved/5d8fcfe7ec3a739d0f075a32417d971d084e2828789e54eee04c79d69453ad31/figure-640.webp 640w",
-      "thumbnail": "https://chutj.github.io/figures/approved/5d8fcfe7ec3a739d0f075a32417d971d084e2828789e54eee04c79d69453ad31/figure-640.webp"
-    },
-    {
       "id": "fig-c4100233ca855994b3176132800a89b8",
       "image": "https://chutj.github.io/figures/approved/ff43ecf45fc71b1fed0399f30bfc39667db97186284935af6a47f64c05a50d89/figure.png",
       "metadata_sha256": "5e5e4f3e8b276eb378c42438925de2e4ae6da965d3742c4129a9c43df557c0bd",
@@ -39605,6 +39559,52 @@
       "source_image_sha256": "ae4f8d0b6544db8d42f217594d5eb60a43f9e263304cddd75d9949b2d5bcd732",
       "srcset": "https://chutj.github.io/figures/approved/ae4f8d0b6544db8d42f217594d5eb60a43f9e263304cddd75d9949b2d5bcd732/figure-320.webp 320w, https://chutj.github.io/figures/approved/ae4f8d0b6544db8d42f217594d5eb60a43f9e263304cddd75d9949b2d5bcd732/figure-640.webp 640w",
       "thumbnail": "https://chutj.github.io/figures/approved/ae4f8d0b6544db8d42f217594d5eb60a43f9e263304cddd75d9949b2d5bcd732/figure-640.webp"
+    },
+    {
+      "id": "fig-08b7dcb1e05c546f8fc3102a033b0016",
+      "image": "https://chutj.github.io/figures/approved/080d8d91f07f210e059d6c2306d04fb53e841f6a3baefdcc90abff0a28bec189/figure.png",
+      "metadata_sha256": "66c07ef8d2f75ef351c98ef6f7eda9d77550f81d74b46882a37e816281fd3c8e",
+      "rights": {
+        "additional_credit": "Parent figure’s caption credits the regional reference material. IPCC AR6 reference regions adapted by the paper authors from Iturbide et al. (2020), https://doi.org/10.5194/essd-12-2959-2020, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Colors, shading and labels were added in the paper.",
+        "approved_at": "2026-11-19",
+        "approved_by": "Chutj",
+        "attribution": "Huang, C., Zhang, H. & Yan, J. A global feasibility gap in resilient island energy transitions. Nature Communications 17, 8684 (2026). Fig. 2d. https://doi.org/10.1038/s41467-026-75606-4. © The Author(s) 2026. CC BY-NC-ND 4.0, subject to the disclaimer of warranties in the license terms.",
+        "evidence_reference": "GALLERY-ISSUE-1-2-d",
+        "human_reviewed": true,
+        "license": "CC BY-NC-ND 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "modification_status": "Continuous rectangular excerpt of the publisher’s Version of Record figure. Pixels inside the excerpt match the source; thumbnails use proportional resizing and WebP encoding. A source legend is shown separately when linked.",
+        "permission_basis": "license",
+        "public_use_allowed": true,
+        "review_evidence_sha256": "dbee7d524973b911e7b41ee108738850a4fb779b3860c2e2f6b8843da4d048cf",
+        "status": "approved"
+      },
+      "source_image_sha256": "080d8d91f07f210e059d6c2306d04fb53e841f6a3baefdcc90abff0a28bec189",
+      "srcset": "https://chutj.github.io/figures/approved/080d8d91f07f210e059d6c2306d04fb53e841f6a3baefdcc90abff0a28bec189/figure-320.webp 320w, https://chutj.github.io/figures/approved/080d8d91f07f210e059d6c2306d04fb53e841f6a3baefdcc90abff0a28bec189/figure-616.webp 616w",
+      "thumbnail": "https://chutj.github.io/figures/approved/080d8d91f07f210e059d6c2306d04fb53e841f6a3baefdcc90abff0a28bec189/figure-616.webp"
+    },
+    {
+      "id": "fig-e489616a00c658df9d253de916aef1c5",
+      "image": "https://chutj.github.io/figures/approved/5d8fcfe7ec3a739d0f075a32417d971d084e2828789e54eee04c79d69453ad31/figure.png",
+      "metadata_sha256": "6c0f82c32bdb85b3f8b66a9b6bd0702f662a31efa1cd6c0bd9d9dd997ca054b6",
+      "rights": {
+        "additional_credit": "Parent figure’s caption credits the regional reference material. IPCC AR6 reference regions adapted by the paper authors from Iturbide et al. (2020), https://doi.org/10.5194/essd-12-2959-2020, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Colors, shading and labels were added in the paper.",
+        "approved_at": "2026-11-19",
+        "approved_by": "Chutj",
+        "attribution": "Huang, C., Zhang, H. & Yan, J. A global feasibility gap in resilient island energy transitions. Nature Communications 17, 8684 (2026). Fig. 3a. https://doi.org/10.1038/s41467-026-75606-4. © The Author(s) 2026. CC BY-NC-ND 4.0, subject to the disclaimer of warranties in the license terms.",
+        "evidence_reference": "GALLERY-ISSUE-1-3-a",
+        "human_reviewed": true,
+        "license": "CC BY-NC-ND 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "modification_status": "Continuous rectangular excerpt of the publisher’s Version of Record figure. Pixels inside the excerpt match the source; thumbnails use proportional resizing and WebP encoding. A source legend is shown separately when linked.",
+        "permission_basis": "license",
+        "public_use_allowed": true,
+        "review_evidence_sha256": "5dbcbdc0f2e1cecfd746c7a09812438d41a49e7ff4326b2c5931d945049a553d",
+        "status": "approved"
+      },
+      "source_image_sha256": "5d8fcfe7ec3a739d0f075a32417d971d084e2828789e54eee04c79d69453ad31",
+      "srcset": "https://chutj.github.io/figures/approved/5d8fcfe7ec3a739d0f075a32417d971d084e2828789e54eee04c79d69453ad31/figure-320.webp 320w, https://chutj.github.io/figures/approved/5d8fcfe7ec3a739d0f075a32417d971d084e2828789e54eee04c79d69453ad31/figure-640.webp 640w",
+      "thumbnail": "https://chutj.github.io/figures/approved/5d8fcfe7ec3a739d0f075a32417d971d084e2828789e54eee04c79d69453ad31/figure-640.webp"
     }
   ],
   "image_hosts": [

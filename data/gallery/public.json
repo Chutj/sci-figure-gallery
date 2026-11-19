@@ -2646,7 +2646,7 @@
       "id": "fig-08b7dcb1e05c546f8fc3102a033b0016",
       "image": "https://chutj.github.io/figures/approved/080d8d91f07f210e059d6c2306d04fb53e841f6a3baefdcc90abff0a28bec189/figure.png",
       "journal": "Nature Communications",
-      "metadata_sha256": "2dda5a49b0908b2d1ed9690dc2e658a78a3f3bd672b8e091e75a7d21e29d3b23",
+      "metadata_sha256": "66c07ef8d2f75ef351c98ef6f7eda9d77550f81d74b46882a37e816281fd3c8e",
       "paper": "A global feasibility gap in resilient island energy transitions",
       "primary": "Composition charts",
       "rights": {
@@ -2669,7 +2669,7 @@
         "Design lessons": "Label counts at the end of aligned bars, then use a small part-to-whole summary for the aggregate split.",
         "Statistics & symbols": "Of 1,830 islands, 834 are feasible and 996 infeasible in the Ideal scenario. Count labels and percentages refer to islands.",
         "Verification & limitations": "The panel was checked against the Version of Record, the exact classified crop and the source caption. The paper and regional-material licenses are recorded separately.",
-        "What the figure shows": "Horizontal bars show counts for six classes. The inset combines them into feasible and infeasible shares."
+        "What the figure shows": "Horizontal bars show counts for six classes. The inset pie chart combines them into feasible and infeasible shares."
       },
       "source": "https://doi.org/10.1038/s41467-026-75606-4",
       "source_image_sha256": "080d8d91f07f210e059d6c2306d04fb53e841f6a3baefdcc90abff0a28bec189",
@@ -74098,7 +74098,7 @@
         "sha256": "5f2151bca5a37514698870dc9d436e7fe6c3a85f5551cc140bd20a3e10273518",
         "width": 375
       },
-      "metadata_sha256": "ed6b5f4186f04e6eb2a0318f7cd1a805fdceaab3bbf422b69f4321c57d246e6c",
+      "metadata_sha256": "6c0f82c32bdb85b3f8b66a9b6bd0702f662a31efa1cd6c0bd9d9dd997ca054b6",
       "paper": "A global feasibility gap in resilient island energy transitions",
       "primary": "Scatter plots",
       "rights": {
@@ -74121,7 +74121,7 @@
         "Design lessons": "Put decision boundaries on the same axes as the outcomes. Use marginal densities to show where the displayed points concentrate.",
         "Statistics & symbols": "The panel shows the 201 islands whose cost rises by more than 0.05 USD/kWh from Ideal to Climate Stress. Leftward movement on the reversed cost axis means a higher cost.",
         "Verification & limitations": "The panel was checked against the Version of Record, the exact classified crop and the source caption. The paper and regional-material licenses are recorded separately.",
-        "What the figure shows": "This scatterplot compares Ideal, Baseline and Climate Stress positions in the same cost-affordability space."
+        "What the figure shows": "This quadrant-style scatterplot tracks how islands shift among Ideal, Baseline and Climate Stress in the same cost-affordability space."
       },
       "source": "https://doi.org/10.1038/s41467-026-75606-4",
       "source_image_sha256": "5d8fcfe7ec3a739d0f075a32417d971d084e2828789e54eee04c79d69453ad31",
